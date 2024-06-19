@@ -1,0 +1,4113 @@
+p, span, div, h1, h2, h3, pre {
+    user-select: none;
+}
+
+.vkui--vkBase--dark, .vkui--vkBase--light, .vkui--vkCom--dark, .vkui--vkCom--light, :root {
+    --vkui--size_border_radius--regular: var(--button_border_radius);
+}
+
+body {
+    --color_secondary3: #818C99;
+    --color_secondary2: #B8C1CC;
+    --color_secondary: #A4A6AA;
+    --color_blue: #6DAFFB;
+    --scale-value: 1;
+
+    --color_primary: #000000;
+    --header_background: var(--background_content);
+    --gradient_opacity: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.676073) 7.81%, rgba(255, 255, 255, 0) 49.84%, rgba(255, 255, 255, 0.56386) 91.66%, #FFFFFF 100%);
+    --border_color: #F5F5F5;
+    --border_players_color: #F3F2F2;
+    --input_background: #FFFFFF;
+    --input_border: #E1E3E6;
+
+    --scroll_color_1: #F3F2F2;
+    --scroll_color_2: #EDEDED;
+    --scroll_color_3: #E7E7E7;
+
+    --grdient_primary: linear-gradient(90deg, #F05F88 0%, #FBD20A 100%, #FAAF1A 100%);
+    --gradient_blue: linear-gradient(135deg, #70B2FF 0%, #5C9CE6 100%);
+    --gradient_violet: linear-gradient(135deg, #C48AFF 0%, #AA65F0 100%);
+    --gradient_yellow: linear-gradient(135deg, #FFB73D 0%, #FFA000 100%);
+    --gradient_light_gray: linear-gradient(135deg, #B1B6BD 0%, #99A2AD 100%);
+    --gradient_gray: linear-gradient(135deg, #626466 0%, #444647 100%);
+    --gradient_red: linear-gradient(135deg, #FF5263 0%, #FF3347 100%);
+    --gradient_green: linear-gradient(135deg, #50C750 0%, #32B332 100%);
+    --gradient_pink: linear-gradient(93.43deg, #F05F88 0%, #FF66AC 100%);
+
+    --palette_gradient_1: conic-gradient(from 90deg at 50% 50%, #FFB063 -18.83deg, #FD5C5C 31.14deg, #FE77C4 72.4deg, #C47EFF 119.66deg, #508DFA 160.52deg, #5FE3FF 206.24deg, #50E98E 248.94deg, #FFED63 293.98deg, #FFB063 341.17deg, #FD5C5C 391.14deg);
+    --palette_gradient_2: conic-gradient(from 90deg at 50% 50%, #34A5D2 0deg, #508DFA 72deg, #38587E 144.37deg, #3A8DD7 216deg, #466AC0 283.13deg, #3D5164 339.37deg, #34A5D2 360deg);
+    --palette_gradient_3: conic-gradient(from 90deg at 50% 50%, #F8D465 -111.06deg, #FF5990 31.14deg, #FF635C 72.4deg, #E08B53 119.66deg, #DDB173 160.52deg, #FFBC78 206.24deg, #F8D465 248.94deg, #FF5990 391.14deg);
+    --palette_gradient_4: conic-gradient(from 90deg at 50% 50%, #B970E6 -43.13deg, #F2B888 11.25deg, #8ED6FF 71.25deg, #FF6746 157.5deg, #CC976F 247.5deg, #B970E6 316.87deg, #F2B888 371.25deg);
+    --palette_gradient_5: conic-gradient(from 90deg at 50% 50%, #DCD6FF 0deg, #EFBED0 72.4deg, #FF75E1 151.87deg, #FF7CE2 221.25deg, #FEBFFF 298.12deg, #DCD6FF 360deg);
+    --palette_gradient_6: conic-gradient(from 90deg at 50% 50%, #666CFF -56.25deg, #6653DF 34.51deg, #92B0FF 128deg, #57AAD9 217.25deg, #666CFF 303.75deg, #6653DF 394.51deg);
+    --palette_gradient_7: conic-gradient(from 180deg at 50% 50%, #FFCD4B -5.63deg, #FC71FF 60deg, #FF8C67 153.75deg, #8471F9 270deg, #FFCD4B 354.37deg, #FC71FF 420deg);
+    --palette_gradient_8: conic-gradient(from 90deg at 50% 50%, #2A0567 -56.25deg, #8C3CFF 50.63deg, #FFA7E6 217.25deg, #2A0567 303.75deg, #8C3CFF 410.62deg);
+    --palette_gradient_9: conic-gradient(from 90deg at 50% 50%, #99E600 -30deg, #FFB36D 24.38deg, #C2D357 125.63deg, #FFC886 217.25deg, #99E600 330deg, #FFB36D 384.38deg);
+
+    --color_primary_2: #FF5277;
+
+    --picture_info_card_color: #EAEAEA;
+    --picture_info_card_text_color_primary: #515151;
+    --picture_info_card_text_color_secondary: #777777;
+    --picture_info_card_text_color_secondary_2: #272727;
+
+    /*v1.3*/
+    --button_border_radius: 16px;
+    --custom_card_background: #F5F5F5;
+    --custom_card_solo_text_color: #999999;
+    --panel_container_background: #EBEDF0;
+    --panel_container_card_background: #FFFFFF;
+    --lvl_background: #EFEFEF;
+    --event_button_shadow_color_1: rgba(255, 255, 255, .6);
+    --event_button_shadow_color_2: rgba(255, 255, 255, .3);
+
+    --linear_shadow_background: linear-gradient(180deg, var(--background_content) 9.61%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+body[scheme='bright_light'], body[scheme='vkcom_light'] {
+    --button_outline_foreground: var(--color_blue);
+    --button_outline_border: var(--color_blue);
+
+}
+
+body[scheme='space_gray'], body[scheme='vkcom_dark'] {
+    --color_primary: #FFFFFF;
+    --header_background: var(--background_content);
+    --border_color: #3A3737;
+    --border_players_color: #3A3737;
+    --input_background: #444444;
+
+    --scroll_color_1: #373434;
+    --scroll_color_2: #474343;
+    --scroll_color_3: #615B5B;
+
+    --picture_info_card_color: #3A3737;
+    --picture_info_card_text_color_primary: #FFFFFF;
+    --picture_info_card_text_color_secondary: #A7A7A7;
+    --picture_info_card_text_color_secondary_2: #BBBBBB;
+
+    /*v1.3*/
+    --custom_card_background: #444444;
+    --custom_card_solo_text_color: #FFFFFF;
+    --panel_container_background: #0A0A0A;
+    --panel_container_card_background: #19191A;
+    --lvl_background: #444444;
+    --event_button_shadow_color_1: rgba(0, 0, 0, .3);
+    --event_button_shadow_color_2: rgba(0, 0, 0, .15);
+
+    --linear_shadow_background: linear-gradient(180deg, var(--background_content) 9.61%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+/*DESKTOP DARK*/
+body[scheme='vkcom_dark'] {
+    --gradient_opacity: linear-gradient(90deg, #222222 0%, rgba(34, 34, 34, 0.676073) 7.81%, rgba(34, 34, 34, 0) 49.84%, rgba(34, 34, 34, 0.56386) 91.66%, #222222 100%);
+}
+
+/*MOBILE DARK*/
+body[scheme='space_gray'] {
+    --gradient_opacity: linear-gradient(90deg, #19191A 0%, rgba(25, 25, 26, 0.676073) 7.81%, rgba(25, 25, 26, 0) 49.84%, rgba(25, 25, 26, 0.56386) 91.66%, #19191A 100%);
+}
+
+body[scheme='space_gray'] #vk_donut_avocado, body[scheme='vkcom_dark'] #vk_donut_avocado {
+    --background_content: #242424;
+}
+
+body[scheme='bright_light'] #vk_donut_avocado, body[scheme='vkcom_light'] #vk_donut_avocado {
+    --background_content: #F9F9F9;
+}
+
+.LoadingRef {
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+}
+
+h1 {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--color_primary);
+}
+
+h2 {
+    font-family: Manrope Semibold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--color_primary);
+}
+
+h3 {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--color_primary);
+}
+
+p {
+    font-family: Manrope Bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color_secondary);
+}
+
+.Placeholder h1 {
+    margin-top: calc(100vh / 812 * 96);
+}
+
+.Placeholder p {
+    margin-top: 16px;
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--color_secondary);
+}
+
+.Placeholder .TwoButtons, .Placeholder .OneButton {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Placeholder .TwoButtons > * {
+    width: 100%;
+}
+
+.vkuiButton--sz-m, .Button--sz-m {
+    min-height: 46px;
+    height: 46px;
+    width: 188px;
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+}
+
+.vkuiButton--lvl-primary_2, .Button--lvl-primary_2 {
+    color: #FFFFFF;
+    background: var(--color_primary_2);
+}
+
+.vkuiButton--lvl-gradient, .Button--lvl-gradient {
+    color: #FFFFFF;
+    background: linear-gradient(93.43deg, #F05F88 0%, #FAAF1A 100%);
+}
+
+.vkuiButton--lvl-gradient_gray, .Button--lvl-gradient_gray {
+    color: #FFFFFF;
+    background: var(--gradient_gray);
+}
+
+.vkuiButton--lvl-gradient_light_gray, .Button--lvl-gradient_light_gray {
+    color: #FFFFFF;
+    background: var(--gradient_light_gray);
+}
+
+.vkuiButton--lvl-gradient_donut, .Button--lvl-gradient_donut {
+    color: #FFFFFF;
+    background: linear-gradient(93.43deg, #F05F88 0%, #FF66AC 100%);
+}
+
+.vkuiButton--lvl-gradient_blue, .Button--lvl-gradient_blue {
+    color: #FFFFFF;
+    background: var(--gradient_blue);
+}
+
+.vkuiButton--lvl-gradient_violet, .Button--lvl-gradient_violet {
+    color: #FFFFFF;
+    background: var(--gradient_violet);
+}
+
+.vkuiButton--lvl-gradient_pink, .Button--lvl-gradient_pink {
+    color: #FFFFFF;
+    background: var(--gradient_pink);
+}
+
+.vkuiButton--lvl-gradient_red, .Button--lvl-gradient_red {
+    color: #FFFFFF;
+    background: var(--gradient_red);
+}
+
+.vkuiButton--lvl-pink_secondary, .Button--lvl-pink_secondary {
+    color: #F15F8A;
+    background: #FEEFF4;
+}
+
+.Main h3, .Author h3 {
+    margin: 28px 0 0 0;
+}
+
+.Main h1, .Author h1 {
+    margin: 2px 0 0 0;
+}
+
+.Author .Author_Title_Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Author .Author_Title_Container .vkuiButton {
+    color: var(--color_primary);
+}
+
+.Main .Colors__Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 66px;
+}
+
+.Main .Colors__Container > .Gradient_Opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--gradient_opacity);
+}
+
+.Main .Colors__Container > .Color {
+    min-width: 40px;
+    height: 60px;
+    border: 3px solid var(--border_color);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Main .Colors__Container > .Color > span {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--color_primary);
+}
+
+.Main .Colors__Container > .Color > div {
+    margin-top: 4px;
+    border: 2px solid var(--border_color);
+    box-sizing: border-box;
+    border-radius: 14px;
+    width: 16px;
+    height: 16px;
+}
+
+.Main p {
+    margin: 8px 0 0 0;
+}
+
+.Cards__Container, .Cards2__Container {
+    display: flex;
+    margin-top: 24px;
+}
+
+.Cards__Container > * {
+    height: calc(165px - 14px - 14px);
+    width: calc(144px - 12px - 12px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 14px 12px;
+    background: var(--border_color);
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+.Cards2__Container > *, .StatsCards__Container > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 12px;
+    background: var(--border_color);
+    border-radius: 21px;
+    cursor: pointer;
+    color: var(--color_secondary2);
+    width: calc(144px - 12px - 12px);
+}
+
+.Cards2__Container > * > span, .CardButton > span {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.Cards2__Container > * > .Icon {
+    margin-left: 4px;
+}
+
+.Cards__Container > * > .Top {
+    width: 100%;
+    text-align: right;
+    background: linear-gradient(90deg, #F05F88 0%, #FAAF1A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.Main > .PlayerPics__Container > .Card_Button_Stretch > .Images {
+    margin-top: 0px;
+    width: auto;
+}
+
+.Cards__Container > * > .Images, .Main .Card_Button_Stretch > .Images {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Cards__Container > * > .Images > *, .Main .Card_Button_Stretch > .Images > * {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5.33333px rgba(0, 0, 0, 0.1);
+    border-radius: 5.333333px;
+    width: 18px;
+    height: 27px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Cards__Container > * > .Images > * > *, .Main .Card_Button_Stretch > .Images > * > * {
+    height: 100%;
+}
+
+.Cards__Container > * > .Images > *[num='0'], .Cards__Container > * > .Images > *[num='2'],
+.Main .Card_Button_Stretch > .Images > *[num='0'], .Main .Card_Button_Stretch > .Images > *[num='2'] {
+    margin-top: 7.17px;
+    opacity: .5;
+}
+
+.Cards__Container > * > .Images > *[num='1'], .Main .Card_Button_Stretch > .Images > *[num='1'] {
+    z-index: 1;
+}
+
+.Cards__Container > * > .Images > *[num='0'], .Main .Card_Button_Stretch > .Images > *[num='0'] {
+    transform: translateX(5px) rotate(-15deg);
+}
+
+.Cards__Container > * > .Images > *[num='2'], .Main .Card_Button_Stretch > .Images > *[num='2'] {
+    transform: translateX(-5px) matrix(-0.97, -0.26, -0.26, 0.97, 0, 0);
+}
+
+.Cards__Container > * > .Texts {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Cards__Container > * > .Texts > :first-child {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--color_primary);
+}
+
+.Cards__Container > * > .Texts > :last-child {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 11px;
+    text-align: center;
+    color: var(--color_secondary);
+    margin-top: 2px;
+}
+
+.PlayContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.PlayContainer p {
+    margin-top: 6px;
+    text-align: center;
+}
+
+.PlayContainer > :first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PlayContainer > :first-child > :last-child {
+    margin-left: 10px;
+}
+
+.ButtonPlay {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #F05F88 0%, #FAAF1A 100%);
+    border-radius: 48px;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.ButtonPlayGlobal, .ButtonPlayFriends {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.ButtonPlayGlobal {
+    background: var(--gradient_blue);
+}
+
+.ButtonPlayFriends {
+    background: var(--gradient_violet);
+}
+
+.Images_Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    padding-bottom: 12px;
+}
+
+.Images_Grid > * {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 30.3px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    width: 148px;
+    height: 148px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Images_Grid > * > * {
+    width: 100%;
+    height: 100%;
+}
+
+.vkuiPanelHeader__left {
+    color: var(--color_primary);
+}
+
+.Users_List {
+    align-items: center;
+    min-height: 92px;
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Users_List > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.Users_List > * > :last-child {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Users_List > * > :last-child > :first-child {
+    white-space: nowrap;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+
+    color: var(--color_primary);
+}
+
+.Users_List > * > :last-child > :last-child {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 11px;
+    text-align: center;
+
+    color: var(--color_secondary);
+    margin-top: 2px;
+    width: 60px;
+}
+
+.Pictures_List {
+    min-height: 92px;
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Pictures_List__ {
+    padding: 5px;
+    margin-top: 18px;
+}
+
+.Pictures_List > *, .Pictures_List__ > * {
+    min-width: 92px;
+    min-height: 92px;
+    max-width: 92px;
+    max-height: 92px;
+    background: #FFFFFF;
+    /*box-shadow: 0px 0px 18.8351px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    /*border: 0.1px solid rgba(0, 0, 0, 0.05);*/
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 12px;
+    position: relative;
+}
+
+.Pictures_List > * > :first-child, .Pictures_List__ > * > :first-child {
+    width: 70px;
+    height: 70px;
+}
+
+.Pictures_List > * > :last-child, .Pictures_List__ > * > :last-child {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    color: #F16384;
+}
+
+.SearchGame {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.SearchGame h3 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color_secondary);
+
+    margin-top: 2px;
+}
+
+.Comments_Container {
+    margin-top: 28px;
+}
+
+.Comments {
+    max-height: 14.0394089vh;
+    clear: both;
+    overflow-y: scroll;
+    margin: -2px;
+    padding: 2px;
+}
+
+.Comments > .UserMessage {
+    /*cursor: pointer;*/
+}
+
+.Comments > .UserActivity {
+    align-items: center;
+}
+
+.Comments > * {
+    display: flex;
+}
+
+.Comments > * > :last-child {
+    margin-left: 12px;
+
+    font-family: Manrope;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.Comments > .UserMessage > :last-child > :first-child {
+    font-weight: 500;
+    color: var(--color_primary);
+}
+
+.Comments > .UserMessage > :last-child > :last-child,
+.Comments > .UserActivity > :last-child {
+    font-weight: normal;
+    color: var(--color_secondary);
+    max-width: 243px;
+}
+
+.Comments > .UserActivity > :last-child {
+    margin-top: calc(32px / 2 - 12px / 2);
+}
+
+.Comment_Input {
+    margin-top: 14px;
+    padding: 6px 0;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Comment_Input > :last-child {
+    margin-left: 7px;
+}
+
+.vkuiInput {
+    height: inherit;
+    width: 100%;
+}
+
+.vkuiFormField__border {
+    background: var(--input_background);
+    border: 1px solid var(--input_border);
+    box-sizing: border-box;
+    border-radius: var(--button_border_radius);
+}
+
+.vkuiInput__el {
+    white-space: nowrap;
+    padding: 6.5px 12px 7.5px;
+}
+
+.Game .Canvas_Container {
+    position: relative;
+}
+
+.Game .Canvas_Container > .Icon__Clear {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: auto;
+    margin: 12px;
+    padding: 4px;
+    display: flex;
+}
+
+.Game .Canvas_Container > :last-child {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 24px;
+    display: flex;
+    align-items: end;
+}
+
+.Game .Canvas_Container > :last-child > :first-child {
+    width: 90%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: scroll;
+    height: 32px;
+}
+
+.Game .Canvas_Container > :last-child > :first-child > * {
+    border-radius: 14px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    cursor: pointer;
+}
+
+.Game .Canvas_Container > :last-child > :last-child {
+    width: 10%;
+    margin-left: 18px;
+    display: flex;
+    justify-content: end;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: var(--scroll_color_1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll_color_2);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--scroll_color_3);
+}
+
+.Canvas_Container ::-webkit-scrollbar-thumb, .Canvas_Container_Clear ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #F3F2F2;
+}
+
+.Canvas_Container ::-webkit-scrollbar-thumb:hover, .Canvas_Container_Clear ::-webkit-scrollbar-thumb:hover {
+    background-color: #EDEDED;
+}
+
+.Canvas_Container ::-webkit-scrollbar-thumb:active, .Canvas_Container_Clear ::-webkit-scrollbar-thumb:active {
+    background-color: #E7E7E7;
+}
+
+::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
+    height: 2px;
+}
+
+::-webkit-scrollbar-button:single-button {
+    display: none;
+}*/
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.Result {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Result h1 {
+    max-width: 279px;
+    margin: 0;
+}
+
+.Result p {
+    max-width: 195px;
+    text-align: center;
+    margin: 8px 0 0 0;
+}
+
+.Result .Canvas_Container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Result .Canvas_Container h2, #global .Canvas_Container h2 {
+    margin: 18px 0;
+    color: #000000;
+}
+
+#global .Canvas_Container h2 {
+    position: absolute;
+}
+
+.Result .Canvas_Container .Button, #global .Canvas_Container .Button {
+    position: absolute;
+    bottom: 24px;
+}
+
+.Result .Canvas_Container .Report, #global .Canvas_Container .Report {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    color: var(--color_secondary);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.Result .Canvas_Container .Like, #global .Canvas_Container .Like {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.vkuiButton--lvl-secondary, .Button--lvl-secondary, .vkuiButton--lvl-secondary.vkuiButton--clr-accent {
+    background: var(--border_color);
+    color: var(--color_secondary);
+}
+
+.Result .Canvas_Container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+}
+
+.Search_Avatar {
+    -webkit-animation: Search_Avatar ease-in-out infinite 1s;
+    -o-animation: Search_Avatar ease-in-out infinite 1s;
+    animation: Search_Avatar ease-in-out infinite 1s;
+    transform-origin: center;
+}
+
+@keyframes Search_Avatar {
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+#global .Canvas_Container {
+    position: relative;
+    width: 319px;
+    height: 319px;
+    background: #FFFFFF;
+    border-radius: 28px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+
+#global .CanvasGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(319px, 1fr));
+    grid-gap: 24px;
+    padding: 12px;
+}
+
+.Likes__Container {
+    display: flex;
+    height: 42px;
+    background: var(--border_color);
+    border-radius: 21px;
+    margin-top: 24px;
+}
+
+.Likes__Container > :first-child {
+    padding: 9px 0 9px 16px;
+    width: calc(50% - 16px);
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.97044335vh;
+    line-height: 2.70935961vh;
+    color: var(--color_secondary);
+
+    display: flex;
+    align-items: center;
+}
+
+.Likes__Container > :first-child > span {
+    color: #F16384;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+}
+
+.Likes__Container > :last-child {
+    background: #FAAF1A;
+    border-radius: 21px;
+
+    padding: 12px 17px;
+    width: calc(50% - 17px - 17px);
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.60098522vh;
+    line-height: 2.21674877vh;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+#picture_info .vkuiPanelHeader__in {
+    background: none;
+}
+
+/*.PictureInfo > .Canvas_Container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+}
+
+.PictureInfo > .Canvas_Container h2 {
+    margin: 18px 0;
+    color: #000000;
+    z-index: 1;
+}
+
+.PictureInfo > .Canvas_Container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.PictureInfo > .Canvas_Container .Actions_Container {
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+}
+
+.PictureInfo > .Canvas_Container .Actions_Container .PictureTime, .PictureInfo > .Canvas_Container .Actions_Container .ReportButton {
+    background: #F9F9F9;
+    border-radius: 21px;
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+
+    color: var(--color_secondary);
+}
+
+.PictureInfo > .Canvas_Container .Actions_Container .ReportButton, .PictureInfo > .Canvas_Container .Actions_Container .LikeButton {
+    margin-left: 16px;
+    cursor: pointer;
+	z-index: 1;
+}
+
+.PictureInfo > .Canvas_Container .Actions_Container .LikeButton {
+    background: #F9F9F9;
+    border-radius: 21px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #F16384;
+}
+
+.PictureInfo > .Author_Container {
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.PictureInfo > .Author_Container > :first-child {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: var(--color_secondary);
+}
+
+.PictureInfo > .Author_Container > :last-child {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.PictureInfo > .Author_Container > :last-child > :last-child {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+
+    color: var(--color_primary);
+
+    margin-left: 12px;
+}
+
+.PictureInfo > .ButtonResumeDraw {
+    margin-top: 16px;
+}*/
+
+.PanelHeader__Placeholder {
+    position: absolute;
+    top: -24px;
+}
+
+.PanelHeader__Placeholder .vkuiPanelHeader__in {
+    background: none;
+}
+
+.Offline_Drawing__Buttons {
+    margin: 28px auto 0;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+.vkuiPromoBanner .SimpleCell--ios, .vkuiPromoBanner .SimpleCell--andoid, .vkuiPromoBanner .PromoBanner__head {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.vkuiPromoBanner .SimpleCell__after {
+    display: none;
+}
+
+.vkuiPromoBanner {
+    border-radius: 21px;
+    outline: none;
+    position: fixed;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.05);
+}
+
+.User_Header {
+    display: flex;
+    align-items: center;
+}
+
+.User_Header > .UserTags {
+    display: flex;
+    margin-left: 10px;
+}
+
+.User_Header > .UserTags > * {
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.User_Header > .Avatar .online, .User_Header > .Avatar .offline {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 3px solid var(--background_content);
+}
+
+.User_Header > .Avatar .online {
+    background: #83E261;
+}
+
+.User_Header > .Avatar .offline {
+    background: #A2A2A2;
+}
+
+.Tags h1 {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+
+    margin: 0;
+}
+
+.Tags h3 {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+
+    margin: 2px 0 0 0;
+}
+
+.TagsList {
+    margin-top: 2px;
+}
+
+.TagsList > * {
+    margin-top: 16px;
+    display: flex;
+}
+
+.TagsList > * > :first-child {
+    margin-top: 4px;
+}
+
+.TagsList > * > :last-child {
+    margin-left: 6px;
+}
+
+.Friends p, .FriendLobby p, .Stats p, .Shop p, .FriendLobbySettings p, .Suggestions p {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.FriendLobby .vkuiBanner {
+    padding: 0;
+    margin-top: 24px;
+}
+
+.LobbyList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    gap: 8px;
+    width: 100%;
+}
+
+.LobbyList > * {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.LobbyList > * > span {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: var(--color_primary);
+}
+
+.LobbyList > * > .KickButton {
+    margin-left: auto;
+}
+
+.LobbyActions {
+    margin: 24px 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.FriendsList {
+    margin-top: 12px;
+}
+
+.FriendsList .Span, .FriendLobby .Span, .Stats .Span, .FriendLobbySettings .Span, .SuggestionsIdea .Span, .SuggestionsWord_Container > .Span, .SuggestionsList .Span, #search .Span {
+    font-family: "Manrope Bold";
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color_secondary);
+}
+
+.Suggestions .Span, .SuggestionsWord > .Span {
+    font-family: "Manrope Medium";
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--color_primary);
+}
+
+.FriendsList .vkuiSimpleCell--android, .FriendsList .vkuiSimpleCell--vkcom, .FriendsList .vkuiSimpleCell--ios {
+    padding: 0;
+}
+
+#global .Stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    margin: 28px 12px 12px;
+}
+
+#global .Stats .vkuiModalCardBase__container {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+.FriendLobby {
+    padding-bottom: 12px;
+}
+
+.FriendSplash {
+    position: fixed;
+    background: var(--background_content);
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: all 100ms;
+    -moz-transition: all 100ms;
+    -ms-transition: all 100ms;
+    -o-transition: all 100ms;
+    transition: all 100ms;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.StatsCards__Container {
+    display: flex;
+    margin-top: 18px;
+}
+
+.StatsCards__Container > * > span {
+    font-family: SF Pro Rounded;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: lowercase;
+    color: var(--color_primary);
+}
+
+.StatsCards__Container > * > :last-child {
+    margin-left: 2px;
+}
+
+.Rating__List > :first-child {
+    margin-top: 18px;
+}
+
+.Rating__List .HorizontalScroll {
+    margin-top: 12px;
+}
+
+.FriendLobby .FormField {
+    margin-top: 12px;
+}
+
+.FriendLobby .FormField__border {
+    border-radius: inherit;
+}
+
+.ShopItems {
+    margin-top: 6px;
+}
+
+.ShopItems > * {
+    background: var(--border_color);
+    border-radius: 21px;
+    padding: 22px 16px;
+    /*width: 100%;*/
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ShopItems > * > .icon {
+    height: 48px;
+    min-width: 48px;
+}
+
+.ShopItems > * > .titles {
+    margin-left: 8px;
+}
+
+.ShopItems > * > .titles > :first-child {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color_primary);
+}
+
+.ShopItems > * > .titles > :last-child {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color_secondary);
+    margin-top: 2px;
+}
+
+.ShopItems > * > .TimeCounter, .ShopItems > * > .WatchAdvert, .TimeCounter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 21px;
+}
+
+.ShopItems > * > .TimeCounter > span, .ShopItems > * > .WatchAdvert > span, .TimeCounter > span {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    margin-left: 4px;
+}
+
+.ShopItems > * > .WatchAdvert {
+
+}
+
+.app_version {
+    position: absolute;
+    top: calc(var(--safe-area-inset-top) + var(--panelheader_height_ios) / 2);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 28px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(164, 166, 170, 0.25);
+}
+
+.app_version > span {
+    color: rgba(230, 57, 2, 0.25);
+}
+
+.Main .PlayCard {
+    cursor: pointer;
+}
+
+.Main .PlayCards__Container .PlayCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 21px;
+    padding: 14px;
+    color: var(--background_content);
+}
+
+.Main .PlayCards__Container .PlayCard > span {
+    margin-left: 6px;
+    font-family: Manrope Bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.Main .PlayCards__Container .GlobalLobby {
+    background: var(--gradient_blue);
+}
+
+.Main .PlayCards__Container .SelfLobby {
+    background: var(--gradient_violet);
+}
+
+.Main .PlayCards__Container .GlobalCanvasButton {
+    margin-top: 8px;
+    background: var(--gradient_yellow);
+    position: relative;
+}
+
+.Main .PlayCards__Container .SuggestionsButton {
+    margin-top: 8px;
+    background: var(--gradient_gray);
+}
+
+.Main .GlobalCanvasButton .Point_New_Notify {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: var(--gradient_red);
+    border-radius: 22px;
+}
+
+.Main .Card_Button_Stretch {
+    background: var(--custom_card_background);
+    border-radius: 21px;
+    display: flex;
+    padding: 12px 14px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.Main .Card_Button_Stretch .Card_Text__Container {
+    margin-left: 12px;
+    width: 100%;
+}
+
+.Main .Card_Button_Stretch .Card_Text__Container > :first-child {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Main .Card_Button_Stretch .Card_Text__Container > :first-child > :first-child {
+    font-family: 'Manrope Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: var(--color_primary);
+}
+
+.Main .Card_Button_Stretch .Card_Text__Container > :first-child > :last-child {
+    font-family: 'Manrope Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 10px;
+    text-transform: lowercase;
+
+    color: var(--background_content);
+    background: var(--gradient_light_gray);
+    border-radius: 22px;
+    padding: 2px 6px;
+
+    white-space: nowrap;
+}
+
+.Main .Card_Button_Stretch .Card_Text__Container > :last-child {
+    margin-top: 2px;
+
+    font-family: 'Manrope Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 11px;
+
+    color: var(--color_secondary);
+}
+
+.SubCards__Container {
+    margin-top: 8px;
+    display: flex;
+}
+
+.Main .SubCards__Container > * {
+    padding: 16px;
+    border-radius: 21px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    color: var(--custom_card_solo_text_color);
+    background: var(--custom_card_background);
+}
+
+.Main .SubCards__Container > * > :last-child {
+    margin-top: 2px;
+    font-family: 'Manrope Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.Main .OnlineText {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+
+    color: var(--color_secondary);
+    opacity: .5;
+}
+
+.Game .Canvas_Items_Container {
+    display: flex;
+    gap: 12px;
+    margin: 18px 12px 0;
+}
+
+.Game .Canvas_Items_Container > :first-child {
+    width: 55%;
+}
+
+.Game .Canvas_Items_Container > :last-child {
+    width: 45%;
+}
+
+.Game .Canvas_Colors_Container {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: scroll;
+    height: 32px;
+}
+
+.Game .Canvas_Colors_Container > * {
+    border-radius: 14px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    cursor: pointer;
+}
+
+.Canvas_SubItems_Container {
+    display: flex;
+    justify-content: end;
+}
+
+.Canvas_SubItems_Container > *, .DrawPanel--CanvasController-Mode > * {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+
+    background: var(--custom_card_background);
+    color: var(--color_secondary);
+}
+
+.Canvas_SubItems_Container > :not(:first-child),
+.DrawPanel--CanvasController-Mode > :not(:first-child) {
+    margin-left: 8px;
+}
+
+.Game .vkuiSlider__thumb,
+.GlobalCanvas .vkuiSlider__thumb,
+.DrawPanel .vkuiSlider__thumb {
+    width: 16px;
+    height: 16px;
+    top: -6px;
+}
+
+.Game .vkuiSlider__thumb--end, .GlobalCanvas .vkuiSlider__thumb--end, .DrawPanel .vkuiSlider__thumb--end {
+    right: -3px;
+}
+
+.Game .vkuiSlider__dragger::before, .Game .vkuiSlider::before,
+.GlobalCanvas .vkuiSlider__dragger::before, .GlobalCanvas .vkuiSlider::before,
+.DrawPanel .vkuiSlider__dragger::before, .DrawPanel .vkuiSlider::before {
+    height: 4px;
+}
+
+.Game .vkuiSlider__dragger::before,
+.GlobalCanvas .vkuiSlider__dragger::before,
+.DrawPanel .vkuiSlider__dragger::before {
+    width: 100%;
+    left: 0;
+}
+
+.Game .vkuiSlider,
+.GlobalCanvas .vkuiSlider,
+.DrawPanel .vkuiSlider {
+    padding: 0;
+}
+
+.Game .vkuiSlider__dragger,
+.GlobalCanvas .vkuiSlider__dragger,
+.DrawPanel .vkuiSlider__dragger {
+    min-width: 12px;
+}
+
+.GlobalCanvas .NavigationBar {
+    height: 164px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0.377259) 43.75%, rgba(255, 255, 255, 0.161458) 70.83%, rgba(255, 255, 255, 0.0518973) 87.5%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.GlobalCanvas .NavigationBar .SubItems {
+    position: fixed;
+    bottom: calc(76px - 28px);
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+}
+
+.GlobalCanvas .NavigationBar .Items {
+    position: fixed;
+    bottom: 76px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GlobalCanvas .NavigationBar .Items > * {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.GlobalCanvas .NavigationBar .Items > :not(:first-child) {
+    margin-left: 8px;
+}
+
+.GlobalCanvas canvas {
+    outline: 2px solid black;
+}
+
+.GlobalCanvas > img {
+    outline: 2px solid black;
+
+    width: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.GlobalCanvas_Items__List {
+    margin-top: 18px;
+}
+
+.GlobalCanvas_Items__List > * {
+    display: flex;
+    align-items: center;
+}
+
+.GlobalCanvas_Items__List > :not(:first-child) {
+    margin-top: 12px;
+}
+
+.GlobalCanvas_Items__List > * > :first-child {
+    color: var(--color_secondary);
+}
+
+.GlobalCanvas_Items__List > * > :last-child {
+    margin-left: 6px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color_primary);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.GlobalCanvas_Items__List > * > :last-child > :first-child {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.GlobalCanvas_Items__List > * > :last-child > :not(:first-child) {
+    opacity: .5;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.GlobalCanvas .Canvas_Areas {
+    overflow: hidden;
+    width: 1595px;
+    height: 1595px;
+    pointer-events: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 319px);
+    position: absolute;
+}
+
+.GlobalCanvas .Canvas_Areas > * {
+    width: 319px;
+    height: 319px;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: 1px dashed #535353;
+}
+
+.GlobalCanvas .Canvas_Areas > * > h1 {
+    font-family: 'Manrope Semibold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+
+    color: #DDDDDD;
+    margin-bottom: 0;
+}
+
+.GlobalCanvas .Canvas_Areas > * > h3 {
+    font-family: 'Manrope Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #DDDDDD;
+    margin-bottom: 0;
+}
+
+.GlobalCanvas .Canvas_Areas > * > .CustomButton {
+    background: #979797;
+    border-radius: 10px;
+    color: #DDDDDD;
+    padding: 5px 12px;
+
+    font-family: 'Manrope Semibold';
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    cursor: pointer;
+    margin-top: 10px;
+    z-index: 100;
+    pointer-events: all;
+}
+
+.GlobaCanvas_Load_Picture {
+    width: 370px;
+    height: 370px;
+    background: #FFFFFF;
+    border-radius: 21px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FriendLobbySettings .vkuiFormField__border, .FriendLobbySettings .vkuiSegmentedControl,
+.SuggestionsIdea .vkuiFormField__border, .SuggestionsIdea .vkuiSegmentedControl,
+.SuggestionsWord .vkuiFormField__border, .SuggestionsWord .vkuiSegmentedControl,
+.SuggestionsList .vkuiFormField__border, .SuggestionsList .vkuiSegmentedControl,
+.vkuiButton, .vkuiBanner__in {
+    border-radius: var(--button_border_radius);
+}
+
+.Placeholder_Clean {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Placeholder_Clean .Placeholder__Icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 24.6154px;
+}
+
+.Placeholder_Clean > div {
+    width: 76.8vw;
+}
+
+.Placeholder_Clean > div > h1 {
+    font-family: 'Manrope Semibold';
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: var(--color_primary);
+
+    margin: 32px 0 0 0;
+}
+
+.Placeholder_Clean > div > p {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.24px;
+    color: var(--color_secondary);
+
+    margin: 8px 0 0 0;
+}
+
+.Placeholder_Clean > div > .OneButton, .Placeholder_Clean > div > .TwoButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 32px;
+}
+
+.Placeholder_Clean > div > .TwoButtons > :last-child {
+    margin: 8px 0 0 0;
+}
+
+.Placeholder_Clean > div > .OneButton > button, .Placeholder_Clean > div > .TwoButtons > button {
+    border-radius: 20px;
+}
+
+.Suggestions .SuggestionsCards {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 8px;
+    align-items: stretch;
+}
+
+.Suggestions .SuggestionsCards > * {
+    padding: 16px;
+    border-radius: 21px;
+    background: var(--gradient_light_gray);
+    width: calc(50% - 28px - 8px);
+}
+
+.Suggestions .SuggestionsCards p {
+    margin: 0 0 0 0;
+}
+
+.Suggestions .SuggestionsCards > * > :first-child {
+    font-family: 'Manrope Bold';
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.Suggestions .SuggestionsCards > * > :last-child {
+    margin-top: 2px;
+
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    word-wrap: normal;
+}
+
+.Suggestions .SuggestionsVariants {
+    margin-top: 18px;
+}
+
+.Suggestions .SuggestionsVariants > :not(:first-child) {
+    margin-top: 12px;
+}
+
+.Suggestions .SuggestionsVariants > * {
+    padding: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 21px;
+
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.Suggestions .SuggestionsVariants > * > :last-child {
+    margin-left: 6px;
+}
+
+.Suggestions .SuggestionsVariants > .Variant_0 {
+    background: var(--gradient_blue);
+}
+
+.Suggestions .SuggestionsVariants > .Variant_1 {
+    background: var(--gradient_gray);
+}
+
+.Suggestions .SuggestionsVariants > .Variant_2 {
+    background: var(--gradient_red);
+}
+
+.SuggestionsList_Container {
+    margin-top: 12px;
+}
+
+/*#vk_donut_avocado .vkuiPanel, #vk_donut_avocado .vkuiPanel__in, #vk_donut_avocado .vkuiPanel:after {
+    background: #242424;
+}*/
+
+#vk_donut_avocado .vkuiPanelHeader__in {
+    background: none;
+}
+
+.GameChooseWord, .GameAfkWarning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 87.2vw;
+    max-width: 327px;
+}
+
+.GameChooseWord .GameChooseWord-Timer {
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(48px);
+    border-radius: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'SF Pro Rounded Semibold';
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.GameChooseWord .GameChooseWord-Title, .GameAfkWarning .GameAfkWarning-Title {
+    font-family: 'SF Pro Rounded Semibold';
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+
+    margin-top: 12px;
+}
+
+.GameChooseWord .GameChooseWord-Words {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.GameChooseWord .GameChooseWord-Words > *, .GameAfkWarning .GameAfkWarning-Button, .GameAfkWarning .GameAfkWarning-Button-Close {
+    height: 48px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(35px);
+    border-radius: var(--button_border_radius);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    width: 87.2vw;
+    max-width: 327px;
+}
+
+.GameChooseWord .GameChooseWord-Words > * {
+    font-family: 'SF Pro Text Medium';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    font-variant: small-caps;
+    color: #FFFFFF;
+
+    position: relative;
+}
+
+.GameChooseWord .GameChooseWord-Words > * > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 23px;
+
+    font-family: 'SF Pro Rounded Medium';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    font-variant: all-small-caps;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.GameAfkWarning .GameAfkWarning-Icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(48px);
+    border-radius: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #FF3F52;
+}
+
+.GameAfkWarning .GameAfkWarning-Description {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+
+    margin-top: 4px;
+}
+
+.GameAfkWarning .GameAfkWarning-Button, .GameAfkWarning .GameAfkWarning-Button-Close {
+    font-family: 'SF Pro Text Semibold';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+
+    margin-top: 24px;
+}
+
+.GameAfkWarning .GameAfkWarning-Button-Close {
+    background: none;
+    margin-top: 4px;
+}
+
+.PictureInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PictureInfo .PictureInfo-Word-Time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color_primary);
+}
+
+.PictureInfo .PictureInfo-Word-Time > :nth-child(1) {
+    font-family: 'Manrope Semibold';
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.PictureInfo .PictureInfo-Word-Time > :nth-child(2) {
+    font-family: 'SF Pro Rounded Semibold';
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    opacity: .5;
+
+    margin-left: 12px;
+}
+
+.PictureInfo .PictureInfo-CanvasContainer {
+    margin-top: 14px;
+    background: #FFFFFF;
+    border: 2px solid var(--custom_card_background);
+    border-radius: 41.25px;
+    overflow: hidden;
+
+    max-width: 220px;
+    max-height: 220px;
+    min-width: 220px;
+    min-height: 220px;
+}
+
+.PictureInfo .PictureInfo-CanvasContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.PictureInfo .PictureInfo-Actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 100%;
+    gap: 8px;
+}
+
+.PictureInfo .PictureInfo-Actions > * {
+    background: var(--custom_card_background);
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+    color: var(--custom_card_solo_text_color);
+}
+
+.PictureInfo .PictureInfo-Actions > * > :last-child {
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+
+    margin-top: 2px;
+}
+
+.PictureInfo .PictureInfo-Author {
+    background: var(--custom_card_background);
+    border-radius: 21px;
+    padding: 10px 0px;
+    margin-top: 12px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.PictureInfo .PictureInfo-Author > :first-child {
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+    margin-left: 16px;
+
+    color: var(--color_secondary);
+}
+
+.PictureInfo .PictureInfo-Author > :last-child {
+    display: flex;
+    align-items: center;
+
+    margin-left: 16px;
+    margin-top: 6px;
+}
+
+.PictureInfo .PictureInfo-Author > :last-child > :last-child {
+    margin-left: 6px;
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--custom_card_solo_text_color);
+}
+
+.PictureInfo .PictureInfo-Arrows-ResumeDraw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    gap: 12px;
+}
+
+.PictureInfo .PictureInfo-Arrows-ResumeDraw > * {
+    width: 52px;
+    height: 52px;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.PictureInfo .PictureInfo-Arrows-ResumeDraw > :first-child, .PictureInfo .PictureInfo-Arrows-ResumeDraw > :last-child {
+    background: var(--custom_card_background);
+    color: var(--custom_card_solo_text_color);
+}
+
+.Result_New h2 {
+    font-family: 'Manrope Semibold';
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+
+    color: var(--color_primary);
+    margin: 0 0 0 0;
+}
+
+.Result_New .Canvas_Container {
+    width: 220px;
+    height: 220px;
+
+    background: #FFFFFF;
+    border: 2px solid var(--custom_card_background);
+    border-radius: 41.25px;
+
+    margin-top: 14px;
+    overflow: hidden;
+}
+
+.Result_New .Canvas_Container img {
+    width: 100%;
+    height: 100%;
+}
+
+.Result_New h1 {
+    font-family: 'Manrope Semibold';
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+
+    color: var(--color_primary);
+    margin: 12px 0 0 0;
+}
+
+.Result_New p {
+    text-align: center;
+    margin: 8px 0 0 0;
+    max-width: 195px;
+}
+
+.Result_New .vkuiButton {
+    height: 46px;
+    border-radius: 16px;
+}
+
+.Result_New .Actions_Container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 33px;
+}
+
+.SearchGame .SearchContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 228px;
+    width: 228px;
+}
+
+.SearchGame .SearchContainer h1 {
+    margin: 0 0 0 0;
+
+    font-family: 'Inter Bold';
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color_primary);
+}
+
+.SearchGame .SearchContainer button {
+    backdrop-filter: blur(17.5px);
+    border-radius: 18px;
+    min-height: 48px;
+}
+
+.SearchGame .SearchImages {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+.SearchGame .SearchImages > * {
+    position: fixed;
+    bottom: -56px;
+    width: 56px;
+    height: 56px;
+    animation: ease-in-out search_images_animation 5s;
+    border-radius: 12px;
+}
+
+@keyframes search_images_animation {
+    from {
+        top: 100vh;
+    }
+    to {
+        top: -56px;
+    }
+}
+
+.vkuiContentCard__caption button {
+    pointer-events: all;
+}
+
+.vkuiPopoutWrapper--masked .vkuiPopoutWrapper__overlay {
+    background: rgba(0, 0, 0, .8);
+}
+
+#stats .HorizontalCell__content span {
+    white-space: nowrap;
+}
+
+#stats .vkuiHorizontalCell--s:first-child:before, #stats .vkuiHorizontalCell--s:last-child:after {
+    min-width: 0;
+}
+
+.Panel_Container_Card {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.Panel_Container_Card h2, .Panel_Container_Card p {
+    text-align: left;
+    margin: 0 0 0 0;
+}
+
+.Panel_Container_Card > * {
+    background: var(--panel_container_card_background);
+}
+
+.Panel_Container_Card-ManyCards > *:not(:first-child) {
+    border-radius: 28px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Panel_Container_Card-ManyCards {
+    padding-bottom: 16px;
+}
+
+.Panel_Container_Card > :first-child {
+    border-radius: 0 0 28px 28px;
+    padding: 0 36px 28px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#stats .Panel_Container_Card > :first-child,
+#friends .Panel_Container_Card > :first-child,
+#shop .Panel_Container_Card > :first-child,
+#search .Panel_Container_Card > :first-child,
+#friend_list .Panel_Container_Card > :first-child,
+#feed .Panel_Container_Card > :first-child {
+    padding: 0 20px 28px;
+}
+
+.Panel_Container_Card > :first-child > :first-child {
+    color: var(--color_primary);
+}
+
+.Panel_Container_Card > :first-child > .Panel_Container_Card-Text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.Panel_Container_Card > :first-child > .Panel_Container_Card-Buttons, .Panel_Container_Card-Buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Panel_Container_Card .Panel_Container_Card-Header {
+    margin-left: 8px;
+    font-family: 'Manrope ExtraBold';
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    text-transform: uppercase;
+    color: var(--color_secondary);
+}
+
+.Panel_Container_Card .Panel_Container_Card-Header-Center {
+    margin-left: 0;
+    text-align: center;
+}
+
+.Panel_Container_Card-TwoCards {
+    height: calc(100vh - var(--vkui--size_panel_header_height--regular));
+}
+
+.Panel_Container_Card-TwoCards > :last-child {
+    border-radius: 20px 20px 0 0;
+    padding: 13px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+}
+
+#friends .Panel_Container_Card .MiniCards,
+#friend_list .Panel_Container_Card .MiniCards,
+#search .Panel_Container_Card .MiniCards.MiniCardsPeople {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(var(--friend_lobbies_row_count), 1fr);
+}
+
+#friends .Panel_Container_Card .MiniCard,
+#friend_list .Panel_Container_Card .MiniCard,
+#search .Panel_Container_Card .MiniCards.MiniCardsPeople .MiniCard {
+    border: 2px solid var(--custom_card_background);
+    background: var(--panel_container_card_background);
+    border-radius: 20px;
+    padding: 13px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+#friends .Panel_Container_Card .MiniCard > :last-child > span:first-child,
+#friend_list .Panel_Container_Card .MiniCard > :last-child > span:first-child,
+#search .Panel_Container_Card .MiniCards.MiniCardsPeople .MiniCard > :last-child > span:first-child {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.408px;
+    color: var(--color_primary);
+}
+
+#friends .Panel_Container_Card .MiniCard > :last-child > div:last-child {
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    font-family: 'SF Pro Rounded';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.408px;
+
+    color: #99A2AD;
+}
+
+#gallery .Panel_Container_Card .MiniCards,
+#guessed_pictures .Panel_Container_Card .MiniCards,
+#search .Panel_Container_Card .MiniCards.MiniCardsPicture {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(var(--user_gallery_row_count), 1fr);
+}
+
+#gallery .Panel_Container_Card .MiniCard,
+#guessed_pictures .Panel_Container_Card .MiniCard,
+.Profile .AuthorWorks > *,
+#search .Panel_Container_Card .MiniCards.MiniCardsPicture .MiniCard {
+    justify-self: center;
+    border: 2px solid var(--custom_card_background);
+    background: #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#gallery .Panel_Container_Card .MiniCard img,
+#guessed_pictures .Panel_Container_Card .MiniCard img,
+#search .Panel_Container_Card .MiniCards.MiniCardsPicture .MiniCard img {
+    width: inherit;
+    height: inherit;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(1),
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(1) > :last-child,
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(1) > :last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(1) > :last-child > :first-child,
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(1) > :last-child > :first-child {
+    font-family: 'SF Pro Display Medium';
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color_primary);
+    opacity: 0.75;
+    margin: 0 0 0 0;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(1) > :last-child > :last-child,
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(1) > :last-child > :last-child {
+    font-family: 'SF Pro Display Medium';
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color_secondary);
+    margin: 0 0 0 0;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2),
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2) {
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 2px solid var(--custom_card_background);
+    width: calc(100vw - 16px - 16px);
+    height: calc(100vw - 16px - 16px);
+    overflow: hidden;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2) > img,
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2) > canvas,
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2) > img,
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2) > canvas {
+    width: inherit;
+    height: inherit;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3),
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) {
+    display: flex;
+    height: 28px;
+    gap: 10px;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > *,
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > * {
+    padding: 4px 8px;
+    border-radius: 10px;
+    background: var(--custom_card_background);
+    color: var(--color_secondary);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > :last-child,
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > :last-child {
+    margin-left: auto;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > :first-child,
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > :first-child {
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > :first-child[liked="0"],
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > :first-child[liked="0"] {
+    background: var(--gradient_pink);
+    color: var(--panel_container_card_background);
+}
+
+#feed .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > :first-child[liked="1"],
+#bookmarks .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) > :first-child[liked="1"] {
+    color: var(--color_secondary);
+}
+
+#shop .Panel_Container_Card-ManyCards > *:not(:first-child) {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+#shop .Panel_Container_Card-ManyCards > *:not(:first-child) > .ShopItemIcon {
+    width: 48px;
+    height: 48px;
+}
+
+#shop .Panel_Container_Card-ManyCards > *:not(:first-child) > div.ShopItemIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color_blue);
+}
+
+#shop .Panel_Container_Card-ManyCards > *:not(:first-child) > .ShopItemText {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 60.8vw;
+}
+
+#shop .Panel_Container_Card-ManyCards > *:not(:first-child) > .ShopItemCount {
+    font-family: 'Manrope Bold';
+    font-size: 12px;
+    color: var(--color_secondary);
+    text-align: right;
+    width: 13.6vw;
+    margin-left: auto;
+}
+
+#shop .Panel_Container_Card-ManyCards > *:not(:first-child) > .ShopItemText > :first-child {
+    font-family: 'Manrope Medium';
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color_primary);
+}
+
+#shop .Panel_Container_Card-ManyCards > *:not(:first-child) > .ShopItemText > :last-child {
+    font-family: 'Manrope Semibold';
+    font-size: 12px;
+    line-height: 16px;
+
+    color: var(--color_secondary);
+}
+
+#shop .TimeCounter, #shop .WatchAdvert {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(14px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: var(--color_primary);
+
+    font-family: 'Manrope Bold';
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+}
+
+#palette .vkuiButton__content {
+    transition: all 400ms;
+}
+
+#palette .PaletteContainer {
+    margin: 16px 24px 0;
+}
+
+#palette .PaletteContainer > .GradientContainer {
+    margin-top: 32px;
+}
+
+#palette .PaletteContainer > .GradientContainer > h2 {
+    font-family: 'SF Pro Rounded Bold';
+    font-size: 16px;
+    line-height: 19px;
+
+    text-align: center;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+
+    color: #959595;
+    margin: 0 0 0 0;
+}
+
+#palette .PaletteContainer > .GradientContainer > div {
+    margin-top: 12px;
+}
+
+#palette .PaletteContainer > .GradientContainer > div,
+.UserAvatarFrame > div > :last-child > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#palette .PaletteContainer > .GradientContainer > div > *,
+#palette .PaletteContainer > .GradientContainer > div > * > div > div,
+#palette .PaletteContainer > .GradientContainer > div > * > div,
+.UserAvatarFrame > div > :last-child > div > *,
+.UserAvatarFrame > div > :last-child > div > * > div > div,
+.UserAvatarFrame > div > :last-child > div > * > div {
+    border-radius: 30px;
+}
+
+#palette .PaletteContainer > .GradientContainer > div > * > div > div,
+#palette .PaletteContainer > .GradientContainer > div > * > div,
+.UserAvatarFrame > div > :last-child > div > * > div > div,
+.UserAvatarFrame > div > :last-child > div > * > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#palette .PaletteContainer > .GradientContainer > div > *,
+.UserAvatarFrame > div > :last-child > div > * {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+#palette .PaletteContainer > .GradientContainer > div > * > div,
+.UserAvatarFrame > div > :last-child > div > * > div {
+    width: calc(30px - 10px);
+    height: calc(30px - 10px);
+    background: var(--background_content);
+}
+
+#palette .PaletteContainer > .GradientContainer > div > * > div > div,
+.UserAvatarFrame > div > :last-child > div > * > div > div {
+    width: 13px;
+    height: 13px;
+}
+
+#palette .PaletteBlock {
+    margin: 28px 20px 0;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color_primary);
+}
+
+#palette .ButtonsContainer {
+    margin: 32px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#palette .react-colorful {
+    height: 328px;
+    width: 100%;
+}
+
+#palette .react-colorful__saturation {
+    border-radius: 16px;
+}
+
+#palette .react-colorful__hue {
+    margin-top: 20px;
+    border-radius: 16px;
+}
+
+#palette .react-colorful__pointer {
+    width: 20px;
+    height: 20px;
+    border: 4px solid #FFFFFF;
+}
+
+.Profile > .UserAvatarCover {
+    width: 100%;
+    height: 207px;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.Profile > .UserAvatarCover > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+}
+
+.Profile > .UserInfoContainer {
+    margin-top: -55px;
+    background: var(--background_content);
+    border-radius: 24px 24px 0px 0px;
+    width: 100%;
+    min-height: calc(100vh - 207px);
+}
+
+.UserAvatar {
+    filter: drop-shadow(0px 0px 30.3px rgba(0, 0, 0, 0.1));
+    position: relative;
+}
+
+.UserAvatar > img {
+    /*mask-repeat: no-repeat;
+    mask-size: contain;*/
+    width: inherit;
+    height: inherit;
+}
+
+.UserAvatar > .UserAvatarBorder {
+    /*mask-repeat: no-repeat;
+    mask-size: contain;*/
+
+    position: absolute;
+    z-index: -1;
+}
+
+.UserAvatar > .Badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    border: 6px solid var(--background_content);
+}
+
+.Profile > .UserInfoContainer > .UserAvatar {
+    margin-left: 50%;
+    transform: translate(-50%, -50px);
+}
+
+.Author > .UserInfoContainer > .UserAvatar {
+    cursor: pointer;
+}
+
+.Profile > .UserInfoContainer > .UserNameTags {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: calc(-55px + 16px) 0 0 0;
+}
+
+.Profile > .UserInfoContainer h1 {
+    margin: 0 0 0 0;
+    font-family: 'Manrope ExtraBold';
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--color_primary);
+}
+
+.Profile > .UserInfoContainer > .UserNameTags > .AuthorName {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.Profile > .UserInfoContainer > .UserNameTags > .UserTags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.Profile > .UserInfoContainer > .UserNameTags > .UserTags > * {
+    cursor: pointer;
+}
+
+.Profile > .UserInfoContainer > .UserLvl,
+#lvl_help .UserLvl {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Profile > .UserInfoContainer > .UserLvl > .UserLvlProgress,
+#lvl_help .UserLvl > .UserLvlProgress {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+}
+
+.Profile > .UserInfoContainer > .UserLvl > .UserLvlProgress > :first-child,
+#lvl_help .UserLvl > .UserLvlProgress > :first-child {
+    background: var(--lvl_background);
+    border-radius: 6px;
+    height: 6px;
+}
+
+.Profile > .UserInfoContainer > .UserLvl > .UserLvlProgress > :first-child > :first-child,
+#lvl_help .UserLvl > .UserLvlProgress > :first-child > :first-child {
+    background: var(--grdient_primary);
+    height: inherit;
+    border-radius: inherit;
+}
+
+.Profile > .UserInfoContainer > .UserLvl > .UserLvlProgress > :last-child,
+#lvl_help .UserLvl > .UserLvlProgress > :last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Profile > .UserInfoContainer > .UserLvl > .UserLvlProgress > :last-child > :first-child,
+#lvl_help .UserLvl > .UserLvlProgress > :last-child > :first-child {
+    font-family: 'Manrope Bold';
+    font-size: 14px;
+    line-height: 19px;
+    color: #999999;
+}
+
+.Profile > .UserInfoContainer > .UserLvl > .UserLvlProgress > :last-child > :first-child > span,
+#lvl_help .UserLvl > .UserLvlProgress > :last-child > :first-child > span {
+    color: #E3E3E3;
+}
+
+.Profile > .UserInfoContainer > .UserLvl > .UserLvlProgress > :last-child > :last-child,
+#lvl_help .UserLvl > .UserLvlProgress > :last-child > :last-child {
+    font-family: 'Manrope Bold';
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    color: #5E5E5E;
+}
+
+.Profile .AuthorWorks {
+    padding-bottom: 24px;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(var(--user_gallery_row_count), 1fr);
+}
+
+.Profile .AuthorWorks > * img {
+    width: inherit;
+    height: inherit;
+}
+
+#lvl_help .UserLvlTemp {
+    background: linear-gradient(90deg, #FF0000 5.21%, #FF8A00 16.48%, #FFE600 27.74%, #14FF00 39.35%, #00A3FF 49.37%, #0500FF 61.18%, #AD00FF 72.26%, #FF00C7 83.53%, #FF0000 94.61%);
+    height: 16px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+#lvl_help .UserLvlTemp > .Opacity {
+    background: var(--panel_container_card_background);
+    opacity: .6;
+    position: absolute;
+    right: 0;
+    height: inherit;
+}
+
+.Profile > .UserInfoContainer > .ActionCards {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Profile > .UserInfoContainer > .ActionCards > * {
+    display: flex;
+    gap: 8px;
+    height: 56px;
+}
+
+.Profile > .UserInfoContainer > .ActionCards > :last-child {
+    height: 80px;
+}
+
+.Profile > .UserInfoContainer > .ActionCards > :last-child > * {
+    background: var(--custom_card_background);
+    color: var(--custom_card_solo_text_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+}
+
+.Profile > .UserInfoContainer > .ActionCards > :last-child > * > :last-child {
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.Profile > .UserInfoContainer > .ActionCards .ActionCard {
+    cursor: pointer;
+    border-radius: 21px;
+}
+
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+    color: #FFFFFF;
+
+    width: 100%;
+}
+
+.Profile .ActionCards .PlayGlobal {
+    background: var(--gradient_blue);
+}
+
+.Profile .ActionCards .PlayLobby {
+    background: var(--gradient_violet);
+}
+
+.Profile .ActionCards .Suggestion {
+    background: var(--gradient_gray);
+}
+
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.GlobalCanvas,
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.ArtBattle {
+    width: calc(100% - 56px);
+    padding: 11px 20px 17px 8px;
+    background: var(--gradient_pink);
+    box-shadow: inset -4px -4px 0px var(--event_button_shadow_color_1), inset -8px -8px 0px var(--event_button_shadow_color_2);
+    transition: all 100ms ease-in-out;
+}
+
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.ArtBattle {
+    background: var(--gradient_red);
+}
+
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.GlobalCanvas:hover,
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.ArtBattle:hover {
+    transform: scale(1.025);
+}
+
+.Profile .ActionCards .GalleryGuessed {
+    background: var(--custom_card_background);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: 100%;
+    padding: 12px 14px;
+}
+
+.Profile .ActionCards .GalleryGuessed > .Titles {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+}
+
+.Profile .ActionCards .GalleryGuessed > .Titles > :first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Profile .ActionCards .GalleryGuessed > .Titles > :first-child > :first-child {
+    font-family: 'Manrope Bold';
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color_primary);
+}
+
+.Profile .ActionCards .GalleryGuessed > .Titles > :first-child > :last-child {
+    background: var(--gradient_light_gray);
+    border-radius: 14px;
+    padding: 2px 6px;
+
+    font-family: 'Manrope Bold';
+    font-size: 9px;
+    line-height: 12px;
+    color: var(--background_content);
+}
+
+.Profile .ActionCards .GalleryGuessed > .Titles > :last-child {
+    font-family: 'Manrope Bold';
+    font-size: 10px;
+    line-height: 14px;
+    color: var(--color_secondary);
+}
+
+.Profile .ActionCards .GalleryGuessed > .Images {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Profile .ActionCards .GalleryGuessed > .Images > * {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5.33333px rgba(0, 0, 0, 0.1);
+    border-radius: 5.333333px;
+    width: 18px;
+    height: 27px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Profile .ActionCards .GalleryGuessed > .Images > * > * {
+    height: 100%;
+}
+
+.Profile .ActionCards .GalleryGuessed > .Images > *[num='0'],
+.Profile .ActionCards .GalleryGuessed > .Images > *[num='2'] {
+    margin-top: 7.17px;
+    opacity: .5;
+}
+
+.Profile .ActionCards .GalleryGuessed > .Images > *[num='1'] {
+    z-index: 1;
+}
+
+.Profile .ActionCards .GalleryGuessed > .Images > *[num='0'] {
+    transform: translateX(5px) rotate(-15deg);
+}
+
+.Profile .ActionCards .GalleryGuessed > .Images > *[num='2'] {
+    transform: translateX(-5px) matrix(-0.97, -0.26, -0.26, 0.97, 0, 0);
+}
+
+.Profile .Online {
+    font-family: 'Manrope Bold';
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+
+    color: var(--color_secondary);
+    opacity: .5;
+}
+
+.UserAvatarFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.UserAvatarFrame h1 {
+    margin: 0 0 0 0;
+    font-family: 'SF Pro Text Bold';
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.25px;
+    text-transform: uppercase;
+    color: #7E7E7E;
+}
+
+.UserAvatarFrame > div,
+.UserAvatarFrame > div > div:not(:last-child),
+.UserAvatarFrame > div:not(:last-child) > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.UserAvatarFrame > div:not(:last-child) {
+    gap: 28px;
+}
+
+.UserAvatarFrame > div:not(:last-child) > div {
+    gap: 16px;
+}
+
+.UserAvatarFrame > div:not(:last-child) > :first-child > :last-child {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.UserAvatarFrame > div:not(:last-child) > :first-child > :last-child > * {
+    width: 97px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--custom_card_background);
+    color: var(--custom_card_solo_text_color);
+    cursor: pointer;
+}
+
+.UserAvatarFrame > div:not(:last-child) > :first-child > :last-child > * > img {
+    color: var(--custom_card_solo_text_color);
+}
+
+.UserAvatarFrame > :last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.WeekGifts {
+    gap: 32px;
+}
+
+#week_gifts .vkuiPanelHeader__in {
+    background: none;
+}
+
+.Background {
+    position: fixed;
+    z-index: -1;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    width: calc(100vw + 20px);
+    height: calc(100vh + 20px);
+}
+
+.WeekGifts .Background {
+    position: fixed;
+    z-index: -1;
+    filter: blur(48px);
+    top: -24px;
+    right: -24px;
+    bottom: -24px;
+    left: -24px;
+}
+
+.WeekGifts, .WeekGifts > .WeekGifts_Texts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.WeekGifts > .WeekGifts_Texts {
+    gap: 12px;
+    margin: 0 43px;
+}
+
+.WeekGifts > .WeekGifts_Texts > h1 {
+    font-family: 'Manrope Semibold';
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 0 0 0;
+}
+
+.WeekGifts > .WeekGifts_Texts > p {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.24px;
+    color: #A4AAA9;
+    margin: 0 0 0 0;
+}
+
+.WeekGifts > .WeekGifts_Users {
+    margin-top: 3.9408867vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.WeekGifts > .WeekGifts_Users > :nth-child(2) {
+    margin-top: -45px;
+}
+
+.WeekGifts > .WeekGifts_Users > :nth-child(3) {
+    opacity: .75;
+    margin-top: -27px;
+}
+
+.WeekGifts > .WeekGifts_Users > .UsersContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 100%;
+}
+
+.WeekGifts > .WeekGifts_Users .UserContainer {
+    width: 138px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.WeekGifts > .WeekGifts_Users .UserContainer > .UserNameScore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.WeekGifts > .WeekGifts_Users .UserContainer > .UserNameScore > h2 {
+    font-family: 'SF Pro Display Semibold';
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 0 0 0;
+}
+
+.WeekGifts > .WeekGifts_Users .UserContainer > .UserNameScore > p {
+    font-family: 'SF Pro Rounded Semibold';
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #A4AAA9;
+    margin: 0 0 0 0;
+}
+
+#author .vkuiPanelHeader {
+    position: absolute;
+}
+
+#author .vkuiPanelHeader__in {
+    background: none;
+}
+
+.SVGMaterials {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.TrainCheck .Group__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TrainCheck .Group__inner img {
+    width: 150px;
+    height: 150px;
+}
+
+.GlobalCanvasActions {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 19px 0px calc(var(--safe-area-inset-bottom) + 6px);
+    gap: 6px;
+
+    background: var(--background_content);
+    border-radius: 21px 21px 0px 0px;
+    border: 1px solid var(--custom_card_background);
+}
+
+.GlobalCanvasActions .GlobalCanvasActions_Buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.GlobalCanvasActions .GlobalCanvasActions_Buttons .Actions_Separator {
+    width: 3px;
+    height: 20px;
+    background: var(--custom_card_background);
+    border-radius: 2px;
+}
+
+.GlobalCanvasActions .GlobalCanvasActions_Buttons > *:not(.Actions_Separator) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+
+    background: var(--custom_card_background);
+    border-radius: 37px;
+
+    color: var(--custom_card_solo_text_color);
+
+    cursor: pointer;
+}
+
+.GlobalCanvasActions > .GlobalCanvasActions_Slider, .GlobalCanvas .GlobalCanvasActions .vkuiSlider {
+    width: 239px;
+}
+
+.GlobalCanvasActions .vkuiSlider__thumb {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.GlobalCanvasActions > .GlobalCanvasActions_Slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.GlobalCanvasActions > .GlobalCanvasActions_Slider > span, .GlobalCanvasActions > div > span {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.GlobalCanvasActions > .GlobalCanvasActions_Slider > span {
+    font-size: 12px;
+    line-height: 14px;
+
+    color: var(--color_secondary);
+}
+
+.GlobalCanvasActions > div > span {
+    font-size: 14px;
+    line-height: 17px;
+
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.ArtBattlePlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.ArtBattlePlaceholder .ArtBattlePlaceholder--Title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #FF4154;
+}
+
+.ArtBattlePlaceholder .ArtBattlePlaceholder--Title h1 {
+    font-family: 'Manrope Bold';
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0 0 0 0;
+    color: inherit;
+}
+
+.ArtBattlePlaceholder .ArtBattlePlaceholder--Steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ArtBattlePlaceholder .ArtBattlePlaceholder--Steps > * {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ArtBattlePlaceholder .ArtBattlePlaceholder--Steps > * > :first-child {
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+
+    background: var(--custom_card_background);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'SF Pro Rounded Semibold';
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--custom_card_solo_text_color);
+}
+
+.ArtBattlePlaceholder .ArtBattlePlaceholder--Steps > * > :last-child {
+    font-family: 'Manrope Semibold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color_primary);
+}
+
+.ArtBattlePlaceholder .ArtBattlePlaceholder--Actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ArtBattleRate--RateActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 319px;
+    margin-top: 18px;
+}
+
+.ArtBattleRate--RateActions > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--custom_card_background);
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+
+    cursor: pointer;
+}
+
+.ArtBattleRate--RateActions > * > img {
+    width: 32px;
+    height: 32px;
+}
+
+.AdvertIntegration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.AdvertIntegration > .Titles > div:first-child {
+    position: relative;
+}
+
+.AdvertIntegration > .Titles > div:first-child .AdvertMark {
+    position: absolute;
+    top: -15.3px;
+    right: -6px;
+}
+
+.AdvertIntegration > .Titles > :nth-child(1),
+.AdvertIntegration .Titles h1 {
+    font-family: 'Manrope Semibold';
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+
+    color: var(--color_primary);
+
+    margin: 32px 0 0 0;
+}
+
+.AdvertIntegration > .Titles > :nth-child(2),
+.AdvertIntegration .Titles h3 {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.24px;
+
+    color: var(--color_secondary);
+
+    margin: 8px 0 0 0;
+}
+
+.AdvertIntegration > .Buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 32px;
+}
+
+#services .Panel_Container_Card .MiniCards {
+    display: grid;
+    gap: 10px 8px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#services .Panel_Container_Card .MiniCards > * {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+#services .Panel_Container_Card .MiniCards > * > :first-child {
+    width: 28px;
+    height: 28px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+#services .Panel_Container_Card .MiniCards > * > :last-child {
+    color: var(--color_primary);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.3px;
+}
+
+#services .SearchCard {
+    display: flex;
+    align-items: center;
+    margin: 0 16px;
+    gap: 6px;
+    cursor: pointer;
+}
+
+#services .SearchCard > span {
+    color: var(--color_primary);
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.3px;
+}
+
+#services .SearchCard > :last-child {
+    margin-left: auto;
+}
+
+.CustomIconButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+
+    background: var(--custom_card_background);
+    border-radius: var(--button_border_radius);
+    cursor: pointer;
+}
+
+#settings .Panel_Container_Card-ManyCards > *:not(:first-child),
+#tags .Panel_Container_Card-ManyCards > *:not(:first-child) {
+    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+#settings .Panel_Container_Card-ManyCards > *:not(:first-child) > .Icon {
+    color: var(--color_blue);
+}
+
+#settings .Panel_Container_Card-ManyCards > *:not(:first-child) > h3 {
+    font-family: "Manrope Medium";
+    font-size: 16px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#settings .Panel_Container_Card-ManyCards > :last-child {
+    background: none;
+    gap: 3px;
+    user-select: none;
+    align-items: center;
+    flex-direction: column;
+    cursor: auto;
+}
+
+#settings .Panel_Container_Card-ManyCards > :last-child > p {
+    font-family: "Manrope Bold";
+    font-size: 12px;
+    color: var(--color_secondary);
+    opacity: .5;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#tags .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2) {
+    width: calc(100% - 8px - var(--vkui--size_field_height--compact));
+}
+
+#tags .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2) > :first-child {
+    font-family: "Manrope Medium";
+    font-size: 16px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    color: var(--color_primary);
+}
+
+#tags .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(2) > :last-child {
+    font-family: "Manrope Semibold";
+    font-size: 12px;
+    margin: 2px 0 0 0;
+    padding: 0 0 0 0;
+    color: var(--color_secondary);
+}
+
+#tags .Panel_Container_Card-ManyCards > *:not(:first-child) > :nth-child(3) {
+    width: var(--vkui--size_field_height--compact);
+    height: var(--vkui--size_field_height--compact);
+}
+
+/*
+REDESIGN GAME DRAW PANEL
+*/
+
+.DrawPanel > .DrawPanel--Header {
+    margin-top: var(--safe-area-inset-top);
+    height: var(--panelheader_height);
+    width: 100%;
+
+    display: flex;
+    position: relative;
+}
+
+.DrawPanel-Task > .DrawPanel--Header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1px;
+}
+
+.DrawPanel-Drawer > .DrawPanel--Header {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 12px;
+    cursor: pointer;
+
+    width: 319px;
+}
+
+.DrawPanel-Task > .DrawPanel--Header h1, .DrawPanel-Task > .DrawPanel--Header h3 {
+    text-align: center;
+}
+
+.DrawPanel > .DrawPanel--Header h1 {
+    margin: 0 0 0 0;
+    font-family: "SF Pro Text Semibold";
+    font-size: 16px;
+    line-height: 20px; /* 125% */
+    letter-spacing: -0.32px;
+
+    color: var(--color_primary);
+}
+
+.DrawPanel > .DrawPanel--Header h3 {
+    margin: 0 0 0 0;
+    font-family: "SF Pro Text";
+    font-size: 13px;
+    line-height: 16px; /* 123.077% */
+    letter-spacing: -0.08px;
+
+    color: var(--color_secondary3);
+}
+
+.DrawPanel > .DrawPanel--MessageBox {
+    position: relative;
+
+    margin: 0 auto;
+    width: 319px;
+    min-height: 39px;
+
+    /*flex-grow: 1;*/
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+
+    overflow-y: scroll;
+}
+
+.DrawPanel > .DrawPanel--MessageBox > * {
+    width: 319px;
+}
+
+.DrawPanel-Drawer > .DrawPanel--MessageBox {
+    order: 2;
+    margin-top: 8px;
+}
+
+body[keyboard_on='1'] .DrawPanel-Drawer > .DrawPanel--MessageBox {
+    height: calc(100vh - var(--safe-area-inset-top) - var(--panelheader_height) - 8px - 4px - (var(--n-canvas-size) + 34px) - var(--safe-area-inset-bottom) - var(--keyboard-height));
+}
+
+.DrawPanel-Task > .DrawPanel--Header::after,
+.DrawPanel-Drawer > .DrawPanel--CanvasContainer::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: var(--linear_shadow_background);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.DrawPanel-Task > .DrawPanel--Header::after {
+    bottom: calc((50px - 1px) * -1);
+}
+
+.DrawPanel-Drawer > .DrawPanel--CanvasContainer::after {
+    bottom: calc((50px + 7px) * -1);
+}
+
+.DrawPanel > .DrawPanel--MessageBox > *.DrawPanel--Message {
+    display: flex;
+    gap: 12px;
+}
+
+.DrawPanel > .DrawPanel--MessageBox > *.DrawPanel--Message > :first-child {
+    margin-top: 1.5px;
+}
+
+.DrawPanel > .DrawPanel--MessageBox > *.DrawPanel--Message > :last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    width: calc(319px - 12px - 36px);
+}
+
+.DrawPanel > .DrawPanel--MessageBox > *.DrawPanel--Message > :last-child > :first-child {
+    color: var(--color_primary);
+    font-family: "SF Pro Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    letter-spacing: -0.32px;
+
+    margin: 0 0 0 0;
+}
+
+.DrawPanel > .DrawPanel--MessageBox > *.DrawPanel--Message > :last-child > :last-child {
+    color: var(--color_secondary3);
+    font-family: "SF Pro Text";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+    letter-spacing: -0.08px;
+
+    margin: 0 0 0 0;
+    white-space: break-spaces;
+}
+
+.DrawPanel > .DrawPanel--MessageBox > .DrawPanel--Input-Container {
+    position: fixed;
+
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    width: 319px;
+}
+
+body[keyboard_on='0'] .DrawPanel > .DrawPanel--MessageBox > .DrawPanel--Input-Container {
+    bottom: calc(var(--safe-area-inset-bottom) + 8px);
+    height: 52px;
+}
+
+body[keyboard_on='1'] .DrawPanel > .DrawPanel--MessageBox > .DrawPanel--Input-Container {
+    bottom: calc(var(--safe-area-inset-bottom) + 8px + var(--keyboard-height));
+}
+
+.DrawPanel .DrawPanel--Input input:focus {
+    animation: blink_input_opacity_to_prevent_scrolling_when_focus 0.01s;
+}
+
+.DrawPanel > .DrawPanel--CanvasContainer {
+    position: relative;
+
+    width: 100%;
+
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: auto;
+    margin-bottom: calc(var(--safe-area-inset-bottom) + 12px);
+}
+
+.DrawPanel-Drawer > .DrawPanel--CanvasContainer {
+    order: 1;
+    height: 319px;
+    margin-top: 4px;
+}
+
+.DrawPanel > .DrawPanel--CanvasContainer > .DrawPanel--Canvas {
+    background: #FFFFFF;
+    border: 2px solid var(--custom_card_background);
+    border-radius: 28px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 319px;
+    width: 319px;
+    max-width: 319px;
+    min-height: 319px;
+    height: 319px;
+    max-height: 319px;
+}
+
+.DrawPanel > .DrawPanel--CanvasContainer > .DrawPanel--CanvasBottom {
+    margin-top: 16px;
+    padding-top: 12px;
+    box-shadow: 0 -2px 0 var(--custom_card_background);
+
+    width: 100vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.DrawPanel-Drawer > .DrawPanel--CanvasContainer > .DrawPanel--CanvasBottom {
+    display: none;
+}
+
+.DrawPanel > .DrawPanel--CanvasContainer > .DrawPanel--CanvasBottom > .DrawPanel--CanvasController {
+    height: 36px;
+    width: 319px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.DrawPanel > .DrawPanel--CanvasContainer > .DrawPanel--CanvasBottom > .DrawPanel--CanvasController > .DrawPanel--CanvasController-Mode {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.DrawPanel {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+body[keyboard_on='0'] .DrawPanel {
+    height: 100vh;
+}
+
+body[keyboard_on='1'] .DrawPanel {
+    height: calc(100vh - var(--keyboard-height));
+}
+
+.DrawPanel .vkuiSlider {
+    width: -webkit-fill-available;
+}
+
+.DrawPanel .vkuiSlider::before, .DrawPanel .vkuiSlider__dragger::before {
+    height: 17px;
+    margin-top: -6px;
+    border-radius: 20px;
+}
+
+.DrawPanel > .DrawPanel--Users {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.DrawPanel > .DrawPanel--Users > * {
+    position: relative;
+}
+
+.DrawPanel > .DrawPanel--Users > * > :last-child {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background: var(--custom_card_background);
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
