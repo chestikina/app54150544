@@ -3140,7 +3140,8 @@ html {
 }
 
 .Profile > .UserInfoContainer > .ActionCards .MainActionCard.GlobalCanvas,
-.Profile > .UserInfoContainer > .ActionCards .MainActionCard.ArtBattle {
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.ArtBattle,
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.Marathon {
     width: calc(100% - 56px);
     padding: 11px 20px 17px 8px;
     background: var(--gradient_pink);
@@ -3153,8 +3154,13 @@ html {
 }
 
 .Profile > .UserInfoContainer > .ActionCards .MainActionCard.GlobalCanvas:hover,
-.Profile > .UserInfoContainer > .ActionCards .MainActionCard.ArtBattle:hover {
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.ArtBattle:hover,
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.Marathon:hover {
     transform: scale(1.025);
+}
+
+.Profile > .UserInfoContainer > .ActionCards .MainActionCard.Marathon {
+    background: #F2AE91;
 }
 
 .Profile .ActionCards .GalleryGuessed {
@@ -4110,4 +4116,64 @@ body[keyboard_on='1'] .DrawPanel {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#marathon .marathon-task {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: 13px;
+    background: var(--custom_card_background);
+    color: var(--color_primary);
+}
+
+#marathon .marathon-task > :last-child > :first-child,
+#marathon .marathon-gifts > * > :last-child > :first-child {
+    font-family: 'Manrope Medium';
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    color: var(--color_primary);
+}
+
+#marathon .marathon-task > :last-child > :last-child,
+#marathon .marathon-gifts > * > :last-child > :last-child {
+    font-family: 'Manrope Semibold';
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    color: var(--color_secondary);
+}
+
+#marathon .marathon-gifts {
+    display: flex;
+    gap: 18px;
+    overflow-x: scroll;
+}
+
+#marathon .marathon-gifts > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+#marathon .marathon-gifts > * > :first-child {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    background: var(--custom_card_background);
+}
+
+#marathon .marathon-gifts > * > :last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
 }

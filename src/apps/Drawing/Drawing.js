@@ -98,6 +98,7 @@ import Bookmarks from "./Bookmarks";
 import Search from "./Search";
 import Settings from "./Settings";
 import Reports, {ReportView} from "./Reports";
+import Marathon from "./Marathon";
 
 import (`../../css/Drawing/${window.location.search.length > 0 && JSON.parse('{"' + decodeURI(window.location.search.substring(1)).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}').vk_platform === 'desktop_web' ? 'Desktop' : 'Mobile'}.css`);
 
@@ -1143,7 +1144,7 @@ class Drawing extends React.Component {
     }
 
     isPanelWithContainerCards(element_id) {
-        return ['friends', 'gallery', 'guessed_pictures', 'feed', 'stats', 'shop', 'lvl_help', 'services', 'friend_list', 'suggestions', 'suggestions_word', 'suggestions_idea', 'bookmarks', 'search', 'settings', 'tags', 'reports'].indexOf(element_id) > -1;
+        return ['friends', 'gallery', 'guessed_pictures', 'feed', 'stats', 'shop', 'lvl_help', 'services', 'friend_list', 'suggestions', 'suggestions_word', 'suggestions_idea', 'bookmarks', 'search', 'settings', 'tags', 'reports', 'marathon'].indexOf(element_id) > -1;
     }
 
     async actionAfterGame(onlyNativeAd = false) {
@@ -1648,6 +1649,13 @@ class Drawing extends React.Component {
                                         id: 'week_gifts',
                                         component: <React.Fragment>
                                             <WeekGifts t={this}/>
+                                            {snackbar}
+                                        </React.Fragment>
+                                    },
+                                    {
+                                        id: 'marathon',
+                                        component: <React.Fragment>
+                                            <Marathon t={this}/>
                                             {snackbar}
                                         </React.Fragment>
                                     },

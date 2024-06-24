@@ -31,6 +31,7 @@ import {Icon28AddCircleOutline} from "@vkontakte/icons";
 import eruda from 'eruda';
 import bridge from "@vkontakte/vk-bridge";
 import {UserAvatar} from "./UserAvatarFrame";
+import {ReactComponent as IconGift} from "../../assets/drawing/icons/icon_gift_28.svg";
 
 let globalCanvasTicker;
 
@@ -273,53 +274,67 @@ export class Main extends PureComponent {
                         </div>
                         <div>
                             {
-                                (activeMiniGame === 0 || needShowGlobalCanvasButton) ?
+                                (new Date() === new Date(2024, 6, 1) || user.admin) ?
                                     <div
-                                        className='ActionCard MainActionCard GlobalCanvas'
+                                        className='ActionCard MainActionCard Marathon'
                                         onClick={() => {
-                                            if (canvas_status.end !== 0 || canvas_status.start !== 0) {
-                                                if (canvas_status.start >= Date.now()) return;
-                                                if (canvas_status.end !== 0 && canvas_status.end <= Date.now()) return;
-                                            }
-
-                                            bridge.send('VKWebAppStorageSet', {key: 'canvas_new_mode', value: '1'});
-                                            t.setState({isShowGlobalCanvas: false});
-                                            this.setState({isShowGlobalCanvas: false});
-                                            t.go('global_canvas');
+                                            t.go('marathon');
                                         }}
                                     >
-                                        {
-                                            canvas_status.start >= Date.now() ?
-                                                `${globalCanvasTime.hours}:${globalCanvasTime.minutes}:${globalCanvasTime.seconds}` :
-                                                <React.Fragment>
-                                                    <Icon28CrownOutline/> Общий холст
-                                                </React.Fragment>
-                                        }
-                                    </div>
-                                    :
+                                        <IconGift/> Марафон
+                                    </div> :
                                     (
-                                        activeMiniGame === 1 ?
+                                        (activeMiniGame === 0 || needShowGlobalCanvasButton) ?
                                             <div
-                                                className='ActionCard MainActionCard ArtBattle'
+                                                className='ActionCard MainActionCard GlobalCanvas'
                                                 onClick={() => {
-                                                    t.go('art_battle_placeholder');
+                                                    if (canvas_status.end !== 0 || canvas_status.start !== 0) {
+                                                        if (canvas_status.start >= Date.now()) return;
+                                                        if (canvas_status.end !== 0 && canvas_status.end <= Date.now()) return;
+                                                    }
+
+                                                    bridge.send('VKWebAppStorageSet', {
+                                                        key: 'canvas_new_mode',
+                                                        value: '1'
+                                                    });
+                                                    t.setState({isShowGlobalCanvas: false});
+                                                    this.setState({isShowGlobalCanvas: false});
+                                                    t.go('global_canvas');
                                                 }}
                                             >
-                                                <Icon28CupOutline/> Битва артов
+                                                {
+                                                    canvas_status.start >= Date.now() ?
+                                                        `${globalCanvasTime.hours}:${globalCanvasTime.minutes}:${globalCanvasTime.seconds}` :
+                                                        <React.Fragment>
+                                                            <Icon28CrownOutline/> Общий холст
+                                                        </React.Fragment>
+                                                }
                                             </div>
                                             :
                                             (
-                                                activeMiniGame === 2 &&
-                                                <div
-                                                    className='ActionCard MainActionCard Gift'
-                                                    style={{
-                                                        background: `url(${getSrcUrl(require('../../assets/drawing/backgrounds/gifts.png'))}) no-repeat`,
-                                                        backgroundSize: 'cover'
-                                                    }}
-                                                    onClick={() => t.go('week_gifts')}
-                                                >
-                                                    <Icon28GiftOutline/> Розыгрыш
-                                                </div>
+                                                activeMiniGame === 1 ?
+                                                    <div
+                                                        className='ActionCard MainActionCard ArtBattle'
+                                                        onClick={() => {
+                                                            t.go('art_battle_placeholder');
+                                                        }}
+                                                    >
+                                                        <Icon28CupOutline/> Битва артов
+                                                    </div>
+                                                    :
+                                                    (
+                                                        activeMiniGame === 2 &&
+                                                        <div
+                                                            className='ActionCard MainActionCard Gift'
+                                                            style={{
+                                                                background: `url(${getSrcUrl(require('../../assets/drawing/backgrounds/gifts.png'))}) no-repeat`,
+                                                                backgroundSize: 'cover'
+                                                            }}
+                                                            onClick={() => t.go('week_gifts')}
+                                                        >
+                                                            <Icon28GiftOutline/> Розыгрыш
+                                                        </div>
+                                                    )
                                             )
                                     )
                             }
