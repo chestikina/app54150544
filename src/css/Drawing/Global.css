@@ -4128,6 +4128,12 @@ body[keyboard_on='1'] .DrawPanel {
     color: var(--color_primary);
 }
 
+#marathon .marathon-task > :last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 #marathon .marathon-task > :last-child > :first-child,
 #marathon .marathon-gifts > * > :last-child > :first-child {
     font-family: 'Manrope Medium';
