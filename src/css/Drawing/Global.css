@@ -4138,6 +4138,11 @@ body[keyboard_on='1'] .DrawPanel {
     color: var(--color_primary);
 }
 
+#marathon .marathon-gifts > * > :last-child > :first-child,
+#marathon .marathon-gifts > * > :last-child > :last-child {
+    text-align: center;
+}
+
 #marathon .marathon-task > :last-child > :last-child,
 #marathon .marathon-gifts > * > :last-child > :last-child {
     font-family: 'Manrope Semibold';
@@ -4152,6 +4157,7 @@ body[keyboard_on='1'] .DrawPanel {
     display: flex;
     gap: 18px;
     overflow-x: scroll;
+    margin-top: 18px;
 }
 
 #marathon .marathon-gifts > * {

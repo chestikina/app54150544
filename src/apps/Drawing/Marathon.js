@@ -39,7 +39,7 @@ export class Marathon extends PureComponent {
                     </div>
                 </div>
                 <div>
-                    <div className='marathon_task'>
+                    <div className='marathon-task'>
                         <Icon28BillheadOutline/>
                         <div>
                             <span>Задание</span>
