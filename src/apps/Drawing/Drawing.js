@@ -744,6 +744,7 @@ class Drawing extends React.Component {
             setStorageValue(`bookmarks_${currentListIndex}`, JSON.stringify(currentList));
             this.setState({bookmarks, bookmarks_count});
             console.log('add bookmark', {currentListIndex, currentList});
+            socket.call('marathon.addBookmark', {type, object});
         } else if (action === 'r') {
             let {bookmarks, bookmarks_count} = this.state;
             const currentBookmarkIndex = this.state.bookmarks.findIndex(value => value === `${type}_${object}`);

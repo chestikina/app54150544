@@ -7,10 +7,10 @@ import {
 import {
     Icon28LightbulbOutline,
     Icon28ArticlesOutline,
-    Icon28BugOutline, Icon28FavoriteOutline, Icon28NotebookCheckOutline, Icon28BillheadOutline
+    Icon28BugOutline, Icon28FavoriteOutline, Icon28NotebookCheckOutline, Icon28BillheadOutline, Icon28CheckCircleOutline
 } from "@vkontakte/icons";
 import {
-    decOfNum,
+    decOfNum, getSrcUrl,
     isPlatformDesktop, openUrl
 } from "../../js/utils";
 import {ReactComponent as IconCoin} from "../../assets/drawing/icons/icon_coin_32.svg";
@@ -20,10 +20,27 @@ import {ReactComponent as IconLocked} from "../../assets/drawing/icons/icon_lock
 
 export class Marathon extends PureComponent {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data: []
+        }
+    }
+
+    componentDidMount() {
+        const {socket} = this.props.t;
+        socket.call('marathon.getData', {}, async r => {
+            this.setState({data: r.response});
+        });
+    }
+
     render() {
         const
             {t} = this.props,
-            {user} = t.state
+            {user} = t.state,
+            {data} = this.state,
+            currentTask = data[user.marathon_next_task_time > Date.now() ? (user.marathon_active_task - 1) : user.marathon_active_task]
         ;
         return <React.Fragment>
             <PanelHeader
@@ -40,79 +57,60 @@ export class Marathon extends PureComponent {
                 </div>
                 <div>
                     <div className='marathon-task'>
-                        <Icon28BillheadOutline/>
-                        <div>
-                            <span>Задание</span>
-                            <span>Сыграйте в своём лобби три раза</span>
-                        </div>
+                        {
+                            currentTask ?
+                                <React.Fragment>
+                                    {
+                                        currentTask.completed ?
+                                            <Icon28CheckCircleOutline/> : <Icon28BillheadOutline/>
+                                    }
+                                    <div>
+                                        <span>Задание{currentTask.completed ? ' выполнено' : ''}</span>
+                                        <span>{currentTask.completed ? `Новое задание будет ${new Date(user.marathon_next_task_time).toLocaleDateString('ru', {
+                                            day: 'numeric',
+                                            month: 'long',
+                                            hour: 'numeric',
+                                            minute: 'numeric'
+                                        })}` : currentTask.text}</span>
+                                    </div>
+                                </React.Fragment>
+                                :
+                                <React.Fragment>
+                                    <Icon28CheckCircleOutline/>
+                                    <div>
+                                        <span>Ты молодец!</span>
+                                        <span>Все задания выполнены, ожидайте подведения итогов</span>
+                                    </div>
+                                </React.Fragment>
+                        }
                     </div>
                     <div className='marathon-gifts'>
                         {
-                            [
-                                {
-                                    title: 'Подарок',
-                                    descr: 'Подписка avocado+ на час',
-                                    icon: <IconAvocado/>,
-                                    locked: false,
-                                },
-                                {
-                                    title: 'Билет',
-                                    descr: 'Розыгрыш стикеров',
-                                    icon: <IconLabel/>,
-                                    locked: false,
-                                },
-                                {
-                                    title: 'Монеты',
-                                    descr: '+ 10 000',
-                                    icon: <IconCoin/>,
-                                    locked: false,
-                                },
-                                {
-                                    title: 'Подарок',
-                                    descr: 'Подписка avocado+ на 12 часов',
-                                    icon: <IconAvocado/>,
-                                    locked: true,
-                                },
-                                {
-                                    title: 'Монеты',
-                                    descr: '+ 10 000',
-                                    icon: <IconCoin/>,
-                                    locked: true,
-                                },
-                                {
-                                    title: 'Билет',
-                                    descr: 'Розыгрыш капсулы мини',
-                                    icon: <IconLabel/>,
-                                    locked: true,
-                                },
-                                {
-                                    title: 'Монеты',
-                                    descr: '+ 20 000',
-                                    icon: <IconCoin/>,
-                                    locked: true,
-                                },
-                                {
-                                    title: 'Билет',
-                                    descr: 'Розыгрыш avocado+ на месяц',
-                                    icon: <IconLabel/>,
-                                    locked: true,
-                                },
-                                {
-                                    title: 'Билет',
-                                    descr: 'Розыгрыш VK Музыка на 3 месяца',
-                                    icon: <IconLabel/>,
-                                    locked: true,
-                                },
-                            ].map((value, index) =>
+                            data.map((value, index) =>
                                 <div key={`gift-${index}`}>
                                     <div>
-                                        {value.locked ? <IconLocked/> : value.icon}
+                                        {value.completed ? (value.type === 'gift' ?
+                                                <IconAvocado/> : (value.type === 'ticket' ? <IconLabel/> : <IconCoin/>)) :
+                                            <IconLocked/>}
                                     </div>
                                     <div>
-                                        <span>{value.locked ? 'Подарок' : value.title}</span>
-                                        <span>{value.locked ? 'Выполните задание' : value.descr}</span>
+                                        <span>{value.completed ? (value.type === 'gift' ?
+                                            'Подарок' : (value.type === 'ticket' ? 'Билет' : 'Монеты')) : 'Закрыто'}</span>
+                                        <span>{value.completed ? value.reward : 'Выполните задание'}</span>
                                     </div>
                                 </div>
+                            )
+                        }
+                    </div>
+                    <div className='marathon-art'>
+                        {
+                            new Array(9).fill(0).map((v, i) =>
+                                <img
+                                    alt='art'
+                                    key={`art-${i}`}
+                                    className={(data[i] && data[i].completed) ? '' : 'locked'}
+                                    src={getSrcUrl(require(`../../assets/drawing/marathon/marathon_art-${i + 1}.webp`))}
+                                />
                             )
                         }
                     </div>

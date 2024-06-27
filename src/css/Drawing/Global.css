@@ -4189,3 +4189,17 @@ body[keyboard_on='1'] .DrawPanel {
     align-items: center;
     gap: 2px;
 }
+
+#marathon .marathon-art {
+    margin-top: 18px;
+    display: grid;
+    grid-gap: 0 0;
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
+    border-radius: 13px;
+}
+
+#marathon .marathon-art > *.locked {
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+}
