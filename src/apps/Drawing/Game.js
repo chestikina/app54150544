@@ -1013,7 +1013,7 @@ export class Game extends PureComponent {
                     >
                         <Slider
                             step={1}
-                            min={4}
+                            min={2}
                             max={30}
                             value={Number(lineWidth)}
                             onChange={(lineWidth) => this.setState({lineWidth})}
