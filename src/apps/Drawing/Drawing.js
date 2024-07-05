@@ -368,10 +368,13 @@ class Drawing extends React.Component {
         this.newAdSupports = bridge.supports('VKWebAppShowBannerAd');
         console.log({newAdSupports: this.newAdSupports});
         this.showNewAd = () => {
-            bridge.send('VKWebAppShowBannerAd', {
-                banner_location: 'bottom',
-                layout_type: 'resize'
-            });
+            try {
+                bridge.send('VKWebAppShowBannerAd', {
+                    banner_location: 'bottom',
+                    layout_type: 'resize'
+                });
+            } catch (e) {
+            }
         };
 
         this.log = async (key, event, data) => {
@@ -422,41 +425,41 @@ class Drawing extends React.Component {
 
         this.setState({bridge_inited: true});
         loadCssFontsODR([
-            // CSS files
+                // CSS files
 
-            /*
-            * export code:
-            [...new Set(data2.split('\n').filter(value => value.includes('font-family')).map(value => {
-                const str = 'font-family: ';
-                return value.substring(value.indexOf(str) + str.length).replace(';', '').replaceAll('"', '').replaceAll("'", '')
-            }))]
-            * */
+                /*
+                * export code:
+                [...new Set(data2.split('\n').filter(value => value.includes('font-family')).map(value => {
+                    const str = 'font-family: ';
+                    return value.substring(value.indexOf(str) + str.length).replace(';', '').replaceAll('"', '').replaceAll("'", '')
+                }))]
+                * */
 
-            'Manrope',
-            'Manrope Medium',
-            'Manrope Semibold',
-            'Manrope Bold',
-            'Manrope ExtraBold',
+                'Manrope',
+                'Manrope Medium',
+                'Manrope Semibold',
+                'Manrope Bold',
+                'Manrope ExtraBold',
 
-            'SF Pro Text',
-            'SF Pro Text Medium',
-            'SF Pro Text Semibold',
-            'SF Pro Text Bold',
+                'SF Pro Text',
+                'SF Pro Text Medium',
+                'SF Pro Text Semibold',
+                'SF Pro Text Bold',
 
-            'SF Pro Rounded',
-            'SF Pro Rounded Medium',
-            'SF Pro Rounded Semibold',
-            'SF Pro Rounded Bold',
+                'SF Pro Rounded',
+                'SF Pro Rounded Medium',
+                'SF Pro Rounded Semibold',
+                'SF Pro Rounded Bold',
 
-            'SF Pro Display Medium',
-            'SF Pro Display Semibold',
-            'SF Pro Display',
+                'SF Pro Display Medium',
+                'SF Pro Display Semibold',
+                'SF Pro Display',
 
-            'Inter Bold',
+                'Inter Bold',
 
-            // VK STORY
-            'TT Commons Demibold',
-            'Inter Black',
+                // VK STORY
+                'TT Commons Demibold',
+                'Inter Black',
             ]
         );
         //loadFonts();
@@ -570,7 +573,9 @@ class Drawing extends React.Component {
             vk_user: vk_user.id == urlParams.vk_user_id ? vk_user : (vk_user_[0] || vk_user)
         });
 
-        bridge.send('VKWebAppEnableSwipeBack');
+        if (bridge.supports('VKWebAppEnableSwipeBack')) {
+            bridge.send('VKWebAppEnableSwipeBack');
+        }
 
         this.connect();
 

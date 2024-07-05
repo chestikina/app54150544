@@ -4194,7 +4194,7 @@ body[keyboard_on='1'] .DrawPanel {
     margin-top: 18px;
     display: grid;
     grid-gap: 0 0;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     overflow: hidden;
     border-radius: 13px;
 }
@@ -4202,4 +4202,8 @@ body[keyboard_on='1'] .DrawPanel {
 #marathon .marathon-art > *.locked {
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
+}
+
+#marathon .marathon-art > * {
+    width: 100%;
 }

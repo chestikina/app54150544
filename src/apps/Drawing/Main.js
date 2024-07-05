@@ -13,7 +13,7 @@ import {
     Icon28CupOutline,
     Icon28ServicesOutline,
     Icon28Cards2Outline,
-    Icon28SettingsOutline
+    Icon28SettingsOutline, Icon28SneakerOutline
 } from "@vkontakte/icons";
 import {
     convertMsToNormalTime,
@@ -274,69 +274,60 @@ export class Main extends PureComponent {
                         </div>
                         <div>
                             {
-                                (new Date() === new Date(2024, 6, 1) || user.admin) ?
-                                    <div
-                                        className='ActionCard MainActionCard Marathon'
-                                        onClick={() => {
-                                            t.go('marathon');
-                                        }}
-                                    >
-                                        <IconGift/> Марафон
-                                    </div> :
-                                    (
-                                        (activeMiniGame === 0 || needShowGlobalCanvasButton) ?
-                                            <div
-                                                className='ActionCard MainActionCard GlobalCanvas'
-                                                onClick={() => {
-                                                    if (canvas_status.end !== 0 || canvas_status.start !== 0) {
-                                                        if (canvas_status.start >= Date.now()) return;
-                                                        if (canvas_status.end !== 0 && canvas_status.end <= Date.now()) return;
-                                                    }
-
-                                                    bridge.send('VKWebAppStorageSet', {
-                                                        key: 'canvas_new_mode',
-                                                        value: '1'
-                                                    });
-                                                    t.setState({isShowGlobalCanvas: false});
-                                                    this.setState({isShowGlobalCanvas: false});
-                                                    t.go('global_canvas');
-                                                }}
-                                            >
-                                                {
-                                                    canvas_status.start >= Date.now() ?
-                                                        `${globalCanvasTime.hours}:${globalCanvasTime.minutes}:${globalCanvasTime.seconds}` :
-                                                        <React.Fragment>
-                                                            <Icon28CrownOutline/> Общий холст
-                                                        </React.Fragment>
+                                (
+                                    (activeMiniGame === 0 || needShowGlobalCanvasButton) ?
+                                        <div
+                                            className='ActionCard MainActionCard GlobalCanvas'
+                                            onClick={() => {
+                                                if (canvas_status.end !== 0 || canvas_status.start !== 0) {
+                                                    if (canvas_status.start >= Date.now()) return;
+                                                    if (canvas_status.end !== 0 && canvas_status.end <= Date.now()) return;
                                                 }
-                                            </div>
-                                            :
-                                            (
-                                                activeMiniGame === 1 ?
+
+                                                bridge.send('VKWebAppStorageSet', {
+                                                    key: 'canvas_new_mode',
+                                                    value: '1'
+                                                });
+                                                t.setState({isShowGlobalCanvas: false});
+                                                this.setState({isShowGlobalCanvas: false});
+                                                t.go('global_canvas');
+                                            }}
+                                        >
+                                            {
+                                                canvas_status.start >= Date.now() ?
+                                                    `${globalCanvasTime.hours}:${globalCanvasTime.minutes}:${globalCanvasTime.seconds}` :
+                                                    <React.Fragment>
+                                                        <Icon28CrownOutline/> Общий холст
+                                                    </React.Fragment>
+                                            }
+                                        </div>
+                                        :
+                                        (
+                                            activeMiniGame === 1 ?
+                                                <div
+                                                    className='ActionCard MainActionCard ArtBattle'
+                                                    onClick={() => {
+                                                        t.go('art_battle_placeholder');
+                                                    }}
+                                                >
+                                                    <Icon28CupOutline/> Битва артов
+                                                </div>
+                                                :
+                                                (
+                                                    activeMiniGame === 2 &&
                                                     <div
-                                                        className='ActionCard MainActionCard ArtBattle'
-                                                        onClick={() => {
-                                                            t.go('art_battle_placeholder');
+                                                        className='ActionCard MainActionCard Gift'
+                                                        style={{
+                                                            background: `url(${getSrcUrl(require('../../assets/drawing/backgrounds/gifts.png'))}) no-repeat`,
+                                                            backgroundSize: 'cover'
                                                         }}
+                                                        onClick={() => t.go('week_gifts')}
                                                     >
-                                                        <Icon28CupOutline/> Битва артов
+                                                        <Icon28GiftOutline/> Розыгрыш
                                                     </div>
-                                                    :
-                                                    (
-                                                        activeMiniGame === 2 &&
-                                                        <div
-                                                            className='ActionCard MainActionCard Gift'
-                                                            style={{
-                                                                background: `url(${getSrcUrl(require('../../assets/drawing/backgrounds/gifts.png'))}) no-repeat`,
-                                                                backgroundSize: 'cover'
-                                                            }}
-                                                            onClick={() => t.go('week_gifts')}
-                                                        >
-                                                            <Icon28GiftOutline/> Розыгрыш
-                                                        </div>
-                                                    )
-                                            )
-                                    )
+                                                )
+                                        )
+                                )
                             }
                             <div
                                 className='ActionCard MainActionCard Suggestion'
@@ -344,6 +335,18 @@ export class Main extends PureComponent {
                             >
                                 <Icon28ServicesOutline/> Сервисы
                             </div>
+                        </div>
+                        <div
+                            className='ActionCard MainActionCard'
+                            onClick={() => t.go('marathon')}
+                            style={{
+                                backgroundImage: `url(${getSrcUrl(require('../../assets/drawing/marathon/marathon-art.webp'))})`,
+                                backgroundPositionY: -83,
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat'
+                            }}
+                        >
+                            <Icon28SneakerOutline/> Марафон
                         </div>
                         <div>
                             <Tooltip
