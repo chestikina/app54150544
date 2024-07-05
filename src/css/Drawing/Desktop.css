@@ -302,13 +302,6 @@ body {
     transform: translateX(-50%);
 }
 
-.Profile .Online {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 16px;
-}
-
 .UserAvatarFrame {
     margin: 38px 162px;
 }

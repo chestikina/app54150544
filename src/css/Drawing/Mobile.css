@@ -325,10 +325,6 @@ body {
     margin-right: 24px;
 }
 
-.Profile .Online {
-    margin: 24px auto auto;
-}
-
 .UserAvatarFrame {
     margin: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 4px) 20px 0;
 }

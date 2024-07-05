@@ -2599,6 +2599,10 @@ html {
     overflow: hidden;
 }
 
+.Profile {
+    padding-bottom: 32px;
+}
+
 #gallery .Panel_Container_Card .MiniCard img,
 #guessed_pictures .Panel_Container_Card .MiniCard img,
 #search .Panel_Container_Card .MiniCards.MiniCardsPicture .MiniCard img {
@@ -3258,6 +3262,8 @@ html {
 
     color: var(--color_secondary);
     opacity: .5;
+
+    margin: 24px auto auto;
 }
 
 .UserAvatarFrame {
