@@ -1,6 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {
+    Button,
+    HorizontalScroll,
     PanelHeader,
     PanelHeaderBack,
 } from "@vkontakte/vkui";
@@ -40,7 +42,7 @@ export class Marathon extends PureComponent {
             {t} = this.props,
             {user} = t.state,
             {data} = this.state,
-            currentTask = data[user.marathon_next_task_time > Date.now() ? (user.marathon_active_task - 1) : user.marathon_active_task]
+            currentTask = data[user.marathon_next_task_time > Date.now() ? (user.marathon_active_task - 2) : (user.marathon_active_task - 1)]
         ;
         return <React.Fragment>
             <PanelHeader
@@ -52,7 +54,17 @@ export class Marathon extends PureComponent {
                     <Icon28NotebookCheckOutline width={36} height={36}/>
                     <div className='Panel_Container_Card-Text'>
                         <h2>Марафон</h2>
-                        <p>Выполняй задания и получай призы. Задания обновляются каждый день, не пропусти!</p>
+                        <p>Выполняй задания, открывай фрагменты обложки и получай призы. Задания обновляются каждый день, не пропусти!</p>
+                    </div>
+                    <div className='Panel_Container_Card-Buttons'>
+                        <Button
+                            stretched
+                            size='m'
+                            mode='outline'
+                            onClick={() => openUrl('https://vk.com/@draw_app-marathon-2024')}
+                        >
+                            Подробнее
+                        </Button>
                     </div>
                 </div>
                 <div>
@@ -84,24 +96,31 @@ export class Marathon extends PureComponent {
                                 </React.Fragment>
                         }
                     </div>
-                    <div className='marathon-gifts'>
-                        {
-                            data.map((value, index) =>
-                                <div key={`gift-${index}`}>
-                                    <div>
-                                        {value.completed ? (value.type === 'gift' ?
-                                                <IconAvocado/> : (value.type === 'ticket' ? <IconLabel/> : <IconCoin/>)) :
-                                            <IconLocked/>}
-                                    </div>
-                                    <div>
+                    <HorizontalScroll
+                        showArrows
+                        getScrollToLeft={(i) => i - 64}
+                        getScrollToRight={(i) => i + 64}
+                    >
+                        <div className='marathon-gifts'>
+                            {
+                                data.map((value, index) =>
+                                    <div key={`gift-${index}`}>
+                                        <div>
+                                            {value.completed ? (value.type === 'gift' ?
+                                                    <IconAvocado/> : (value.type === 'ticket' ? <IconLabel/> :
+                                                        <IconCoin/>)) :
+                                                <IconLocked/>}
+                                        </div>
+                                        <div>
                                         <span>{value.completed ? (value.type === 'gift' ?
                                             'Подарок' : (value.type === 'ticket' ? 'Билет' : 'Монеты')) : 'Закрыто'}</span>
-                                        <span>{value.completed ? value.reward : 'Выполните задание'}</span>
+                                            <span>{value.completed ? value.reward : 'Выполните задание'}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            )
-                        }
-                    </div>
+                                )
+                            }
+                        </div>
+                    </HorizontalScroll>
                     <div className='marathon-art'>
                         {
                             new Array(9).fill(0).map((v, i) =>

@@ -4168,8 +4168,8 @@ body[keyboard_on='1'] .DrawPanel {
 #marathon .marathon-gifts {
     display: flex;
     gap: 18px;
-    overflow-x: scroll;
     margin-top: 18px;
+    width: fit-content;
 }
 
 #marathon .marathon-gifts > * {
@@ -4206,8 +4206,11 @@ body[keyboard_on='1'] .DrawPanel {
 }
 
 #marathon .marathon-art > *.locked {
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
+    filter: blur(100px);
+    -webkit-filter: blur(100px);
+    -moz-filter: blur(100px);
+    -o-filter: blur(100px);
+    -ms-filter: blur(100px);
 }
 
 #marathon .marathon-art > * {

@@ -761,7 +761,7 @@ export class Game extends PureComponent {
         }
     }
 
-    renderDrawpanel() {
+    render() {
         let
             {t, lobbyId, online, word} = this.props,
             {user, vk_user, test_game, api_manager, game_players} = t.state,
@@ -1233,7 +1233,7 @@ export class Game extends PureComponent {
         </div>
     }
 
-    render() {
+    renderOldDrawPanel() {
         let
             {t, lobbyId, online, word} = this.props,
             {user, vk_user, test_game, api_manager, game_players} = t.state,

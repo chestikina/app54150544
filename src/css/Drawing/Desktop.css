@@ -400,3 +400,7 @@ body[keyboard_on='0'] .DrawPanel-Drawer > .DrawPanel--MessageBox {
 .DrawPanel > .DrawPanel--MessageBox {
     /*margin-bottom: calc(52px);*/
 }
+
+#marathon .Panel_Container_Card-TwoCards > :last-child {
+    height: unset;
+}

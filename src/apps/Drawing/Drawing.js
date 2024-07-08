@@ -115,7 +115,7 @@ let
 ;
 
 export const
-    app_version = '1.4.3',
+    app_version = '1.4.4',
 
     MODAL_CARD_PLAY_MODE = 'play-mode',
     MODAL_CARD_NEW_UPDATE = 'new-update',
