@@ -43,6 +43,8 @@ import bridge from "@vkontakte/vk-bridge";
 //import App from './apps/CatStoriesAdvert';
 //import App from './apps/CatWallPostsStats';
 //import App from './apps/PhotoToAnimeAI';
+//import App from './apps/RedFlagFromTG';
+import App from './apps/VKFilm';
 
 //import App from './apps/BattleStat';
 //import App from './apps/BattleStatCatalog';
@@ -52,7 +54,7 @@ import bridge from "@vkontakte/vk-bridge";
 
 //import App from './apps/ClickerBattle/ClickerBattle';
 
-import App from './apps/Drawing/Drawing';
+//import App from './apps/Drawing/Drawing';
 //import App from './apps/Drawing/Global';
 
 //import App from './apps/RandomCooking';

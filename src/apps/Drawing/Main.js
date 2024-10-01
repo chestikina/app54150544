@@ -336,18 +336,21 @@ export class Main extends PureComponent {
                                 <Icon28ServicesOutline/> Сервисы
                             </div>
                         </div>
-                        <div
-                            className='ActionCard MainActionCard'
-                            onClick={() => t.go('marathon')}
-                            style={{
-                                backgroundImage: `url(${getSrcUrl(require('../../assets/drawing/marathon/marathon-art.webp'))})`,
-                                backgroundPositionY: -83,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat'
-                            }}
-                        >
-                            <Icon28SneakerOutline/> Марафон
-                        </div>
+                        {
+                            false &&
+                            <div
+                                className='ActionCard MainActionCard'
+                                onClick={() => t.go('marathon')}
+                                style={{
+                                    backgroundImage: `url(${getSrcUrl(require('../../assets/drawing/marathon/marathon-art.webp'))})`,
+                                    backgroundPositionY: -83,
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat'
+                                }}
+                            >
+                                <Icon28SneakerOutline/> Марафон
+                            </div>
+                        }
                         <div>
                             <Tooltip
                                 text='Ищите свои рисунки тут. Их ещё можно дорисовать!'

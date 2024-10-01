@@ -3,6 +3,7 @@ import {createCanvas} from "canvas";
 import {func} from "prop-types";
 import axios from "axios";
 import fixWebmDuration from "fix-webm-duration";
+import fetch from "node-fetch";
 
 export function convertTextToLines(text, font, max_width) {
     const
@@ -411,15 +412,15 @@ export function getUrlParams() {
     /*const params = window.location.search.length > 0 && JSON.parse('{"' + decodeURI(window.location.search.substring(1)).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
     if (params && params.vk_chat_id) params.vk_chat_id = decodeURIComponent(params.vk_chat_id);
     return params;*/
-	/*const params = {};
-	if (window.location.search.length > 0) 
-		window.location.search.substring(1).split('&').map(value => [value.substring(0, value.indexOf('=')), value.substring(value.indexOf('=') + 1)]).forEach(v => obj[v[0]] = decodeURIComponent(v[1]));
-	return params;*/
-	const params = {};
-	for( const [key, value] of new URLSearchParams(window.location.search)){
-		params[key] = value;
-	}
-	return params;
+    /*const params = {};
+    if (window.location.search.length > 0)
+        window.location.search.substring(1).split('&').map(value => [value.substring(0, value.indexOf('=')), value.substring(value.indexOf('=') + 1)]).forEach(v => obj[v[0]] = decodeURIComponent(v[1]));
+    return params;*/
+    const params = {};
+    for (const [key, value] of new URLSearchParams(window.location.search)) {
+        params[key] = value;
+    }
+    return params;
 }
 
 export const platforms = {
@@ -790,4 +791,26 @@ export function getMostRepeatingValue(arr) {
         arr.filter(v => v === a).length
         - arr.filter(v => v === b).length
     ).pop();
+}
+
+const yadiskApi = 'https://cloud-api.yandex.net/v1/disk/public/resources?public_key=';
+
+export async function getFilesYaDisk(folderUrl) {
+    const data = await (await fetch(yadiskApi + folderUrl)).json();
+    return data._embedded.items;
+}
+
+export async function getYaDiskImage(url) {
+    const blob = await fetch(url, {
+        referrer: '', headers: {
+            Accept: 'image/webp,image/apng,image/*,*/*;q=0.8',
+            Referer: ''
+        }
+    }).then(res => res.blob());
+    const urlCreator = window.URL || window.webkitURL;
+    return urlCreator.createObjectURL(blob);
+}
+
+export function replaceExtensionPath(path) {
+    return path.split('.').slice(0, -1).join('.');
 }

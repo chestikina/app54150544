@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.49ea5faf.chunk.css",
-    "main.js": "./static/js/main.c10da6e1.chunk.js",
-    "main.js.map": "./static/js/main.c10da6e1.chunk.js.map",
+    "main.css": "./static/css/main.c90afd50.chunk.css",
+    "main.js": "./static/js/main.08836844.chunk.js",
+    "main.js.map": "./static/js/main.08836844.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.9d7e574d.js",
     "runtime-main.js.map": "./static/js/runtime-main.9d7e574d.js.map",
     "static/css/2.d4488d67.chunk.css": "./static/css/2.d4488d67.chunk.css",
-    "static/js/2.a5e315d8.chunk.js": "./static/js/2.a5e315d8.chunk.js",
-    "static/js/2.a5e315d8.chunk.js.map": "./static/js/2.a5e315d8.chunk.js.map",
+    "static/js/2.c3dcc4bc.chunk.js": "./static/js/2.c3dcc4bc.chunk.js",
+    "static/js/2.c3dcc4bc.chunk.js.map": "./static/js/2.c3dcc4bc.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.703a67959d52abaf9d861aacc6a4ef51.js": "./precache-manifest.703a67959d52abaf9d861aacc6a4ef51.js",
+    "precache-manifest.2a0e2a571a77e31db8611f1b586552d8.js": "./precache-manifest.2a0e2a571a77e31db8611f1b586552d8.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.d4488d67.chunk.css.map": "./static/css/2.d4488d67.chunk.css.map",
-    "static/css/main.49ea5faf.chunk.css.map": "./static/css/main.49ea5faf.chunk.css.map",
-    "static/media/Fonts.css": "./static/media/WixMadeforDisplay-SemiBold.9f30f224.ttf",
+    "static/css/main.c90afd50.chunk.css.map": "./static/css/main.c90afd50.chunk.css.map",
     "static/media/Alice-Regular.ttf": "./static/media/Alice-Regular.c91fff83.ttf",
     "static/media/FontsFree-Net-SF-Pro-Rounded-Black.ttf": "./static/media/FontsFree-Net-SF-Pro-Rounded-Black.9dbbd6b9.ttf",
     "static/media/FontsFree-Net-SF-Pro-Rounded-Bold.ttf": "./static/media/FontsFree-Net-SF-Pro-Rounded-Bold.e64fc9d0.ttf",
@@ -60,9 +59,10 @@
     "static/media/TTFirsNeue-DemiBold.ttf": "./static/media/TTFirsNeue-DemiBold.44097099.ttf",
     "static/media/TTFirsNeue-Medium.ttf": "./static/media/TTFirsNeue-Medium.df13f74f.ttf",
     "static/media/TTFirsNeue-Regular.ttf": "./static/media/TTFirsNeue-Regular.0de1b0e6.ttf",
+    "static/media/Fonts.css": "./static/media/WixMadeforDisplay-SemiBold.9f30f224.ttf",
     "static/media/WC-Mano-Negra-Bta.otf": "./static/media/WC-Mano-Negra-Bta.d9521fb6.otf",
     "static/media/background.webp": "./static/media/background.72a93b0d.webp",
-    "static/media/megaphone (1).274193a5.svg": "./static/media/megaphone (1).274193a5.svg",
+    "static/media/megaphone (1).f0464601.svg": "./static/media/megaphone (1).f0464601.svg",
     "static/media/token.png": "./static/media/token.ddb0d793.png"
   }
 }
