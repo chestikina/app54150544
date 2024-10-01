@@ -1,0 +1,111 @@
+.Customization {
+    height: 100%;
+    --accent: #877867;
+}
+
+.Customization .SlideTitle {
+    margin: 39px 22px 0;
+}
+
+.Customization .vkuiCustomSelect {
+    cursor: none;
+    margin: 18px 20px 0;
+    width: auto;
+}
+
+.Customization .vkuiFormField--ios, .Customization .vkuiFormField--android {
+    border-radius: 20px;
+    height: 54px;
+}
+
+.Customization .vkuiFormField__border, .Customization .vkuiCustomSelect__options, .Customization .vkuiCustomSelectOption {
+    background: rgba(135, 120, 103, 0.1);
+    backdrop-filter: blur(40px);
+    border: none;
+}
+
+.Customization .vkuiSelect__container, .Customization .vkuiFormField__after, .Customization .vkuiCustomSelectOption {
+    cursor: none;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: #877867;
+}
+
+.Customization .vkuiCustomSelect__options {
+    border-radius: 0 0 20px 20px;
+}
+
+.Cursors {
+    margin: 36px auto 0;
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    min-width: 91px;
+    max-width: 313px;
+    grid-template-columns: repeat(auto-fill, 91px);
+    grid-gap: 20px;
+}
+
+.Cursors > div {
+    position: relative;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 32px;
+    width: 91px;
+    height: 91px;
+}
+
+.SelectedCursor {
+    position: absolute;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    max-width: 87px;
+    max-height: 87px;
+    top: -2px;
+    left: -2px;
+    border-radius: inherit;
+}
+
+.Cursors > div > div {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemLock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    width: 40px;
+    height: 40px;
+}
+
+.Customization .SlideDescription {
+    margin: 28px 20px 0;
+}
+
+.Banners {
+    margin: 28px 16px 0;
+}
+
+.SelectedBanner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3px dashed rgba(0, 0, 0, 0.5);
+    border-radius: 21px;
+    z-index: 1;
+    pointer-events: none;
+}

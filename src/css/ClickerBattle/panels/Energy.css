@@ -1,0 +1,53 @@
+.Energy {
+    height: 100%;
+}
+
+.EnergyTextsContainer {
+    margin: 0 22px;
+}
+
+.EnergyList {
+    margin-top: 9px;
+}
+
+.EnergyList > * {
+    margin: 9px 16px;
+    display: flex;
+    align-items: center;
+}
+
+.EnergyList > * > :first-child {
+    background: rgba(92, 69, 62, 0.1);
+    border-radius: 18px;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EnergyList > * > :last-child {
+    margin-left: 16px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    line-height: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.EnergyList > * > :last-child > :first-child {
+    width: 65%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 17px;
+    color: #5C453E;
+}
+
+.EnergyList > * > :last-child > :last-child {
+    width: 35%;
+    text-align: right;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6B6356;
+}

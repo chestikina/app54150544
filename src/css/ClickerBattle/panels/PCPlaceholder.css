@@ -1,0 +1,53 @@
+.PCPlaceholder {
+    background: linear-gradient(180deg, #FEF3E9 0%, #D9C296 100%);
+}
+
+.PCPlaceholder .PlaceholderBackground {
+    position: absolute;
+    left: -95px;
+    top: -352px;
+}
+
+.PCPlaceholder .APPCode {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 458px;
+    background: linear-gradient(270deg, rgba(214, 199, 182, 0.6) 50%, rgba(214, 199, 182, 0) 100%);
+}
+
+.PCPlaceholder .APPCode .APPCodeContainer {
+    position: absolute;
+    top: 167px;
+    right: 102px;
+    bottom: 167px;
+    width: 161px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.PCPlaceholder .APPCode .APPCodeContainer .APPText {
+    font-family: SF Pro Display Bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #48312A;
+}
+
+.PCPlaceholder .APPCode .APPCodeContainer .APPQR {
+    margin-top: 25px;
+}
+
+.ButtonSendApp {
+    cursor: pointer;
+    position: absolute;
+    left: 89px;
+    bottom: 17px;
+    width: 319px;
+    height: 71px;
+    font-family: SF Pro Text Semibold;
+    z-index: 100;
+}

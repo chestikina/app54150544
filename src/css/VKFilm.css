@@ -1,0 +1,243 @@
+body[scheme="space_gray"] {
+    --background_content: #7A0000;
+}
+
+.vkuiPanel .vkuiPanel__in, .vkuiPanel:after {
+    background: var(--background_content);
+}
+
+.bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    height: 100vh;
+    object-fit: cover;
+}
+
+#main .icon, #film .category .icon {
+    position: fixed;
+    top: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 344px;
+}
+
+.bottom-container {
+    position: fixed;
+    bottom: calc(var(--safe-area-inset-bottom) + 24px);
+    left: 18px;
+    right: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main .bottom-container > :nth-child(1) {
+    margin: 0 0 0 0;
+    font-family: Akrobat Black;
+    font-size: 44px;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: -0.0667455px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+#main .bottom-container > :nth-child(2) {
+    margin: 0 0 0 0;
+    font-family: Akrobat Black;
+    font-size: 44px;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: -0.0667455px;
+    text-transform: uppercase;
+    color: #FFBB00;
+}
+
+#main .bottom-container > :nth-child(3) {
+    margin-top: 27px;
+
+    background: #2D0000;
+    border-radius: 15px;
+
+    padding: 25.5px 30px;
+
+    font-family: Wix Madefor Display Medium;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: -0.0667455px;
+
+    color: #FFFFFF;
+}
+
+.bottom-container > .btn {
+    margin-top: 39px;
+
+    background: #FFBB00;
+    border-radius: 94px;
+
+    padding: 15px 0;
+    width: 100%;
+
+    font-family: Akrobat Black;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    color: #000000;
+    white-space: nowrap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+#film .category {
+    transition: all 400ms ease-in-out;
+}
+
+#film .category .bottom-container > h1 {
+    font-family: Akrobat Black;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.0667455px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    margin: 0 0 0 0;
+}
+
+#film .category .bottom-container > h1 > span {
+    color: #FFBB00;
+}
+
+#film .category .bottom-container > select {
+    margin-top: 10px;
+
+    padding: 20px 15px 20px 25px;
+    width: 100%;
+    background: #2D0000;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDIzIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS41IDhMMC42NzQ2ODMgMC40OTk5OTlMMjIuMzI1MyAwLjUwMDAwMUwxMS41IDhaIiBmaWxsPSIjOEEzNDM0Ii8+Cjwvc3ZnPgo=");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    border-radius: 15px;
+
+    outline: unset;
+    border: unset;
+
+    font-family: Wix Madefor Display Medium;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.0667455px;
+    color: #FFFFFF;
+
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+}
+
+#film .category .icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#film .category .bottom-container > .btn {
+    margin-top: 10vh;
+}
+
+#film .film {
+    display: none;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+#film #lottie {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 400ms ease-in-out;
+    display: none;
+    transform: scale(1.25);
+    opacity: 0;
+}
+
+#film .film .poster {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#film .film .bottom-container p {
+    margin: 0 0 0 0;
+
+    font-family: Wix Madefor Display Medium;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.0667455px;
+
+    color: #FFFFFF;
+}
+
+#film .film .bottom-container h1 {
+    margin: 0 0 0 0;
+
+    font-family: Akrobat ExtraBold;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: -0.0667455px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+#film .film .bottom-container > :nth-child(2) {
+    margin-top: 10px;
+}
+
+#film .film .bottom-container > :nth-child(3) {
+    margin-top: 6px;
+}
+
+#film .film .bottom-container > :nth-child(4) {
+    margin-top: 5px;
+    color: #FFBB00;
+}
+
+#film .film .bottom-container > :nth-child(5) {
+    margin-top: 34px;
+}
+
+#film .film::before {
+    content: '';
+
+    position: absolute;
+    width: 100%;
+    height: 332px;
+    left: 0px;
+    bottom: 0px;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.8) 80%);
+}

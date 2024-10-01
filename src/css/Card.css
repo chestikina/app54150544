@@ -1,0 +1,49 @@
+body[scheme='bright_light'] {
+    --card-background-color: #ffff;
+    --card-title-color: #000000;
+    --card-description-color: #C9C9C9;
+}
+body[scheme='space_gray'] {
+    --card-background-color: #343537;
+    --card-title-color: #ffff;
+    --card-description-color: rgba(255, 255, 255, 0.9);
+}
+
+.card-main {
+    height: 98px;
+
+    background-color: var(--card-background-color);
+    border: 1px solid var(--elements_border);
+    box-sizing: border-box;
+    border-radius: 16px;
+
+    margin: 18px 17.5px;
+}
+
+.card-description {
+    height: 24px;
+
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: var(--card-description-color);
+
+    margin: 0px 4px;
+}
+
+.card-title {
+    height: 24px;
+
+    font-family: Daikon;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: var(--card-title-color);
+
+    margin: 0px 4px;
+}

@@ -1,0 +1,83 @@
+body[scheme="bright_light"] {
+    --color_primary: #FF2B37;
+    --background_content: #F0ECEB;
+    --text_placeholder: #000000;
+    --button_secondary_background: rgba(255, 43, 55, 0.05);
+    --button_secondary_foreground: var(--color_primary);
+    --button_gradient: linear-gradient(90deg, #FF2B37 0%, #F4BCDA 100%);
+    --button_primary_background: #FF2B37;
+    --button_primary_foreground: #FFFFFF;
+}
+
+#end > .Panel__in {
+    background: inherit;
+}
+
+.Custom_Button--Big {
+    border-radius: 10px;
+    box-shadow: 0px 3px 29px rgba(0, 0, 0, 0.09);
+}
+
+.Custom_Button--Primary {
+    background: var(--button_gradient);
+}
+
+.Custom_Button--Gradient {
+    color: #FFFFFF;
+    background: linear-gradient(180deg, #FF2E32 0%, #FF2A37 100%);;
+}
+
+.Custom_Button--Colored {
+    background: #231D25;
+}
+
+.Result_Title {
+    font-family: SF Pro Display Bold;
+    font-weight: normal;
+    font-size: 6vh;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FF2E32;
+}
+
+.Result_Subtitle {
+    font-family: Montserrat Semibold;
+    font-weight: normal;
+    font-size: 2.2vh;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #231D25;
+}
+
+.Result_Button {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+
+    background: #231D25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    border-radius: 10px;
+    box-shadow: none;
+    margin-top: 0;
+}
+
+.Result_Button > :first-child {
+    height: 32px;
+}
+
+.Result_Button > :last-child {
+    margin-left: 16px;
+    width: 164px;
+}
+
+#result .img {
+    width: 93.5vw;
+    transform: translateX(-6.5vw);
+}
