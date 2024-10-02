@@ -1,0 +1,215 @@
+.BoardCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BoardBetContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    gap: 12px;
+    width: 335px;
+}
+
+.BoardBetContainer > :first-child {
+    display: flex;
+    gap: 3px;
+}
+
+.BoardBetContainer > :last-child {
+    user-select: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+    padding: 18px;
+    gap: 3px;
+
+    color: #FFFFFF;
+    font-family: 'SF Pro Display Medium';
+    font-size: 16px;
+    line-height: 19px;
+
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 21px;
+    width: -webkit-fill-available;
+}
+
+.BoardBetContainer > :first-child > * {
+    user-select: none;
+    cursor: pointer;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BoardBetContainer > :first-child > *, .BoardBetContainer > :first-child input {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: -0.32px;
+}
+
+.BoardBetContainer > :first-child > *, .BoardBetContainer > :first-child .vkuiFormField__border {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 28px;
+    outline: none;
+    border: none;
+}
+
+.BoardBetContainer > :first-child > :nth-child(3) {
+    width: 98px;
+}
+
+.BoardBetContainer > :first-child > :nth-child(1), .BoardBetContainer > :first-child > :nth-child(5) {
+    width: 60.5px;
+}
+
+.BoardBetContainer > :first-child > :nth-child(2), .BoardBetContainer > :first-child > :nth-child(4) {
+    width: 52px;
+}
+
+.HorizontalBoard {
+    position: relative;
+}
+
+.HorizontalBoard > div {
+    position: absolute;
+    margin: 1px;
+}
+
+.TopBoard {
+    width: 504px;
+    height: 225px;
+
+    display: flex;
+}
+
+
+.TopBoard > .TopBoard-Zero {
+    width: 36px;
+    height: inherit;
+}
+
+.TopBoard > .TopBoard-Zero > div[data-value='spacing'] {
+    height: 10px;
+}
+
+.TopBoard > .TopBoard-Zero > :not(div[data-value='spacing']) {
+    height: 108px;
+}
+
+.TopBoard > .TopBoard-Zero > * {
+    width: inherit;
+}
+
+
+.TopBoard > .TopBoard-Int {
+    height: inherit;
+    display: flex;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-value='spacing-horizontal'] {
+    height: 9px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-widthlevel='1'] {
+    width: 31px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-heightlevel='1'] {
+    height: 71px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-heightlevel='2'] {
+    height: 66px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-heightlevel='3'] {
+    height: 61px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-value='spacing-vertical'] {
+    width: 9px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-heightlevel='0'] {
+    height: 9px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-heightlevel='4'] {
+    height: 71px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-heightlevel='5'] {
+    height: 66px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-heightlevel='6'] {
+    height: 61px;
+}
+
+.TopBoard > .TopBoard-Int > * > div[data-widthlevel='2'] {
+    width: 27px;
+}
+
+
+.TopBoard > .TopBoard-Row {
+    height: inherit;
+}
+
+.TopBoard > .TopBoard-Row > * {
+    width: 37px;
+    height: 75px;
+}
+
+
+.BottomBoard {
+    width: 434px;
+    height: 68px;
+
+    margin: 0 35px;
+}
+
+.BottomBoard > * {
+    display: flex;
+}
+
+.BottomBoard > * > * {
+    height: 34px;
+}
+
+.BottomBoard > :first-child > :nth-child(odd) {
+    width: 145px;
+}
+
+.BottomBoard > :first-child > :nth-child(even) {
+    width: 144px;
+}
+
+.BottomBoard > :last-child > * {
+    width: 72px;
+}
+
+.BottomBoard > :last-child > :first-child, .BottomBoard > :last-child > :last-child {
+    width: 73px;
+}
+
+.HorizontalBoard > :first-child {
+    z-index: 2;
+}
+
+.BoardChip {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}

@@ -1,0 +1,60 @@
+.GameHistory {
+    height: 100%;
+    margin: 0 22px;
+}
+
+.GameHistory .CustomButton {
+    width: auto;
+}
+
+.GameCards {
+    margin-top: 18px;
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    min-width: 160px;
+    max-width: 100vw;
+    grid-template-columns: repeat(auto-fill, minmax(159px, auto));
+    grid-gap: 12px;
+}
+
+.GameCard {
+    height: 170px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+}
+
+.GameCard > :first-child {
+    margin: 20px 55px 0 20px;
+}
+
+.GameCard > :first-child > div {
+    display: flex;
+    align-items: center;
+}
+
+.GameCard > :first-child > :last-child {
+    margin-top: 15px;
+}
+
+.GameCard > :first-child > div > :last-child {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    margin-left: 16px;
+}
+
+.GameCard > :last-child {
+    margin: 20px 15px 0 20px;
+    padding-bottom: 16px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(64, 45, 38, 0.5);
+}

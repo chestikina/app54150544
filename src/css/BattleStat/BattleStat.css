@@ -1,0 +1,609 @@
+body {
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body[scheme='space_gray'] {
+    --background_content: #212121;
+    --pslide_background_content: #212121;
+    --card_button_background: rgba(255, 255, 255, 0.1);
+    --card_background: #333333;
+    --header_background: var(--background_content);
+}
+
+.Onboarding_Title {
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.Onboarding_Text {
+    font-family: SF Pro Text;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+    margin-top: 23px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#onboarding .Placeholder__icon {
+    margin-bottom: 56px;
+}
+
+.Button--ios, .Button--android {
+    border-radius: 18px;
+}
+
+.Button--android.Button--sz-l .Button__content, .Button--ios.Button--sz-l .Button__content {
+    font-family: SF Pro Display Semibold;
+    font-size: 15px;
+    padding: 12px 0;
+}
+
+#main .Div--ios, #main .Div--android {
+    padding: 0 21px;
+}
+
+.HorizontalScrollFlex {
+    display: flex;
+}
+
+.HorizontalScrollFlex > :first-child {
+    margin-left: 21px;
+}
+
+.HorizontalScrollFlex::after {
+    padding-right: 21px;
+    content: '';
+}
+
+.HorizontalScrollFlex > * {
+    margin-left: 15px;
+}
+
+.ModalPage__in::before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 51px;
+    height: 5px;
+    border-radius: 31px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ModalPage--android .ModalPage__in, .ModalPage--ios .ModalPage__in {
+    border-radius: 30px 30px 0 0;
+}
+
+.GameHistory_Title {
+    font-family: SF UI Display;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+img.Avatar {
+    border-radius: 50%;
+}
+
+@keyframes opacity_show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.PromoBanner {
+    background: var(--card_background);
+    border-radius: 21px;
+    outline: none;
+}
+
+.PromoBanner .SimpleCell--ios, .PromoBanner .SimpleCell--andoid, .PromoBanner .PromoBanner__head {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.PromoBanner .SimpleCell__after {
+    display: none;
+}
+
+#clicks_container {
+    position: absolute;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    pointer-events: none;
+}
+
+.replay_click {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 9999;
+    border-radius: 50%;
+    animation: click 100ms ease-in-out;
+}
+
+@keyframes click {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.BackgroundPanel > .Panel__in {
+    background: inherit;
+}
+
+.BackgroundPanel > .Panel__in .PanelHeader__in  {
+    background: none;
+}
+
+#Ghost {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 26.23vh;
+    animation: ghost 1500ms ease-in-out infinite;
+}
+
+#Ghost > .AnimationButton {
+    -webkit-transition: all 1ms;
+    -moz-transition: all 1ms;
+    -ms-transition: all 1ms;
+    -o-transition: all 1ms;
+    transition: all 1ms;
+}
+
+#Ghost > .AnimationButton:hover:active {
+    transform: scale(0.8);
+}
+
+@keyframes ghost {
+    0% {
+        top: 50%;
+    }
+    50% {
+        top: 45%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+.MiniGame_Popout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.84);
+}
+
+.MiniGame_Counter {
+    font-family: Manrope;
+    font-weight: 800;
+    font-size: 8.87vh;
+    line-height: 12.07vh;
+    text-align: center;
+    color: #FFFFFF;
+    animation: mini_game_counter 1s ease-in-out 5;
+}
+
+.MiniGame_Title {
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 2.46vh;
+    line-height: 3.32vh;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.MiniGame_Description {
+    font-family: SF Pro Text;
+    font-size: 1.97vh;
+    line-height: 2.34vh;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: rgba(255, 255, 255, 0.75);
+
+    max-width: 76.8vw;
+}
+
+@keyframes mini_game_counter {
+    99% {
+        font-size: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        font-size: 8.87vh;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.MiniGame_Popout_Hide {
+    animation: mini_game_popout_hide 400ms ease-in-out;
+}
+
+@keyframes mini_game_popout_hide {
+    100% {
+        opacity: 0;
+    }
+}
+
+#mini_game_result .HorizontalCard[stretched="true"] {
+    min-height: 15.7vh;
+    min-width: 87.47vw;
+}
+
+#mini_game_result .HorizontalCard {
+    min-width: 41.6vw;
+    min-height: 20.24vh;
+}
+
+#mini_game_result .HorizontalCard:last-child {
+    margin-left: 4.27vw;
+}
+
+.mini_game_result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 7.3vw;
+    height: 100vh;
+}
+
+.MiniGame_Result_Title {
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 2.35vh;
+    line-height: 3.18vh;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.MiniGame_Result_Description {
+    font-family: SF Pro Text;
+    font-size: 1.76vh;
+    line-height: 2.12vh;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.MiniGame_Button {
+    width: 88.27vw;
+    height: 5.88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 1.76vh;
+    line-height: 2.12vh;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.MiniGame_Button_Share {
+    background: var(--card_button_background);
+}
+
+.MiniGame_Button_Share > :last-child {
+    margin-left: 1.6vw;
+}
+
+.AnimationButton {
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+
+.AnimationButton:hover:active {
+    transform: scale(0.95);
+}
+
+#game_boss .HorizontalProgress {
+    position: absolute;
+    bottom: calc(37.5vh + 39.17vh);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#Boss {
+    position: absolute;
+    bottom: 37.5vh;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 39.17vh;
+
+    -webkit-transition: all 25ms;
+    -moz-transition: all 25ms;
+    -ms-transition: all 25ms;
+    -o-transition: all 25ms;
+    transition: all 25ms;
+}
+
+#Boss > svg {
+    height: inherit;
+}
+
+#Boss > svg:hover:active {
+    -webkit-transform: scale(0.8) translateY(13%);
+    -moz-transform: scale(0.8) translateY(13%);
+    -ms-transform: scale(0.8) translateY(13%);
+    -o-transform: scale(0.8) translateY(13%);
+    transform: scale(0.8) translateY(13%);
+}
+
+#game_reaction #zones {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#game_reaction #zones .zone {
+    position: absolute;
+    height: 5vh;
+    width: 5vh;
+    animation: click 100ms ease-in-out;
+}
+
+#monkey {
+    width: 12vh;
+    height: 12vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+#zone_1, #zone_2 {
+    width: 100vw;
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+
+#zone_1 {
+    background: #8F4D57;
+}
+
+#zone_2 {
+    background: #FF965F;
+}
+
+/*  === CATALOG === */
+.Slide {
+    padding-top: var(--safe-area-inset-top);
+}
+
+.Slide .MiniGameIcon {
+    height: 34px;
+    width: 34px;
+}
+
+.Slide .Title {
+    font-family: SF Pro Rounded;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.59vh;
+    line-height: 3.06vh;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 79.2vw;
+}
+
+.Slide .Description {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.88vh;
+    line-height: 2.23vh;
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 79.2vw;
+}
+
+.Slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    height: 84vh;
+    flex-direction: column;
+}
+
+.ButtonContainer {
+    position: absolute;
+    bottom: 9.86vh;
+}
+
+.Button {
+    height: 5.41vh;
+    width: 80.27vw;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.65vh;
+    line-height: 2vh;
+    text-align: center;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(85px);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button > :last-child {
+    margin-left: 2.13vw;
+}
+
+#main, .BackgroundPanel {
+    overflow: hidden;
+    position: fixed;
+}
+
+.PromoBanner {
+    position: absolute;
+    bottom: 2vh;
+    width: 88.8vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.SlideHeader {
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+    position: absolute;
+    top: 3.53vh;
+    height: 6.93vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.SlideHeader > :first-child {
+    margin-left: 8vw;
+    height: 2.12vh;
+    width: 2.12vh;
+}
+
+.SlideHeader > :last-child {
+    margin-left: 3.73vw;
+
+    font-family: SF Pro Rounded;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.59vh;
+    line-height: 3.06vh;
+    color: #FFFFFF;
+}
+
+.GameCounter {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.mini_game_result .HorizontalCard[type='1'] > .HorizontalCard_Title {
+    font-size: 3.2vh;
+    line-height: 3.82vh;
+}
+
+.mini_game_result .HorizontalCard_Description {
+    font-size: 1.72vh;
+    line-height: 2.09vh;
+}
+
+.mini_game_result .HorizontalCard > .HorizontalCard_Icon > img {
+    height: 2.96vh;
+    width: 2.96vh;
+}
+
+.mini_game_result .HorizontalCard {
+    min-height: 27vh;
+    min-width: 37.33vw;
+}
+
+.fixed {
+    overflow: hidden;
+    position: fixed;
+}
+
+#main .Panel__in, #main::after {
+    background: var(--pslide_background_content);
+}
