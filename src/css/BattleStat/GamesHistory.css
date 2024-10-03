@@ -1,6 +1,0 @@
-.GamesHistory {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    grid-gap: 13px;
-    min-width: 160px;
-}
