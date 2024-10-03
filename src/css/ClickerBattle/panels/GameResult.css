@@ -1,0 +1,157 @@
+.GameResult {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.GameResult .PlayerContainer {
+    position: relative;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.GameResult .PlayerContainer:before {
+    background: linear-gradient(180deg, rgba(239, 225, 203, 0) 47.92%, #EFE1CB 100%);
+    mix-blend-mode: normal;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.GameResult .PlayerContainer:after {
+    background: linear-gradient(180deg, #EFE1CB 47.92%, rgba(239, 225, 203, 0) 100%);
+    mix-blend-mode: normal;
+    content: '';
+    position: absolute;
+    top: 100%;
+    bottom: -15%;
+    left: 0;
+    right: 0;
+}
+
+.GameResultTitle {
+    font-family: SF Pro Display Bold;
+    font-size: 26px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #574039;
+
+    margin-top: 9vh;
+}
+
+.GameResultItemsContainer {
+    display: flex;
+    margin: 5.3vh 23px 0;
+    width: 88vw;
+}
+
+.GameResultItemsContainer > * {
+    background: rgba(107, 99, 86, 0.1);
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    height: 11.2vh;
+    width: 50%;
+}
+
+.GameResultItemsContainer > :last-child {
+    margin-left: 12px;
+}
+
+.GameResultItemsContainer > * > :first-child {
+    margin-left: 24px;
+}
+
+.GameResultItemsContainer > * > :last-child {
+    margin-left: 10px;
+    font-family: SF Pro Text Heavy;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.25px;
+    color: #574039;
+}
+
+.GameResult .NextButton {
+    margin-top: 4.8vh;
+    height: 8.74vh;
+}
+
+.GameResult .ShareButton {
+    margin-top: 12px;
+    height: 8.74vh;
+    background: none;
+}
+
+.GameGiftContainer {
+    pointer-events: none;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.GameGiftContainer > * {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 77.33vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.GameGiftContainer > * > :first-child {
+    font-family: SF Pro Display Heavy;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+}
+
+.GameGiftContainer > * > :last-child {
+    margin-top: 24px;
+    min-height: 28.7vh;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    width: 64vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.GameGiftContainer > * > :last-child > :last-child {
+    font-family: SF Pro Display Bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 24px;
+}
