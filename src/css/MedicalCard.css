@@ -1,0 +1,196 @@
+body {
+    --font-common: SF Pro Text;
+
+    --text_description: #808080;
+
+    --action_sheet_action_foreground: var(--accent);
+    --header_tint: var(--accent);
+    --button_primary_background: var(--accent);
+    --button_secondary_foreground: var(--accent);
+    --button_tertiary_foreground: var(--accent);
+    --text_placeholder: black;
+
+    --field_background: #FCFAFA;
+    --action_sheet_item_marker: #000000;
+
+    --color_transparent: #00000000;
+}
+
+body[scheme='bright_light'] {
+    --text_primary: #000000;
+    --text_secondary: #998181;
+    --group_header: #856D6D;
+    --accent: #F95555;
+    --input_color: #444444;
+    --inforow_color: rgba(0, 0, 0, 0.9);
+    --inforow_header: #856D6D;
+    --button_secondary_background: #FEF6F6;
+    --counter_primary_background: var(--accent);
+    --action_sheet_item_marker: #FFFFFF;
+}
+
+body[scheme='space_gray'] {
+    --text_primary: rgba(255, 255, 255, 0.9);
+    --text_secondary: #939393;
+    --group_header: #C0C0C0;
+    --accent: rgba(255, 255, 255, 0.9);
+    --input_color: #939393;
+    --inforow_color: rgba(255, 255, 255, 0.9);
+    --inforow_header: #939393;
+    --button_secondary_background: rgba(255, 255, 255, 0.1);
+    --counter_primary_background: rgba(255, 255, 255, 0.05);
+    --counter_primary_text: white;
+}
+
+.ModalPageHeader--ios .ModalPageHeader__content-in, .ModalPageHeader--android .ModalPageHeader__content-in {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.PanelHeader--ios .PanelHeader__content, .PanelHeader--android .PanelHeader__content, .PanelHeader__content, .PanelHeaderContent__children-in {
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: var(--panelheader_height_android);
+    letter-spacing: 0.38px;
+}
+
+.Header--android.Header--mode-secondary .Header__content, .Header--ios.Header--mode-secondary .Header__content, .Header--vkcom.Header--mode-secondary .Header__content {
+    text-transform: none;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    color: var(--group_header);
+    font-weight: 400;
+}
+
+.Group__description {
+    padding: 0 12px 24px;
+}
+.Group__description > .Caption--l-1 {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.ObjectColor__container {
+    padding: 10px 16px 10px 0;
+}
+.ObjectColor {
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#data > .Footer {
+    color: var(--accent);
+}
+
+.ActionSheetItem__description {
+    color: var(--text_description);
+    margin-left: 6px;
+}
+
+.FormItem > .Subhead {
+    font-family: SF Pro Text;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--group_header);
+}
+.Input__el, .Input__el::placeholder, .Textarea__el, .Textarea__el::placeholder {
+    font-family: SF Pro Text;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--text_secondary);
+}
+.Input__el, .Textarea__el {
+    color: var(--input_color);
+}
+.FormField__border {
+    border: none;
+}
+
+.InfoRow__header {
+    font-family: SF Pro Text;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--inforow_header);
+    padding-bottom: 11px;
+}
+.InfoRow {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--inforow_color);
+}
+
+.Counter--s-m {
+    height: 28px;
+    width: 28px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+}
+.Counter--s-m .Counter__in {
+    min-width: 28px;
+}
+
+.Title {
+    word-break: break-word;
+}
+
+.Color__container {
+    padding: 7px 15px 7px 3px;
+}
+.Color {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.Header__in, .InfoRow__header {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ActionSheetItem__marker {
+    color: var(--action_sheet_item_marker);
+}
+
+.PanelHeader--ios::before, .PanelHeader--ios .PanelHeader__in {
+    margin-top: 20px;
+    background: var(--header_background);
+}
+
+.PanelHeader--ios::after {
+    font-size: 20px;
+    content: '.';
+    color: var(--color_transparent);
+}
+
+.FixedLayout.FixedLayout--ios.FixedLayout--top.PanelHeader__fixed {
+    background: var(--header_background);
+}
+
+.InputBirthday {
+    z-index: 99999;
+    width: 1px;
+    height: 1px;
+    position: fixed;
+    overflow: hidden;
+    color: var(--color_transparent);
+}

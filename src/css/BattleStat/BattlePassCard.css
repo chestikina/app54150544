@@ -1,0 +1,45 @@
+.BattlePassCard {
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    -webkit-animation: opacity_show 1s;
+    -o-animation: opacity_show 1s;
+    animation: opacity_show 1s;
+}
+
+.BattlePassCard > .BattlePassCard_Icon {
+    margin: 26px 0 26px 26px;
+}
+
+.BattlePassCard > .BattlePassCard_Info {
+    margin-left: 26px;
+    margin-right: 22px;
+}
+
+.BattlePassCard > .BattlePassCard_Info > :first-child {
+    font-family: SF UI Display;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.BattlePassCard > .BattlePassCard_Info > :last-child {
+    font-family: SF UI Text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 5px;
+    width: 100%;
+}
+
+.BattlePassCard_Background {
+    position: absolute;
+    width: 346.11px;
+    height: 178.78px;
+    left: -19px;
+    top: -43.41px;
+}

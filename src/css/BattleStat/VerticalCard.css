@@ -1,0 +1,40 @@
+.VerticalCard {
+    position: relative;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    background: var(--card_background);
+    -webkit-animation: opacity_show 1s;
+    -o-animation: opacity_show 1s;
+    animation: opacity_show 1s;
+}
+
+.VerticalCard > :first-child {
+    width: 58%;
+    margin: 19px 55px 19px 20px;
+}
+
+.VerticalCard > :first-child > :first-child {
+    font-family: SF UI Display;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.VerticalCard > :first-child > :last-child {
+    font-family: SF UI Text;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+    color: rgba(255, 255, 255, 0.5);
+
+    margin-top: 8px;
+}
+
+.VerticalCard > :last-child {
+    position: absolute;
+    right: 30px;
+    width: 35.14px;
+    height: 36px;
+}

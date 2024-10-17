@@ -1,0 +1,31 @@
+.RadioOptions > * {
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.RadioOptions > * > :last-child {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: #877867;
+
+    margin-left: 16px;
+}
+
+.RadioOptions > * > :first-child {
+    margin-left: 16px;
+    border-radius: 9px;
+    border: 4px solid rgba(135, 120, 103, 0.1);
+    width: 12px;
+    height: 12px;
+}
+
+.RadioOptions > * > :first-child > * {
+    border-radius: inherit;
+    width: inherit;
+    height: inherit;
+}

@@ -1,0 +1,56 @@
+.ReferalInvite {
+    height: 100%;
+}
+
+.ReferalInviteContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ReferalInviteTitle, .ReferalInviteText {
+    max-width: 76.53vw;
+}
+
+.ReferalInviteTitle {
+    margin-top: 4.56vh;
+    font-family: SF Pro Display Bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #574039;
+}
+
+.ReferalInviteText {
+    margin-top: 12px;
+    font-family: SF Pro Display Medium;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #877867;
+}
+
+.ReferalInviteButton {
+    margin: 10.96vh 20px 0;
+    height: 7.14vh;
+}
+
+.ReferalInviteSubButton {
+    margin: 12px 20px 0;
+    height: 7.14vh;
+    background: none;
+    opacity: .5;
+}

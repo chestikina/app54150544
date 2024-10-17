@@ -1,0 +1,50 @@
+.Referals {
+    height: 100%;
+}
+
+.Referals .SlideTitle {
+    margin: 38px 22px 0;
+}
+
+.Referals .SlideDescription {
+    margin: 12px 22px 0;
+}
+
+.Referals .Referal {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    padding: 9px 20px;
+}
+
+.Referals .Referal > :last-child {
+    font-family: SF Pro Text;
+    font-style: normal;
+    letter-spacing: -0.25px;
+
+    margin-left: 16px;
+}
+
+.Referals .Referal > :last-child > :first-child {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    color: #574039;
+}
+
+.Referals .Referal > :last-child > :last-child {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(87, 64, 57, 0.5);
+
+    margin-top: 6px;
+}
+
+.Referals .Input {
+    margin: 12px 20px 0;
+}
+
+.Referals .SlideSubtitle {
+    margin: 24px 21px 0;
+}
