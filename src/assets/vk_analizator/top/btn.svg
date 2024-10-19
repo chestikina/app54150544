@@ -1,12 +1,3 @@
 <svg preserveAspectRatio="none" width="212" height="70" viewBox="0 0 212 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_415_1005)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M30 46L30 70L1.2 46H0V45V0H30L30 45L30 46Z" fill="white"/>
-<rect width="152" height="70" transform="translate(30)" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M182 24L182 2.62268e-06L210.8 24L212 24L212 25L212 70L182 70L182 24Z" fill="white"/>
-</g>
-<defs>
-<clipPath id="clip0_415_1005">
-<rect width="212" height="70" fill="white"/>
-</clipPath>
-</defs>
+<path d="M30 70L1 46H0V0H30L182 2.62268e-06L211 24H212V70L182 70H30Z" fill="white"/>
 </svg>
