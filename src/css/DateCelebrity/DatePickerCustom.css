@@ -1,8 +1,0 @@
-.DatePickerCustom {
-    display: flex;
-    justify-content: center;
-}
-
-.DatePickerCustom > :not(:first-child) {
-    margin-left: 8px;
-}
