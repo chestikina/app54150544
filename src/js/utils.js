@@ -187,19 +187,23 @@ export async function loadCssFontsODR(needFonts = []) {
 }
 
 export function animateValue(obj, start, end, duration, suffix) {
-    if (start === end || end - start === 1) {
-        obj.innerHTML = end;
-    } else {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            obj.innerHTML = Math.floor(progress * (end - start) + start) + (suffix || '');
-            if (progress < 1) {
-                window.requestAnimationFrame(step);
-            }
-        };
-        window.requestAnimationFrame(step);
+    try {
+        if (start === end || end - start === 1) {
+            obj.innerHTML = end;
+        } else {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start) + (suffix || '');
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                    if (this) this.forceUpdate();
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+    } catch (e) {
     }
 }
 

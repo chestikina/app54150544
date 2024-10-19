@@ -144,6 +144,11 @@
 }
 
 @font-face {
+    font-family: ProximaNova ExtraBold;
+    src: url(../fonts/ProximaNova-Extrabld.ttf);
+}
+
+@font-face {
     font-family: Montserrat;
     src: url(../fonts/Montserrat-Regular.ttf);
 }
@@ -296,4 +301,19 @@
 @font-face {
     font-family: Akrobat ExtraBold;
     src: url(../fonts/Akrobat-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: PP Neue Machina;
+    src: url(../fonts/PPNeueMachina-Regular.otf);
+}
+
+@font-face {
+    font-family: PP Neue Machina Light;
+    src: url(../fonts/PPNeueMachina-Light.otf);
+}
+
+@font-face {
+    font-family: PP Neue Machina Ultrabold;
+    src: url(../fonts/PPNeueMachina-Ultrabold.otf);
 }

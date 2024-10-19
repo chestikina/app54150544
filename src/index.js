@@ -44,7 +44,8 @@ import bridge from "@vkontakte/vk-bridge";
 //import App from './apps/CatWallPostsStats';
 //import App from './apps/PhotoToAnimeAI';
 //import App from './apps/RedFlagFromTG';
-import App from './apps/VKFilm';
+//import App from './apps/VKFilm';
+import App from './apps/VKAnalizator';
 
 //import App from './apps/BattleStat';
 //import App from './apps/BattleStatCatalog';
