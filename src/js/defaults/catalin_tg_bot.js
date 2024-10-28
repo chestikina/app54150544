@@ -2,6 +2,7 @@ import React from 'react';
 import {get, getRandomInt, getUrlParams, sleep} from "../utils";
 import bridge from "@vkontakte/vk-bridge";
 import {CustomSelect} from "@vkontakte/vkui";
+import {getStorageValue, setStorageValue} from "./bridge_utils";
 
 export const
     categoriesYears = 4, // Кол-во категорий для возрастов (до 23, после 23; до 23, до 29, после 29)
@@ -286,10 +287,19 @@ export async function subscribeGroup() {
         c = counters[k],
         g = typeof groupsJoinUser[c] === 'object' ? groupsJoinUser[c].id : groupsJoinUser[c]
     ;
+    if (this._rulesVKAPP) {
+        const lastUserDeny = await getStorageValue('_last_user_deny_bridge_subscribe');
+        if (lastUserDeny !== '') {
+            if ((Date.now() - parseInt(lastUserDeny)) < 30 * 24 * 60 * 60 * 1000) {
+                return;
+            }
+        }
+    }
     if (g) {
         try {
             await bridge.send('VKWebAppJoinGroup', {group_id: g});
         } catch (e) {
+            await setStorageValue('_last_user_deny_bridge_subscribe', Date.now() + '');
             skipedSubscribes[k].push(g);
         }
         counters[k]++;
@@ -301,11 +311,20 @@ export async function subscribeSkipedGroup() {
         k = 'subscribe',
         g = skipedSubscribes[k][0]
     ;
+    if (this._rulesVKAPP) {
+        const lastUserDeny = await getStorageValue('_last_user_deny_bridge_subscribe');
+        if (lastUserDeny !== '') {
+            if ((Date.now() - parseInt(lastUserDeny)) < 30 * 24 * 60 * 60 * 1000) {
+                return;
+            }
+        }
+    }
     if (g) {
         try {
             await bridge.send('VKWebAppJoinGroup', {group_id: g});
             skipedSubscribes[k].splice(0, 1);
         } catch (e) {
+            await setStorageValue('_last_user_deny_bridge_subscribe', Date.now() + '');
         }
     }
 }
@@ -317,10 +336,19 @@ export async function allowGroupMessages() {
         c = counters[k],
         g = typeof groupsMessageUser[c] === 'object' ? groupsMessageUser[c].id : groupsMessageUser[c]
     ;
+    if (this._rulesVKAPP) {
+        const lastUserDeny = await getStorageValue('_last_user_deny_bridge_messages');
+        if (lastUserDeny !== '') {
+            if ((Date.now() - parseInt(lastUserDeny)) < 30 * 24 * 60 * 60 * 1000) {
+                return;
+            }
+        }
+    }
     if (g) {
         try {
             await bridge.send('VKWebAppAllowMessagesFromGroup', {group_id: g});
         } catch (e) {
+            await setStorageValue('_last_user_deny_bridge_messages', Date.now() + '');
             skipedSubscribes[k].push(g);
         }
         counters[k]++;
@@ -332,11 +360,20 @@ export async function allowSkipedGroupMessages() {
         k = 'messages',
         g = skipedSubscribes[k][0]
     ;
+    if (this._rulesVKAPP) {
+        const lastUserDeny = await getStorageValue('_last_user_deny_bridge_messages');
+        if (lastUserDeny !== '') {
+            if ((Date.now() - parseInt(lastUserDeny)) < 30 * 24 * 60 * 60 * 1000) {
+                return;
+            }
+        }
+    }
     if (g) {
         try {
             await bridge.send('VKWebAppAllowMessagesFromGroup', {group_id: g});
             skipedSubscribes[k].splice(0, 1);
         } catch (e) {
+            await setStorageValue('_last_user_deny_bridge_messages', Date.now() + '');
         }
     }
 }

@@ -112,6 +112,7 @@ export default class extends React.Component {
         //eruda.init();
 
         initializeNavigation.bind(this)('main');
+        this._rulesVKAPP = true; // Все подписки соблюдая правила вк
 
         this.getStoryCanvas = this.getStoryCanvas.bind(this);
         this.shareStory = this.shareStory.bind(this);
