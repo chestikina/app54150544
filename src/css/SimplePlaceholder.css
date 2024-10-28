@@ -1,0 +1,38 @@
+.SimplePlaceholder {
+    height: 100vh;
+    width: 75vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SimplePlaceholder_Title {
+    font-family: TT Commons;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.46vh;
+    line-height: 2.83vh;
+
+    text-align: center;
+    letter-spacing: -0.08vw;
+
+    color: var(--color_primary);
+}
+
+.SimplePlaceholder_SubTitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.48vh;
+    line-height: 1.72vh;
+    text-align: center;
+
+    color: var(--color_primary);
+}
+
+.SimplePlaceholder img {
+    height: 8.87vh;
+    width: 8.87vh;
+}

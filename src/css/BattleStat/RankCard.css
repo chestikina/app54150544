@@ -1,0 +1,67 @@
+.RankCard {
+    background: var(--card_background);
+    border-radius: 21px;
+    -webkit-animation: opacity_show 1s;
+    -o-animation: opacity_show 1s;
+    animation: opacity_show 1s;
+    padding: 18px 15px 15px;
+}
+
+.RankCard > :first-child {
+    padding: 0 3px 10px;
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 24px;
+    color: #6F6F6F;
+}
+
+.RankCard_Rank {
+    display: flex;
+    align-items: center;
+    padding: 0 3px 22px;
+}
+
+.RankCard_Rank > :last-child {
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.RankCard_Description {
+    display: flex;
+    align-items: center;
+    padding: 0 38px 20px 3px;
+}
+
+.RankCard_Description > :last-child {
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+    color: rgba(255, 255, 255, 0.35);
+    margin-left: 12px;
+}
+
+.RankCard > :last-child {
+    background: var(--card_button_background);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+}
+
+.RankCard > :last-child > :last-child {
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 7px;
+}

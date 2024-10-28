@@ -1,0 +1,193 @@
+body {
+    --button_secondary_foreground: var(--accent);
+}
+
+body[scheme='bright_light'] {
+    --accent: #F50057;
+    --button_secondary_background: rgba(245, 0, 87, 0.05);
+    --button_tertiary_foreground: var(--accent);
+    --button_primary_background: var(--accent);
+    --placeholder_icon_foreground_secondary: var(--accent);
+    --question_background: var(--background_content);
+    --button_outline_foreground: var(--accent);
+    --button_outline_border: var(--accent);
+}
+
+body[scheme='space_gray'] {
+    --accent: #FB5791;
+    --button_secondary_background: #28292D;
+    --button_primary_foreground: #FFFFFF;
+    --button_primary_background: var(--accent);
+    --header_tint: var(--accent);
+    --placeholder_icon_foreground_secondary: var(--accent);
+    --button_tertiary_foreground: var(--accent);
+    --button_secondary_foreground: var(--accent);
+    --button_outline_foreground: var(--accent);
+    --button_outline_border: var(--accent);
+}
+
+#main .Placeholder {
+    position: fixed;
+    bottom: 3vh;
+    background: var(--background_content);
+    left: 0;
+    right: 0;
+}
+
+.Background {
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#main .Placeholder__in {
+    padding: 0 32px;
+}
+
+#share .Title {
+    margin-top: calc(5vh + var(--panelheader_height_ios));
+    width: 100vw;
+    font-family: Stupid Head;
+    font-weight: bold;
+    font-size: 5vh;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+#share .Likes {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#share .Likes > :last-child {
+    margin-left: 18px;
+    font-family: SF Pro Text;
+    font-weight: bold;
+    font-size: 8vh;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+#share .Subtitle {
+    letter-spacing: 1px;
+    width: 100vw;
+    font-family: Stupid Head;
+    font-weight: 600;
+    font-size: 4vh;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#share .Users {
+    margin-top: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#share .Users > :first-child {
+    margin-left: 12px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#share .Users > :last-child {
+    margin-left: 12px;
+    margin-right: 12px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#share .Users > :first-child > *,
+#share .Users > :last-child > * {
+    display: flex;
+    align-items: center;
+    width: 40vw;
+    height: 9vh;
+
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    margin-top: 12px;
+}
+
+#share .Users > :first-child > * > :last-child,
+#share .Users > :last-child > * > :last-child {
+    width: 100%;
+    margin-left: 8px;
+}
+
+#share .Users > :first-child > * > :last-child > :first-child,
+#share .Users > :last-child > * > :last-child > :first-child {
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 1.7vh;
+    color: rgba(255, 255, 255, 95);
+}
+
+#share .Users > :first-child > * > :last-child > :last-child,
+#share .Users > :last-child > * > :last-child > :last-child {
+    display: flex;
+    align-items: center;
+}
+
+#share .Users > :first-child > * > :last-child > :last-child > :first-child,
+#share .Users > :last-child > * > :last-child > :last-child > :first-child {
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 1.6vh;
+    color: #CDCDCD;
+}
+
+#share .Users > :first-child > * > :last-child > :last-child > :last-child,
+#share .Users > :last-child > * > :last-child > :last-child > :last-child {
+    margin-left: 1px;
+}
+
+#share .Bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 13vh;
+    margin: 0 20vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(213, 221, 235, 0.9);
+    border-radius: 24px;
+}
+
+#share .Bottom > :first-child {
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #11245E;
+}
+
+#share .Bottom > :last-child {
+    margin-left: 6px;
+}
+
+#share .ArrowDown {
+    position: absolute;
+    bottom: 9.5vh;
+    width: 20vw;
+    height: 2.5vh;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
