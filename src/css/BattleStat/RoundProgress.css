@@ -1,0 +1,35 @@
+.RoundProgress {
+    position: relative;
+}
+
+.RoundProgress > svg {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 0;
+}
+
+.RoundProgress > svg > circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-linecap: round;
+    transform-origin: 50% 50%;
+}
+
+.RoundProgress > .RoundProgress_Percent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-family: SF Pro Rounded;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}

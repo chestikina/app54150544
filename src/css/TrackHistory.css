@@ -1,0 +1,47 @@
+.thistory .SimpleCell {
+    align-items: normal;
+}
+
+.thistory-0 .SimpleCell__main {
+    margin-left: 22px;
+}
+
+.thistory-0 .SimpleCell__children {
+    font-family: Daikon;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.thistory-1 .SimpleCell__children {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.thistory-0 .SimpleCell__description {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.vertical-line {
+    position: absolute;
+    top: 80px;
+    bottom: 2vh;
+    left: 72px;
+    width: 3px;
+    background: var(--placeholder_icon_background);
+    border-radius: 29px;
+}
+
+.thistory-desc {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+}

@@ -1,0 +1,61 @@
+.SimpleCard {
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 21px;
+    padding: 12px 21px;
+}
+
+.SimpleCard_Title {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    letter-spacing: -0.3px;
+
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.SimpleCard_SubTitle {
+    font-family: TT Commons;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.SimpleCard_MiniSubTitle {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.SimpleCard_Button {
+    width: 100%;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 21px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SimpleCard_Button_Text {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.9);
+}

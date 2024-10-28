@@ -1,0 +1,16 @@
+.Level {
+    height: 100%;
+    margin: 0 22px;
+}
+
+.Level svg {
+    margin-top: 39px;
+}
+
+.PlayerLvl {
+    margin-top: 16px;
+}
+
+.PlayerXP {
+    margin-top: 12px;
+}

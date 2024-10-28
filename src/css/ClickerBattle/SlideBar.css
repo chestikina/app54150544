@@ -1,0 +1,43 @@
+.SlideBar {
+    margin-top: 16px;
+    display: flex;
+    overflow-x: scroll;
+    -webkit-transition: transform 400ms;
+    -moz-transition: transform 400ms;
+    -ms-transition: transform 400ms;
+    -o-transition: transform 400ms;
+    transition: transform 400ms;
+}
+
+.SlideTab:first-child {
+    margin-left: 16px;
+}
+
+.SlideTab:last-child {
+    margin-right: 16px;
+}
+
+.SlideTab {
+    margin-left: 10px;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+
+    white-space: nowrap;
+    font-family: SF Pro Text Semibold;
+    font-size: 15px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.25px;
+
+    backdrop-filter: blur(77px);
+    border-radius: 26px;
+
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
+    transition: all 200ms;
+}

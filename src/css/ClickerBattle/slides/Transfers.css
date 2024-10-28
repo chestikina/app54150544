@@ -1,0 +1,150 @@
+.Transfers {
+    height: 100%;
+}
+
+.Transfers .CustomButton {
+    width: auto;
+}
+
+.Transfers > * {
+    -webkit-animation: showOpacity 400ms ease-in-out;
+    -o-animation: showOpacity 400ms ease-in-out;
+    animation: showOpacity 400ms ease-in-out;
+}
+
+.TransfersQR {
+    margin: 5.8vh 28px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.TransfersQR > :last-child {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #48312A;
+    margin-left: 9.33vw;
+}
+
+.TransferButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 15px;
+    min-height: 14.9vh;
+}
+
+.TransferButtons > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TransferButtons > * > :last-child {
+    margin-top: 10px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+
+    text-align: center;
+    letter-spacing: -0.25px;
+
+    color: #6B6356;
+}
+
+.TransferHistory {
+    margin-top: 9px;
+    width: 100%;
+}
+
+.TransferHistoryItem {
+    display: flex;
+    align-items: center;
+    margin: 9px 16px;
+}
+
+.TransferHistoryItem > :first-child {
+    min-width: 50px;
+    min-height: 50px;
+    background: rgba(92, 69, 62, 0.1);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TransferHistoryItem > :last-child {
+    margin-left: 16px;
+    width: 100%;
+}
+
+.TransferHistoryItem > :last-child > :first-child {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 16px;
+    color: #5C453E;
+}
+
+.TransferHistoryItem > :last-child > :last-child {
+    margin-top: 6px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #6B6356;
+}
+
+.TransferInputTitle {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: #877867;
+    margin: 24px 21px 0;
+}
+
+.Transfers .Input {
+    margin: 12px 20px 0;
+}
+
+.Transfers .vkuiInput {
+    font-family: SF Pro Display Bold;
+}
+
+.Transfers .vkuiInput input::placeholder {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: rgba(135, 120, 103, 0.5);
+}
+
+.Transfers .vkuiFormField__after {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: rgba(135, 120, 103, 0.5);
+    margin-right: 16px;
+}
+
+.ButtonSendClicks {
+    margin: 36px 21px 0;
+    width: auto;
+    height: 64px;
+}
