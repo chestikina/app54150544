@@ -1,0 +1,702 @@
+body[scheme="bright_light"] {
+    --background_content: #ffffff;
+}
+
+.vkuiPanel .vkuiPanel__in, .vkuiPanel:after {
+    background: var(--background_content);
+}
+
+.bg {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.top-rect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}
+
+.bottom-rect {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}
+
+
+#main .bottom-rect {
+    bottom: 0;
+}
+
+#main .bg {
+    width: 100%;
+    top: 57px;
+    height: 75%;
+    object-fit: cover;
+}
+
+#main .title {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 46px + 120px + 60px + 95px + 20px);
+    right: 0;
+    width: 354px;
+}
+
+#main .title > :first-child {
+    margin: 19px 0 0 21px;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 30px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+#main .title > :last-child {
+    margin: 0 0 14px calc(21px + 22px);
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 30px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #86CDFF;
+}
+
+#main .text {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 46px + 120px + 60px);
+    right: 0;
+    width: 354px;
+}
+
+#main .text > p {
+    margin: 14px 0 0 21px;
+
+    font-family: 'ProximaNova Bold';
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+    color: #000A17;
+}
+
+#main .text > div {
+    margin: 11px 0 14px 21px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: "ProximaNova";
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+
+    color: #000A17;
+}
+
+#main .text > div > input {
+    border-radius: 0px;
+    width: 22px;
+    height: 22px;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: white;
+}
+
+#main .text > div > input:checked {
+    background-size: 12px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzM0M18yOTM3KSI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMV8zNDNfMjkzNykiPgo8cGF0aCBkPSJNNy43NDkxNyAyMC42NjI2QzcuMDY3OTEgMjAuNjYyOSA2LjQxNDU1IDIwLjM5MjEgNS45MzMyMyAxOS45MUwwLjQ0MzA0NSAxNC40MjE4Qy0wLjE0NzcwMiAxMy44MzA5IC0wLjE0NzcwMiAxMi44NzMgMC40NDMwNDUgMTIuMjgyQzEuMDMzOTggMTEuNjkxMyAxLjk5MTg5IDExLjY5MTMgMi41ODI4MyAxMi4yODJMNy43NDkxNyAxNy40NDg0TDIxLjQxNzEgMy43ODA0QzIyLjAwODEgMy4xODk2NSAyMi45NjYgMy4xODk2NSAyMy41NTY5IDMuNzgwNEMyNC4xNDc3IDQuMzcxMzQgMjQuMTQ3NyA1LjMyOTI1IDIzLjU1NjkgNS45MjAxOEw5LjU2NTExIDE5LjkxQzkuMDgzNzkgMjAuMzkyMSA4LjQzMDQ0IDIwLjY2MjkgNy43NDkxNyAyMC42NjI2WiIgZmlsbD0iIzIwMkE0NiIvPgo8L2c+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMzQzXzI5MzciPgo8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjxjbGlwUGF0aCBpZD0iY2xpcDFfMzQzXzI5MzciPgo8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+}
+
+#main .bottom-container {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 46px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 273px;
+}
+
+#main .bottom-container > p {
+    margin: 0 0 0 0;
+
+    font-family: 'ProximaNova Semibold';
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+
+    color: #FFFFFF;
+}
+
+#main .bottom-container > p > span {
+    color: #86CDFF;
+}
+
+#main .bottom-container > .button {
+    margin-top: 13px;
+    padding: 24.5px 40px;
+
+    cursor: pointer;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 30px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000A17;
+}
+
+
+#analyze .bottom-rect {
+    bottom: -26px;
+    transition: all 400ms ease-in-out;
+}
+
+#analyze .bg {
+    width: 100%;
+    top: 92px;
+    height: 80%;
+    object-fit: cover;
+}
+
+#analyze .title {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 46px + 120px + 29px + 68px + 46px + 56px + 16px);
+    right: 0;
+    width: 354px;
+}
+
+#analyze .title > :first-child {
+    margin: 19px 0 0 21px;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 30px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+#analyze .title > :last-child {
+    margin: 0 0 14px calc(21px + 22px);
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 30px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #86CDFF;
+}
+
+#analyze .progress {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 46px + 100px + 29px + 68px + 46px);
+    left: 0;
+    width: 354px;
+}
+
+#analyze .progress > h1 {
+    margin: 0 auto;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 30px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+#analyze .text {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 46px + 78px + 29px);
+    right: 0;
+    width: 354px;
+    transition: all 400ms ease-in-out;
+}
+
+#result .text3 {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 14px + 80px + 54px + 100px + 20px + 20px);
+    right: 0;
+    width: 354px;
+}
+
+#analyze .text > p, #result .text3 > p {
+    margin: 14px 0 13px 21px;
+
+    font-family: 'ProximaNova Bold';
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+    color: #000A17;
+}
+
+#analyze .button {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 46px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(293px - 40px * 2);
+
+    padding: 24.5px 40px;
+
+    cursor: pointer;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000A17;
+
+    transition: all 400ms ease-in-out;
+}
+
+#analyze .button2, #result .button2 {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 18px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 211px;
+
+    cursor: pointer;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 16px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    transition: all 400ms ease-in-out;
+}
+
+#result .button2 {
+    bottom: -32px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    width: auto;
+    margin-left: 20px;
+}
+
+#result .button2 > img {
+    position: absolute;
+    left: -40px;
+}
+
+#analyze .button2::before, #result .button2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    background: #86CDFF;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#result .button2::before {
+    bottom: -6px;
+}
+
+
+#result .bottom-rect {
+    bottom: -56px;
+}
+
+#result .bg {
+    width: 100%;
+    top: 86px;
+    height: 75%;
+    object-fit: cover;
+}
+
+#result .title {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 14px + 80px + 54px + 100px + 20px + 178px - 24px);
+    right: 0;
+    width: 362px;
+}
+
+#result .title > :first-child {
+    margin: 17px 0 5px 15px;
+}
+
+#result .title > p {
+    margin: 0 0 0 0;
+
+    font-family: 'ProximaNova';
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+
+    color: #FFFFFF;
+}
+
+#result .title > h3 {
+    margin: 0 0 0 15px;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    color: #86CDFF;
+
+    white-space: nowrap;
+}
+
+#result .title > :last-child {
+    margin: 5px 0 48px 48px;
+}
+
+#result .text {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 14px + 80px + 54px + 100px + 20px + 120px + 48px - 24px);
+    left: 40%;
+    transform: translateX(-40%);
+    width: 211px;
+    max-width: 300px;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#result .text p {
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    margin: 0 0 0 0;
+}
+
+#result .text > p {
+    margin: 13px 19px;
+}
+
+#result .text > p > span {
+    color: #86CDFF;
+}
+
+#result .text2 {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 14px + 80px + 54px + 100px);
+    left: 0;
+    width: 310px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#result .text2 > p {
+    margin: 0 0 0 0;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000A17;
+}
+
+#result .text2 > p > p {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 0 0;
+}
+
+#result .text2 > :nth-child(1) {
+    margin: 18px 0 13px 20px;
+    width: 69px;
+    height: 69px;
+}
+
+#result .text2 > :nth-child(2) > p {
+    color: #3B9EE4;
+}
+
+#result .text2 > :nth-child(3) {
+    margin: 0 35px 0 0;
+}
+
+#result .text2 > :nth-child(3) > p {
+    color: #FF5186;
+}
+
+#result .bottom-container {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 14px + 30px + 32px + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 286.5px;
+}
+
+#result .bottom-container > .bottom-flex {
+    display: flex;
+}
+
+#result .bottom-container > .bottom-flex > .button {
+    cursor: pointer;
+}
+
+#result .bottom-container > .bottom-flex > :first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 20px;
+
+    z-index: 1;
+}
+
+#result .bottom-container > .bottom-flex > :first-child > p {
+    margin: 0 0 0 0;
+
+    font-family: 'ProximaNova ExtraBold';
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+
+    color: #000A17;
+}
+
+#result .bottom-container > .bottom-flex > :last-child {
+    margin-top: 15px;
+    margin-left: -9.5px;
+    width: 240px;
+    height: 60px;
+}
+
+#result .bottom-container > .bottom-flex > :last-child > p {
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: #000A17;
+}
+
+#result .bottom-container > .bottom-flex > :last-child > :first-child {
+    /*margin: 13px 40px 7px auto;*/
+}
+
+#result .bottom-container > .bottom-flex > :last-child > :last-child {
+    /*margin: 0 40px 13px auto;*/
+}
+
+
+#top .bottom-rect {
+    bottom: -91px;
+}
+
+#top .bg {
+    width: 100%;
+    top: 81px;
+    height: 80%;
+    object-fit: cover;
+}
+
+#top .title {
+    width: 362px;
+    margin: calc(var(--safe-area-inset-top) + 120px + 100px) 0 0 auto;
+}
+
+#top .title > h1 {
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 30px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+#top .title > :first-child {
+    margin: 24px 0 4px 23px;
+}
+
+#top .title > :last-child {
+    margin: 0 0 14px 39px;
+    color: #86CDFF;
+}
+
+#top .user-rate,
+#top .users-rate > * {
+    display: flex;
+    align-items: center;
+    width: 258px;
+    margin: -6px auto 0;
+    padding: 17px 30px;
+    gap: 10px;
+}
+
+#top .user-rate > :nth-child(1),
+#top .users-rate > * > :nth-child(1) {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+#top .user-rate > :nth-child(2) > *,
+#top .user-rate > :nth-child(3) > *,
+#top .users-rate > * > :nth-child(2) > *,
+#top .users-rate > * > :nth-child(3) {
+    margin: 0 0 0 0;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 13px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+#top .user-rate > :nth-child(2) > :last-child,
+#top .user-rate > :nth-child(3) > :last-child,
+#top .users-rate > * > :nth-child(2) > :last-child {
+    font-family: 'PP Neue Machina Light';
+    color: #3B9EE4;
+}
+
+#top .user-rate > :nth-child(3),
+#top .users-rate > * > :nth-child(3) {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#top .user-rate > :nth-child(3) > * {
+    text-align: center;
+}
+
+#top .users-rate {
+    margin-top: -6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 128px;
+}
+
+#top .users-rate > * > :nth-child(2) > :first-child {
+    color: #000A17;
+}
+
+#top .users-rate > * > :nth-child(3) {
+    font-size: 32px;
+    line-height: 120%;
+    color: #000A17;
+}
+
+#top .top-rect {
+    z-index: 2;
+}
+
+#top .top-tabs {
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0;
+    gap: 10px;
+    z-index: 1;
+}
+
+#top .top-tabs > :nth-child(1) {
+    padding: 10px 15px;
+}
+
+#top .top-tabs > :nth-child(2) {
+    padding: 10px 16px;
+}
+
+#top .top-tabs > :nth-child(3) {
+    padding: 10px 8px;
+}
+
+#top .top-tabs > * {
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 10px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #5B6E86;
+}
+
+#top .top-tabs > *.active {
+    color: #000A17;
+}
+
+#top .button {
+    position: fixed;
+    bottom: calc(var(--safe-area-inset-bottom) + 14px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 152px;
+
+    margin-top: 13px;
+    padding: 13px 30px;
+
+    cursor: pointer;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000A17;
+}
+
+#top .shadow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 268px;
+    pointer-events: none;
+
+    background: linear-gradient(180deg, rgba(0, 10, 23, 0) 0%, #000A17 100%);
+}
+
+
+.right-rect {
+    margin: 0 0 0 0;
+
+    position: fixed;
+
+    font-family: 'PP Neue Machina Ultrabold';
+    font-size: 115px;
+    line-height: 111px;
+    letter-spacing: -2.46988px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    top: calc(349px + 21px);
+
+    transform: rotate(-90deg) translateY(calc(20px - (375px - 339px)));
+}

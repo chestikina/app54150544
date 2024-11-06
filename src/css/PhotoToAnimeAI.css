@@ -1,0 +1,369 @@
+.vkui--vkIOS--dark, .vkui--vkIOS--light, .vkuispace_gray, [scheme=space_gray], body[scheme=space_gray] {
+    --vkui--size_button_large_height--regular: 52px;
+    --vkui--size_border_radius--regular: 20px;
+    --icon_secondary: #FFFFFF;
+    --modal_card_background: #303030;
+    --header_background: none;
+    --button_secondary_background: rgba(255, 255, 255, 0.15);
+}
+
+.Background {
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    min-width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Background-Onboard {
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
+    min-width: 100vw;
+}
+
+.Onboard {
+    position: fixed;
+    top: 0;
+    left: 28px;
+    right: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: calc(100vw - 28px * 2);
+    height: calc(100vh - 30px - var(--safe-area-inset-bottom));
+}
+
+.Onboard .Onboard-Content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 16px;
+}
+
+.Onboard .Onboard-Content h1 {
+    margin: 20px 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'Manrope Bold';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 115%;
+
+    text-align: center;
+    letter-spacing: 0.25px;
+    font-feature-settings: 'case' on;
+
+    color: #FFFFFF;
+}
+
+.Onboard .Onboard-Content p {
+    margin: 8px 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+
+    text-align: center;
+    letter-spacing: -0.408px;
+
+    color: #FFFFFF;
+
+    opacity: 0.75;
+}
+
+.Onboard .Pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+    gap: 10px
+}
+
+.Onboard .Pagination .Pagination-Circle {
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+    background: #FFFFFF;
+    transition: all 300ms ease-in-out;
+}
+
+.Onboard .Onboard-Body {
+    margin-top: 31px;
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.Onboard .Onboard-Body > * {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 8px;
+}
+
+.Onboard .Onboard-Body > * > span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.vkuiFormField__border {
+    border-radius: 16px;
+}
+
+.vkuiFormField--default .vkuiFormField__border {
+    border: none;
+    background-color: rgba(242, 243, 245, 0.15);
+}
+
+.UploadContent {
+    margin: auto 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.UploadContent h2 {
+    margin: 12px 0 0 0;
+    font-family: 'SF Pro Text Bold';
+    font-style: normal;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.408px;
+    font-feature-settings: 'case' on;
+    color: #FFFFFF;
+}
+
+.UploadContent p {
+    white-space: break-spaces;
+    margin: 4px 0 0 0;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    width: 100%;
+}
+
+#main .vkuiButton--lvl-primary.vkuiButton--clr-accent {
+    background-color: rgba(39, 39, 39, 0.5);
+    border-radius: 36px;
+    margin: auto 24px;
+    height: 55.9241706vh;
+}
+
+.vkuiFile > span {
+    height: inherit;
+}
+
+.ModalCard_IconContainer {
+    padding: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+.CustomRadioGroup {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 8px;
+    margin-top: 28px;
+    width: 100%;
+}
+
+.CustomRadioGroup > .Tappable {
+    padding: 8px 8px 12px 8px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.CustomRadioGroup .RadioContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.CustomRadioGroup .RadioContainer p {
+    margin: 0 6px 0 6px;
+    padding: 0 0 0 0;
+
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.154px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.CustomRadioGroup .RadioContainer .RadioCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: inherit;
+    height: 167px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: inherit;
+}
+
+.CustomRadioGroup .RadioContainer .RadioCard .RadioCardInner {
+    width: 100%;
+    min-height: 51px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.CustomRadioGroup .RadioContainer .RadioCard .RadioCircle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CustomRadioGroup .RadioContainer .RadioCard .RadioCircle .RadioCircleSelected {
+    width: 18px;
+    height: 18px;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.ProgressContainer {
+    height: 100vh;
+    margin: 0 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ProgressContainer .vkuiSpinner {
+    height: auto;
+    color: #FFFFFF;
+}
+
+.ProgressContainer h1 {
+    font-family: 'SF Pro Display Bold';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.326451px;
+    color: #FFFFFF;
+    margin: 0 0 0 0;
+}
+
+.ProgressContainer p {
+    font-family: 'SF Pro Text Medium';
+    font-style: normal;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.408px;
+
+    color: rgba(255, 255, 255, .6);
+
+    margin: -20px 0 0 0;
+}
+
+#result h1 {
+    margin: 2.36966825vh 0 0 0;
+
+    font-family: 'Manrope Bold';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: 0.25px;
+    font-feature-settings: 'case' on;
+    color: #FFFFFF;
+}
+
+.Result_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 20px;
+
+    height: calc(100vh - var(--panelheader_height) - 2.36966825vh - 27.59px - var(--safe-area-inset-bottom) - 16px);
+}
+
+.Result_Container .Actions_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.Photo_Container {
+    background: rgba(39, 39, 39, 0.5);
+    border-radius: 36px;
+    padding: 8px
+}
+
+.Photo_Container_Horizontal {
+    margin-top: 2.8436019vh;
+}
+
+.Photo_Container_Horizontal > * {
+    width: -webkit-fill-available;
+}
+
+.Photo_Container_Horizontal > :first-child {
+    border-radius: 28px 28px 8px 8px;
+}
+
+.Photo_Container_Horizontal > :last-child {
+    border-radius: 8px 8px 28px 28px;
+    margin-top: 8px;
+}
+
+.Photo_Container_Vertical {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: 12.9146919vh;
+}
+
+.Photo_Container_Vertical > * {
+    width: calc(50% - 4px);
+}
+
+.Photo_Container_Vertical > :first-child {
+    border-radius: 28px 8px 8px 28px;
+}
+
+.Photo_Container_Vertical > :last-child {
+    border-radius: 8px 28px 28px 8px;
+}

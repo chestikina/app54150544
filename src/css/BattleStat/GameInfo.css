@@ -1,0 +1,74 @@
+.GameInfo {
+    padding: 36px 31px 48px;
+}
+
+.GameInfo_Top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.GameInfo_Top > * {
+    font-family: SF Pro Display;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.38px;
+
+    color: #FFFFFF;
+}
+
+.GameInfo_Top > :first-child {
+    margin-right: 12px;
+}
+
+.GameInfo_Top > :last-child {
+    margin-left: 12px;
+}
+
+.GameInfo_Bottom {
+    display: flex;
+    width: 100%;
+}
+
+.GameInfo_Bottom > * {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.GameInfo_Bottom > :first-child {
+    text-align: left;
+}
+
+.GameInfo_Bottom > :last-child {
+    text-align: right;
+}
+
+.GameInfo_Bottom > * > :first-child {
+    font-family: SF Pro Display;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    color: #FFFFFF;
+}
+
+.GameInfo_Bottom > * > :last-child {
+    font-family: SF Pro Display;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    color: #909090;
+}
+
+.GameInfo .Button {
+    height: 50px;
+}
+
+.GameInfo .Button--ios.Button--sz-l .Button__content, .GameInfo .Button--android.Button--sz-l .Button__content {
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}

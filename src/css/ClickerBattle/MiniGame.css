@@ -1,0 +1,439 @@
+.MainContainer {
+    width: 100%;
+    bottom: 284.54px;
+    position: fixed;
+}
+
+.MainContainer > * {
+    position: relative;
+}
+
+#person_temp {
+    position: absolute;
+    bottom: 0;
+    border: 2px solid red;
+    width: 80px;
+    height: 180px;
+    margin-left: 32px;
+}
+
+#cactus_temp {
+    position: absolute;
+    bottom: 0;
+    border: 2px solid red;
+}
+
+#Person_Container {
+    z-index: 1;
+}
+
+#Person_Container, #Player_Container {
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    bottom: 0;
+    position: absolute;
+    margin-left: 32px;
+    width: 80px;
+    height: 180px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+#Player_Container {
+    opacity: .5;
+}
+
+#Person_Container > .Person, #Player_Container > .Person {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.Person__Animated {
+    -webkit-animation: jump2 2000ms 1 ease;
+    -o-animation: jump2 2000ms 1 ease;
+    animation: jump2 2000ms 1 ease;
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    -o-transform-origin: bottom;
+    transform-origin: bottom;
+}
+
+.Person__Levitation {
+    -webkit-animation: levitation2 2000ms 1 ease;
+    -o-animation: levitation2 2000ms 1 ease;
+    animation: levitation2 2000ms 1 ease;
+}
+
+.Person__Broke {
+    -webkit-animation: broke 600ms ease;
+    -o-animation: broke 600ms ease;
+    animation: broke 600ms ease;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes broke {
+    0%{
+        -webkit-transform: translateX(0) scaleX(-1);
+        -moz-transform: translateX(0) scaleX(-1);
+        -ms-transform: translateX(0) scaleX(-1);
+        -o-transform: translateX(0) scaleX(-1);
+        transform: translateX(0) scaleX(-1);
+    }
+    100%{
+        -webkit-transform: translateX(calc(-155px - 32px)) scaleX(-1);
+        -moz-transform: translateX(calc(-155px - 32px)) scaleX(-1);
+        -ms-transform: translateX(calc(-155px - 32px)) scaleX(-1);
+        -o-transform: translateX(calc(-155px - 32px)) scaleX(-1);
+        transform: translateX(calc(-155px - 32px)) scaleX(-1);
+    }
+}
+
+@keyframes jump2 {
+    0% {
+        transform: scale(1, 1) translateY(0) scaleX(-1);
+    }
+    10% {
+        transform: scale(1.1, .9) translateY(0) scaleX(-1);
+    }
+    30% {
+        transform: scale(.9, 1.1) translateY(-150px) scaleX(-1);
+    }
+    60% {
+        transform: scale(1, 1) translateY(0) scaleX(-1);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0) scaleX(-1);
+    }
+}
+
+@keyframes levitation2 {
+    0% {
+        transform: scale(1, 1) translateY(0) scaleX(-1);
+    }
+    10% {
+        transform: scale(1.1, .9) translateY(0) scaleX(-1);
+    }
+    30% {
+        transform: scale(.9, 1.1) translateY(-180px) scaleX(-1);
+    }
+    90% {
+        transform: scale(1, 1) translateY(0) scaleX(-1);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0) scaleX(-1);
+    }
+}
+
+.ButtonClick {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 3;
+}
+
+.Cactus {
+    position: absolute;
+    bottom: 0;
+    -webkit-animation: cactus_move 1500ms 1 linear;
+    -o-animation: cactus_move 1500ms 1 linear;
+    animation: cactus_move calc(1500ms * (100 / 375 * var(--client-width) / 100)) 1 linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.Cactus_Small {
+    height: 66.16px;
+    width: 64px;
+}
+
+.Cactus_Large {
+    height: 87px;
+    width: 76.5px;
+}
+
+@keyframes cactus_move {
+    0% {
+        -webkit-transform: translateX(calc(100vw + 76.5px));
+        -moz-transform: translateX(calc(100vw + 76.5px));
+        -ms-transform: translateX(calc(100vw + 76.5px));
+        -o-transform: translateX(calc(100vw + 76.5px));
+        transform: translateX(calc(100vw + 76.5px));
+    }
+    10% {
+    }
+    90% {
+    }
+    100% {
+        -webkit-transform: translateX(-76.5px);
+        -moz-transform: translateX(-76.5px);
+        -ms-transform: translateX(-76.5px);
+        -o-transform: translateX(-76.5px);
+        transform: translateX(-76.5px);
+    }
+}
+
+.RunnerBackground {
+    z-index: -1;
+    position: fixed;
+    bottom: -96px;
+    -webkit-animation: background_move 4575ms infinite linear;
+    -o-animation: background_move 4575ms infinite linear;
+    animation: background_move 4575ms infinite linear;
+}
+
+@keyframes background_move {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(100vw / var(--client-width) * (1983 - var(--client-width)) * -1));
+        -moz-transform: translateX(calc(100vw / var(--client-width) * (1983 - var(--client-width)) * -1));
+        -ms-transform: translateX(calc(100vw / var(--client-width) * (1983 - var(--client-width)) * -1));
+        -o-transform: translateX(calc(100vw / var(--client-width) * (1983 - var(--client-width)) * -1));
+        transform: translateX(calc(100vw / var(--client-width) * (1983 - var(--client-width)) * -1));
+    }
+}
+
+#ScoreText {
+    position: fixed;
+    top: calc(var(--safe-area-inset-top) + var(--panelheader_height_ios) + 6.16vh);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    font-family: SF Pro Display Bold;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    text-shadow: 0px 0px 45px rgba(0, 0, 0, 0.5);
+
+    background: #514E3C;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 400ms linear;
+}
+
+#ScoreText_temp {
+    position: fixed;
+    top: calc(var(--safe-area-inset-top) + var(--panelheader_height_ios) + 6.16vh + 40px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    font-family: SF Pro Display Bold;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: rgba(81, 78, 60, 0.5);
+    text-shadow: 0px 0px 45px rgba(0, 0, 0, 0.5);
+
+    -webkit-animation: score_text 400ms ease-in-out;
+    -o-animation: score_text 400ms ease-in-out;
+    animation: score_text 400ms ease-in-out;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes score_text {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -28px);
+        -moz-transform: translate(-50%, -28px);
+        -ms-transform: translate(-50%, -28px);
+        -o-transform: translate(-50%, -28px);
+        transform: translate(-50%, -28px);
+    }
+}
+
+.MiniGame__Player, .MiniGame__Player > :last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MiniGame__Player > :first-child {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.MiniGame__Player > :last-child > * {
+    margin-left: 12px;
+}
+
+.MiniGame__Player > :last-child > :last-child {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.MiniGame__PlayersContainer {
+    position: fixed;
+    bottom: calc(var(--safe-area-inset-bottom) + 18.84vh);
+    width: 100vw;
+}
+
+.Button__Levitation {
+    position: fixed;
+    bottom: calc(var(--safe-area-inset-bottom) + 11.58vh);
+    width: 57.07vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #A4734E;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 44px;
+
+    font-family: SF Pro Text Bold;
+    font-size: 18px;
+    line-height: 14px;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 24px;
+}
+
+.Button__Levitation > :last-child {
+    margin-left: 8px;
+}
+
+.MiniGame__PlayersContainer {
+    z-index: 2;
+}
+
+.Button__Levitation {
+    z-index: 4;
+}
+
+.Bottom__Tone {
+    position: fixed;
+    height: 284.54px;
+    width: 100vw;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
+    -moz-transform: matrix(1, 0, 0, -1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, -1, 0, 0);
+    -o-transform: matrix(1, 0, 0, -1, 0, 0);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.Fog {
+    opacity: .15;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.MiniGame__Popout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+}
+
+.MiniGame__Popout > .Emoji {
+    width: 44px;
+    height: 44px;
+}
+
+.MiniGame__Popout > .PopoutText {
+    font-family: SF Pro Display Bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+
+    margin-top: 12px;
+}
+
+.MiniGame__Popout > .ButtonsContainer {
+    display: flex;
+    margin-top: 44px;
+    width: 78.93vw;
+    justify-content: space-between;
+}
+
+.MiniGame__Popout > .ButtonsContainer > .Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 19.5px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 220px rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(77px);
+
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.25px;
+}
+
+.MiniGame__Popout > .ButtonsContainer > :first-child {
+    color: #191A11;
+    background: #FFFFFF;
+}
+
+.MiniGame__Popout > .ButtonsContainer > :last-child {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.25);
+    margin-left: 8px;
+}
