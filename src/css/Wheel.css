@@ -1,0 +1,351 @@
+body {
+    --font-common: SF Pro Text;
+    --background_blue: #74A0F5;
+    --rotate-wheel-end: 0deg;
+    --rotate-wheel: 3600deg;
+    --header_background: none;
+    --header_tint: #FFFFFF;
+}
+
+.Panel .Panel__in {
+    background: linear-gradient(180deg, #646365 0%, #45444F 100%);
+}
+
+.FogBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .15;
+    z-index: 5;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+.MainCenter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.MainTitle {
+    font-family: SF Pro Display Heavy;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.GiftButton {
+    background: #FFFFFF;
+    border-radius: 21px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    color: #5D5C62;
+    padding: 16px 24px;
+
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.Wheel-Poly {
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.Popout {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(26px);
+
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+    z-index: 10;
+}
+
+a {
+    text-decoration: none;
+}
+
+.GetGiftTitle {
+    font-family: SF Pro Display Heavy;
+    font-size: 4.43vh;
+    line-height: 5.3vh;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+}
+
+.GetGiftDescription {
+    font-family: SF Pro Display Heavy;
+    font-size: 3.45vh;
+    line-height: 4.06vh;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+    margin-top: 12px;
+}
+
+.GetGift {
+    margin-top: 7.27vh;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 67.8462px;
+    width: 24.14vh;
+    height: 24.14vh;
+}
+
+.Popout .GiftButton {
+    margin-top: 11.08vh;
+}
+
+.AttemptsTitle {
+    font-family: SF Pro Display Heavy;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+    max-width: 70.93vw;
+}
+
+.AttemptsDescription {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1.97vh;
+    max-width: 70.93vw;
+}
+
+.AttemptsVariants {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    margin-top: 7.76vh;
+    padding: 6px 0;
+    width: 80vw;
+}
+
+.AttemptsVariants > * {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.AttemptsVariants > * > :last-child {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    margin-left: 12px;
+}
+
+#get_gift {
+    --text_primary: white;
+    --accent: var(--text_primary);
+}
+
+.TopIsClear {
+    font-family: SF Pro Display Heavy;
+    font-size: 3.43vh;
+    line-height: 4.3vh;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+}
+
+.Title-1 {
+    font-family: var(--font-common);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+}
+
+.Subtitle {
+    font-family: var(--font-common);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.3px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.Footer {
+    font-family: var(--font-common);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.3px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Wheel-Title-Animation {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+}
+
+@keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.Wheel-Rotate-Animation {
+    transform-origin: 50% 50%;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-name: rotate;
+    transform: rotate(var(--rotate-wheel-end));
+}
+
+@keyframes rotate {
+    0%   { transform: rotate(0deg); }
+    25%   { transform: rotate(0deg); }
+    100% { transform: rotate(var(--rotate-wheel)); }
+}
+
+.Get-Gift-Container {
+    width: 124px;
+    height: 124px;
+    background: #F9F9F9;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 0 96px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(43.4925px);
+    display: flex;
+    border-radius: 10px;
+}
+
+.Get-Gift-Container > img {
+    width: 95px;
+    height: 95px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Group-Header {
+    font-family: var(--font-common);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: #F2F2F2;
+}
+
+.ActionSheet--android .ActionSheet__header {
+    box-sizing: border-box;
+    padding: 14px 10px 13px;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.ActionSheet--android .ActionSheet__header:empty {
+    display: none;
+}
+
+.ActionSheet--android .ActionSheet__title {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.38;
+    color: var(--text_secondary);
+    position: relative;
+    z-index: 2;
+}
+
+.ActionSheet--android .ActionSheet__title + .ActionSheet__text {
+    margin-top: 10px;
+}
+
+.ActionSheet--android .ActionSheet__text {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.2;
+    color: var(--text_secondary);
+    position: relative;
+    z-index: 2;
+}
+
+.Alert--android .Alert__footer {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.Alert--android .Alert__btn {
+    margin: 0;
+}
+
+.Alert--android .Alert__content {
+    text-align: center;
+}

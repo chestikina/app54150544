@@ -1,0 +1,454 @@
+body {
+    --friend_lobbies_row_count: 2;
+    --user_gallery_row_count: 3;
+    --keyboard-height: 0px;
+    --n-canvas-size: 319px;
+}
+
+.Placeholder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height_ios) + 100vh / 812 * 72) 28px 0 28px;
+}
+
+.Main {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height_ios)) 28px 0 28px;
+}
+
+.Cards__Container, .Cards2__Container, .StatsCards__Container {
+    justify-content: space-between;
+}
+
+.Cards__Container > *, .Cards2__Container > * {
+    width: 100%;
+}
+
+.Cards__Container > :last-child, .Cards2__Container > :last-child {
+    margin-left: 23px;
+}
+
+.CardButton {
+    display: flex;
+    margin-top: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 12px;
+    background: var(--border_color);
+    border-radius: 21px;
+    cursor: pointer;
+    color: var(--color_secondary2);
+    width: calc(100% - 12px - 12px);
+}
+
+.PlayContainer {
+    position: fixed;
+    bottom: calc(var(--safe-area-inset-bottom) + 38px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.Gallery, .Rating, .Likes, .Tags, .Friends, .FriendLobby, .Stats, .Shop, .GlobalCanvasInfo, .SuggestionsList {
+    margin: 0 28px;
+}
+
+.SearchGame {
+    margin-top: 47px;
+}
+
+.SearchGame h1 {
+    margin: 48px 0;
+}
+
+.Game, .ArtBattleRate {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height_ios)) 28px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.NativeButtonMiniAppTop {
+    position: fixed;
+    top: calc(var(--safe-area-inset-top) + 10px);
+    right: calc(6px + 88px + 6px);
+    height: 32px;
+    padding: 0 8px;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background-color: rgba(40, 43, 46, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'SF Pro Display Medium';
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.GlobalCanvasBack {
+    position: fixed;
+    top: calc(var(--safe-area-inset-top) + 10px);
+    left: 8px;
+    height: 32px;
+    padding: 0 8px;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background-color: rgba(40, 43, 46, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.Comments_Container {
+    width: 100%;
+}
+
+.Comment_Input {
+    margin-top: 14px;
+    /*max-width: 319px;*/
+}
+
+.Comments {
+    max-height: 114px;
+}
+
+.Result {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height_ios) + 5.78817734vh) 28px 0;
+}
+
+.Result .Button--lvl-secondary {
+    position: absolute;
+    bottom: calc(var(--safe-area-inset-bottom) + 42px);
+}
+
+/*.PictureInfo .Canvas_Container {
+    max-width: none;
+    max-height: none;
+    margin: 0 auto;
+}*/
+
+.Canvas_Container, .Canvas_Container_Clear {
+    /*width: calc(319px * var(--scale-value));
+    height: calc(319px * var(--scale-value));*/
+    /*max-width: 319px;
+    max-height: 319px;*/
+
+    margin-top: 28px;
+
+    background: #FFFFFF;
+    border: 2px solid var(--custom_card_background);
+    border-radius: 28px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.PictureInfo {
+    margin: 18px 28px 0 28px;
+    padding-bottom: 12px;
+}
+
+.PictureInfo .Canvas_Container .Actions_Container .LikeButton {
+    width: calc(148px * var(--scale-value));
+}
+
+.PictureInfo .Author_Container {
+    width: calc(319px * var(--scale-value));
+}
+
+.PictureInfo > .Actions_Container {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.PictureInfo > .Actions_Container > :last-child {
+    margin-left: 10px;
+}
+
+.PictureInfo > .ButtonResumeDraw {
+    width: 100%;
+}*/
+
+.Offline_Drawing__Buttons {
+    width: calc(319px * var(--scale-value));
+}
+
+.Offline_Drawing__Buttons > * {
+    width: 100%;
+}
+
+.vkuiPromoBanner {
+    width: 88.8vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 2vh;
+}
+
+.Tags h2, .Friends h2, .FriendLobby h2, .Stats h2, .Shop h2, .GlobalCanvasInfo h2, .Suggestions h2, .SuggestionsIdea h2, .SuggestionsWord h2, .SuggestionsList h2 {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 12px 0 0 0;
+}
+
+.MainTint {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(40, 43, 46, 0.2) 100%);
+    height: 148px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.CardButton > .Icon {
+    margin-left: 4px;
+}
+
+.Main .Colors__Container {
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+.Main .Colors__Container .Color:first-child, :not(.Main .Colors__Container .Color) + .Main .Colors__Container .Color {
+    margin-left: 24px;
+}
+
+.Main .Colors__Container > :last-child {
+    margin-right: 24px;
+}
+
+.Main .PlayCards__Container {
+    margin-top: 12px;
+}
+
+.Main .PlayCards_Lobbies__Container {
+    display: flex;
+}
+
+.Main .PlayCards_Lobbies__Container > :last-child {
+    margin-left: 8px;
+}
+
+.Main .PlayCards_Lobbies__Container > * {
+    width: 100%;
+}
+
+.Main .Card_Button_Stretch {
+    width: auto;
+}
+
+.Game .Canvas_Items_Container {
+    width: calc(319px * var(--scale-value));
+    max-width: 319px;
+}
+
+.Game .vkuiSlider, .GlobalCanvas .vkuiSlider {
+    width: calc(319px * var(--scale-value));
+    max-width: 319px;
+}
+
+.Game .Canvas__, .ArtBattleRate .Canvas__ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#global_canvas .vkuiPanelHeader__in {
+    background: none;
+}
+
+.PictureInfo {
+    margin: 18px 28px 0 28px;
+    padding-bottom: 12px;
+}
+
+.Result_New {
+    margin: 6px 20px 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Result_New .Actions_Container {
+    bottom: calc(var(--safe-area-inset-bottom) + 22px);
+}
+
+.Profile > .UserAvatarCover > img {
+    width: 673px;
+    height: 325px;
+}
+
+.Profile > .UserInfoContainer > .UserNameTags {
+    flex-direction: column;
+}
+
+.Profile > .NativeButtonMiniAppTop > span {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.Profile > .UserInfoContainer > .UserLvl {
+    margin: 20px 24px 0;
+}
+
+.Profile > .UserInfoContainer > .ActionCards {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.UserAvatarFrame {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 4px) 20px 0;
+}
+
+.WeekGifts {
+    margin-top: 4.06403941vh;
+}
+
+.Profile .AuthorWorks {
+    margin: 24px 12px;
+}
+
+#gallery .Panel_Container_Card .MiniCard,
+#guessed_pictures .Panel_Container_Card .MiniCard,
+.Profile .AuthorWorks > *,
+#search .Panel_Container_Card .MiniCards.MiniCardsPicture .MiniCard {
+    width: 28.7179487vw;
+    height: 28.7179487vw;
+}
+
+.GlobalCanvasActions {
+    width: 100vw;
+}
+
+.ArtBattlePlaceholder {
+    margin: auto 48px;
+}
+
+.ArtBattle--Users {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.ArtBattle--Users > * {
+    position: relative;
+}
+
+.ArtBattle--Users > * > :last-child {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 14px;
+    height: 14px;
+    background: var(--custom_card_background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+}
+
+.ArtBattleRate .ArtBattleRate--Author {
+    background: var(--custom_card_background);
+    border-radius: 21px;
+    padding: 10px 16px;
+    margin-top: 18px;
+    width: calc(319px - 32px);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ArtBattleRate .ArtBattleRate--Author > span {
+    font-family: 'Manrope Bold';
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--custom_card_solo_text_color);
+}
+
+.ArtBattleRate .ArtBattleRate--Author > :last-child {
+    position: relative;
+    margin-left: auto;
+}
+
+.ArtBattleRate .ArtBattleRate--Author > :last-child > :first-child {
+    opacity: .5;
+}
+
+.ArtBattleRate .ArtBattleRate--Author > :last-child > :last-child {
+    position: absolute;
+
+    background: var(--custom_card_background);
+    border-radius: 16px;
+    padding: 2px;
+    right: -2px;
+    bottom: -2px;
+
+    transform: rotate(-90deg);
+}
+
+.AdvertIntegration {
+    margin: calc(var(--safe-area-inset-top)) 43px 0 43px;
+    height: calc(100vh - var(--safe-area-inset-top));
+}
+
+#game {
+    overflow-y: hidden;
+}
+
+@keyframes blink_input_opacity_to_prevent_scrolling_when_focus {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.DrawPanel-Task > .DrawPanel--MessageBox {
+    height: calc(100vh - var(--safe-area-inset-top) - var(--panelheader_height) - 16px - (429px + 34px) - var(--safe-area-inset-bottom));
+}
+
+body[keyboard_on='0'] .DrawPanel-Drawer > .DrawPanel--MessageBox {
+    height: calc(100vh - var(--safe-area-inset-top) - var(--panelheader_height) - (8px * 2) - 4px - (var(--n-canvas-size) + 34px) - var(--safe-area-inset-bottom) - (16px * 2) - 52px - 24px);
+}
+
+body[keyboard_on='0'] .DrawPanel-Drawer > .DrawPanel--MessageBox {
+    height: calc(100vh - var(--safe-area-inset-top) - var(--panelheader_height) - (8px * 2) - 4px - (var(--n-canvas-size) + 34px) - var(--safe-area-inset-bottom) - (16px * 2) - 52px - 24px);
+}
+
+body[keyboard_on='0'] .DrawPanel-Drawer > .DrawPanel--MessageBox,
+body[keyboard_on='1'] .DrawPanel-Drawer > .DrawPanel--MessageBox {
+    margin-bottom: calc(52px + 48px);
+}
+
+.DrawPanel > .DrawPanel--MessageBox {
+    /*margin-bottom: calc(52px + 32px);*/
+}
