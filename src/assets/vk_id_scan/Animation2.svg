@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="320" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax">
+  <!-- Фигура лестницы -->
+  <path d="M400 320H0V240H80V160H160V80H400V320Z" fill="#06082C"/>
+  
+  <!-- Кубик с градиентной заливкой.
+       Для удобства анимации его центр (при размере 48×48) размещается в (0,0) путем задания x="-24" и y="-24". -->
+  <rect x="-24" y="-24" width="48" height="48" fill="url(#paint0_linear_1613_412)">
+    <animateMotion 
+      dur="3s" 
+      repeatCount="indefinite" 
+      calcMode="spline"
+      keyTimes="0;0.3;0.6;0.8;1"
+      keySplines="0.35 0 0.65 1;0.35 0 0.65 1;0.35 0 0.65 1;0 0 1 1"
+      path="
+        M -40,216
+        C -40,75 40,75 40,216
+        C 40,50 120,50 120,136
+        C 120,100 265,56 280,56
+        L 440,56
+      " />
+  </rect>
+  
+  <defs>
+    <linearGradient id="paint0_linear_1613_412" x1="11.3655" y1="154.8" x2="80.7929" y2="235.285" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05B6DE"/>
+      <stop offset="1" stop-color="#97FFFF"/>
+    </linearGradient>
+  </defs>
+</svg>
