@@ -429,39 +429,44 @@ export default class extends React.Component {
     async fetchActivity(first) {
         await this.setState({fetch_activity: true});
 
-        const {incoming_activity, outgoing_activity, report, access_token, activity_selected} = this.state;
-        const is_incoming_activity = activity_selected === 1;
-        if (is_incoming_activity ?
-            (report.incoming_activity.length <= incoming_activity.length) :
-            (report.outgoing_activity.length <= outgoing_activity.length)) {
-            if (first !== true) {
-                this.setSnackbar('Вы достигли конца списка');
-            }
-        } else {
-            const next_activity = report[is_incoming_activity ? 'incoming_activity' : 'outgoing_activity']
-                .slice(
-                    (is_incoming_activity ? incoming_activity : outgoing_activity).length,
-                    (is_incoming_activity ? incoming_activity : outgoing_activity).length + 10
-                )
-            ;
-            if (is_incoming_activity) {
-                incoming_activity.push(...next_activity);
+        let {incoming_activity, outgoing_activity, report, access_token, activity_selected} = this.state;
+        for (let i = 0; i < 2; i++) {
+            const is_incoming_activity = first === true ? i : activity_selected === 1;
+            if (is_incoming_activity ?
+                (report.incoming_activity.length <= incoming_activity.length) :
+                (report.outgoing_activity.length <= outgoing_activity.length)) {
+                if (first !== true) {
+                    this.setSnackbar('Вы достигли конца списка');
+                }
             } else {
-                outgoing_activity.push(...next_activity);
+                const next_activity = report[is_incoming_activity ? 'incoming_activity' : 'outgoing_activity']
+                    .slice(
+                        (is_incoming_activity ? incoming_activity : outgoing_activity).length,
+                        (is_incoming_activity ? incoming_activity : outgoing_activity).length + 10
+                    )
+                ;
+                if (is_incoming_activity) {
+                    incoming_activity.push(...next_activity);
+                } else {
+                    outgoing_activity.push(...next_activity);
+                }
+
+                const activity_user_ids = [
+                    ...next_activity.map(activity =>
+                        is_incoming_activity ?
+                            activity.from_id :
+                            activity.source.substring(activity.source.startsWith('photo') ? 'photo'.length : 'wall'.length).split('_')[0]
+                    )
+                ].filter(v => !!v);
+                if (activity_user_ids.length > 0)
+                    await getVKUsers(activity_user_ids, access_token);
+
             }
-
-            const activity_user_ids = [
-                ...next_activity.map(activity =>
-                    is_incoming_activity ?
-                        activity.from_id :
-                        activity.source.substring(activity.source.startsWith('photo') ? 'photo'.length : 'wall'.length).split('_')[0]
-                )
-            ].filter(v => !!v);
-            if (activity_user_ids.length > 0)
-                await getVKUsers(activity_user_ids, access_token);
-
-            this.setState({incoming_activity, outgoing_activity});
+            if (first !== true) {
+                break;
+            }
         }
+        this.setState({incoming_activity, outgoing_activity});
 
         await this.setState({fetch_activity: false});
     }
