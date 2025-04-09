@@ -805,8 +805,8 @@ export default class extends React.Component {
                                         (is_incoming_activity ? incoming_activity : outgoing_activity).map(
                                             (activity, index) => {
                                                 const source_id = activity.source.substring(activity.source.startsWith('photo') ? 'photo'.length : 'wall'.length).split('_')[0];
-                                                const user_data = vk_local_users[is_incoming_activity ? activity.from_id : vk_user.id];
-                                                const user_data2 = vk_local_users[!is_incoming_activity ? source_id : vk_user.id];
+                                                const user_data = vk_local_users[is_incoming_activity ? activity.from_id : report.user_id];
+                                                const user_data2 = vk_local_users[!is_incoming_activity ? source_id : report.user_id];
                                                 const action = {
                                                     like: `поставил${is_incoming_activity && user_data.sex === 1 ? 'а' : ''} лайк на ${activity.source.startsWith('photo') ? 'фото' : (activity.source.startsWith('wall') ? 'запись' : 'комментарий')}`,
                                                     comment: `написал${is_incoming_activity && user_data.sex === 1 ? 'а' : ''} комментарий под ${activity.source.startsWith('photo') ? 'фото' : (activity.source.startsWith('wall') ? 'записью' : 'комментарий')}`,
