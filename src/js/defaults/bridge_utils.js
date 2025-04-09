@@ -55,7 +55,7 @@ export async function getToken(scope, require = false) {
 }
 
 export async function vkApi(method = '', params = {}) {
-    params = {v: '5.126', ...params};
+    if (!params.v) params.v = '5.126';
     return await bridge.send('VKWebAppCallAPIMethod', {method, params});
 }
 

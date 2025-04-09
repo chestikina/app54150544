@@ -34,7 +34,7 @@ import bridge from "@vkontakte/vk-bridge";
 
 //import App from './apps/YearTest';
 //import App from './apps/MarryMe';
-import App from './apps/VKAccPrice';
+//import App from './apps/VKAccPrice';
 //import App from './apps/VKTime';
 //import App from './apps/DeathDate';
 //import App from './apps/DeathDate2';
@@ -46,6 +46,7 @@ import App from './apps/VKAccPrice';
 //import App from './apps/RedFlagFromTG';
 //import App from './apps/VKFilm';
 //import App from './apps/VKAnalizator';
+import App from './apps/VKIdScan';
 
 //import App from './apps/BattleStat';
 //import App from './apps/BattleStatCatalog';

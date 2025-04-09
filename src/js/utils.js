@@ -463,7 +463,7 @@ export let
     name_cases = ['first_name', 'last_name', 'first_name_dat', 'first_name_nom', 'first_name_gen', 'first_name_acc', 'first_name_ins', 'first_name_abl', 'last_name_dat', 'last_name_nom', 'last_name_gen', 'last_name_acc', 'last_name_ins', 'last_name_abl']
 ;
 
-export async function getVKUsers(ids) {
+export async function getVKUsers(ids, access_token) {
     const
         user_ids = [
             ...new Set(
@@ -488,7 +488,8 @@ export async function getVKUsers(ids) {
             users = users.concat(
                 await vkApiRequest('users.get', {
                     user_ids: user_ids.slice(j * 100, j * 100 + 100).join(','),
-                    fields: ['screen_name', 'photo_100', 'photo_200', 'photo_max_orig', 'sex', ...name_cases].join(',')
+                    fields: ['last_seen', 'screen_name', 'photo_100', 'photo_200', 'photo_max_orig', 'sex', ...name_cases].join(','),
+                    access_token
                 })
             );
         }
@@ -819,4 +820,15 @@ export async function getYaDiskImage(url) {
 
 export function replaceExtensionPath(path) {
     return path.split('.').slice(0, -1).join('.');
+}
+
+export function getClearUserId(text = '') {
+    text = text.trim().replace('@', '');
+    if (text.includes('http') || text.includes('vk.')) {
+        text = text.replace('https', '').replace('http', '').replace('://', '').split('/')[1];
+    }
+    if (text.includes('[') && text.includes('|') && text.includes(']')) {
+        text = text.replace('[', '').split('|')[0];
+    }
+    return text;
 }

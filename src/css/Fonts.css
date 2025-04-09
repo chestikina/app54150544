@@ -317,3 +317,18 @@
     font-family: PP Neue Machina Ultrabold;
     src: url(../fonts/PPNeueMachina-Ultrabold.otf);
 }
+
+@font-face {
+    font-family: Gotham Pro;
+    src: url(../fonts/gothampro.ttf);
+}
+
+@font-face {
+    font-family: Gotham Pro Medium;
+    src: url(../fonts/gothampro_medium.ttf);
+}
+
+@font-face {
+    font-family: Gotham Pro Bold;
+    src: url(../fonts/gothampro_bold.ttf);
+}

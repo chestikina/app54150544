@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="320" viewBox="0 0 400 320"
+     xmlns="http://www.w3.org/2000/svg" fill="none" preserveAspectRatio="xMaxYMax">
+    <!-- Лестница (каждая ступень 80×80) -->
+    <path d="M0 320H400V0H240V80H160V160H80V240H0V320Z" fill="#D9D9D9"/>
+
+    <!-- Кубик, центр которого находится в (0,0) -->
+    <rect x="-24" y="-24" width="48" height="48" fill="#A2A2A2">
+
+        <!-- Анимация движения по траектории с нелинейным (spline) распределением скорости -->
+        <animateMotion
+                dur="3s"
+                repeatCount="indefinite"
+                calcMode="spline"
+                keyTimes="0;0.25;0.5;0.75;1"
+                keySplines="
+        0.42 0 1 1;
+        0.42 0 0.58 1;
+        0.42 0 0.58 1;
+        0 0 0.58 1"
+                path="
+        M -40,360
+        C -40,140 40,140 40,216
+        C 40,40 120,40 120,136
+        C 120,-40 200,-40 200,56
+        C 200,-120 320,-120 320,-24
+      "/>
+
+        <!-- Анимация масштабирования (bounce): кубик плющится при приземлении -->
+        <animateTransform
+                attributeName="transform"
+                type="scale"
+                additive="sum"
+                dur="3s"
+                repeatCount="indefinite"
+                keyTimes="0;0.24;0.25;0.26;0.49;0.5;0.51;0.74;0.75;0.76;0.98;1"
+                values="
+        1 1;
+        1 1;
+        1.2 0.8;
+        1 1;
+        1 1;
+        1.2 0.8;
+        1 1;
+        1 1;
+        1.2 0.8;
+        1 1;
+        1.2 0.8;
+        1 1"/>
+    </rect>
+</svg>
