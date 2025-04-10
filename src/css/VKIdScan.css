@@ -121,6 +121,10 @@ html {
     cursor: pointer;
 }
 
+.vkuiPanel .vkuiPanel__in button {
+    cursor: pointer;
+}
+
 .vkuiPanel .vkuiPanel__in button > img {
     width: 36px;
     min-width: 36px;
@@ -192,6 +196,7 @@ body :has(#loading) {
     margin: 20px;
     background: #4CD9EE;
     padding: 25px 27px;
+    z-index: 2;
 }
 
 #loading.vkuiPanel .vkuiPanel__in > .box > div {
@@ -371,6 +376,7 @@ body :has(#loading) {
     display: flex;
     gap: 20px;
     align-items: center;
+    cursor: pointer;
 }
 
 #result.vkuiPanel .vkuiPanel__in > .block > div.list > * > :nth-child(1) {

@@ -339,7 +339,7 @@ export default class extends React.Component {
             await this.setPopout(null);
             loadingProcessInterval = setInterval(async () => {
                 const status = (await this.api('getReportStatus', {source_id: report_id})).response; // fetch from api get report status
-                this.setState({loading_process: status.response});
+                this.setState({loading_process: status});
                 if (status >= 100) {
                     clearInterval(loadingProcessInterval);
                     const report = await this.api('getReport', {source_id: report_id}); // fetch from api
@@ -619,7 +619,7 @@ export default class extends React.Component {
                     <Logo id='logo'/>
                     <h1>Идет обработка {loading_process > 0 &&
                         <React.Fragment><br/>({loading_process}%)</React.Fragment>}</h1>
-                    <h2>Это может занять от 3 до 20 минут</h2>
+                    <h2>Это может занять от 1 минут до 24 часов</h2>
                     <div className='box'>
                         <div>
                             <IconMessage/>
@@ -758,7 +758,8 @@ export default class extends React.Component {
                                     Вероятные друзья
                                 </h1>
                                 <p>
-                                    Страницы, которых нет в друзьях у пользователя, но с которыми он часто взаимодействует:
+                                    Страницы, которых нет в друзьях у пользователя, но которые часто пересекаются среди его
+                                    друзей:
                                 </p>
                                 {
                                     possible_friends ?
@@ -888,7 +889,7 @@ export default class extends React.Component {
                                     Важные сообщества
                                 </h1>
                                 <p>
-                                    Сообщества с которыми он максимально часто взаимодействует:
+                                    Сообщества, с которыми пользователь, скорее всего, часто взаимодействует:
                                 </p>
                                 <div className='list'>
                                     <InfiniteScroll
@@ -1031,27 +1032,31 @@ export default class extends React.Component {
                                             return this.setSnackbar('Сначала поставь оценку');
                                         }
 
-                                        if (score_text && score_text.trim().length >= 10) {
-                                            if (vk_user.id == report.user_id) {
-                                                return this.setSnackbar('Вы не можете оставить отзыв самому себе');
-                                            }
-
-                                            await this.setPopout(<ScreenSpinner/>);
-                                            const review = await this.api('sendReview', {
-                                                source_id: report.user_id,
-                                                text: score_text,
-                                                score: selected_score + 1
-                                            }); // fetch from api
-                                            if (review.response) {
-                                                reviews.push(review.response);
-                                                this.setState({reviews});
-                                                document.querySelector('#input_score_text').value = '';
-                                                this.setState(({selected_score: -1}));
-                                            }
-                                            await this.setPopout(null);
-                                        } else {
-                                            this.setSnackbar('Минимальная длина отзыва 10 символов');
+                                        if (!score_text || score_text.trim().length < 10) {
+                                            return this.setSnackbar('Слишком короткий отзыв');
                                         }
+
+                                        if (score_text && score_text.trim().length > 1024) {
+                                            return this.setSnackbar('Слишком длинный отзыв');
+                                        }
+
+                                        if (vk_user.id == report.user_id) {
+                                            return this.setSnackbar('Вы не можете оставить отзыв самому себе');
+                                        }
+
+                                        await this.setPopout(<ScreenSpinner/>);
+                                        const review = await this.api('sendReview', {
+                                            source_id: report.user_id,
+                                            text: score_text,
+                                            score: selected_score + 1
+                                        }); // fetch from api
+                                        if (review.response) {
+                                            reviews.push(review.response);
+                                            this.setState({reviews});
+                                            document.querySelector('#input_score_text').value = '';
+                                            this.setState(({selected_score: -1}));
+                                        }
+                                        await this.setPopout(null);
                                     }}
                                 >
                                     Оставить отзыв
