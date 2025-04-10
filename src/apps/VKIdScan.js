@@ -573,7 +573,8 @@ export default class extends React.Component {
                         options={
                             (searchUsers.length > 0 ? searchUsers : (userInfo ? userInfo.history : [])).map(value => ({
                                 label: `${value.first_name} ${value.last_name}`,
-                                value: `${value.id}`
+                                value: `${value.id}`,
+                                screen_name: `${value.screen_name}`
                             }))
                         }
                         searchable={true}
@@ -582,7 +583,7 @@ export default class extends React.Component {
                         onInputChange={(e) => {
                             clearTimeout(timeoutSearchUser);
                             timeoutSearchUser = setTimeout(async () => {
-                                const value = e.target.value;
+                                const value = getClearUserId(e.target.value);
                                 if (!value) {
                                     this.setState({searchUsers: []});
                                     return;
@@ -598,8 +599,15 @@ export default class extends React.Component {
                             const value = e.target.value;
                             this.setState({scanId: value});
                         }}
-                        filterFn={(value, option) => searchUsers.length > 0 ? true : option.label.toLowerCase().includes(value.toLowerCase()) ||
-                            option.value.toLowerCase().includes(value.toLowerCase())}
+                        filterFn={(value, option) => {
+                            try {
+                                return searchUsers.length > 0 ? true : option.label.toLowerCase().includes(value.toLowerCase()) ||
+                                    option.value.toLowerCase().includes(value.toLowerCase()) ||
+                                    option.screen_name.includes(getClearUserId(value))
+                            } catch(e) {
+                                return true;
+                            }
+                        }}
                         onOpen={() => this.setState({searchUsers: []})}
                         fetching={searchUser}
                     />

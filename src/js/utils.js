@@ -470,11 +470,7 @@ export async function getVKUsers(ids, access_token) {
                 ids
                     .filter(value => vk_local_users[value] === undefined)
                     .map(
-                        value => typeof value === 'number' ? value : value.replace('@', '')
-                            .replace('id', '')
-                            .replace('vk.com/', '')
-                            .replace('http://', '')
-                            .replace('https://', '')
+                        value => typeof value === 'number' ? value : getClearUserId(value)
                     )
             )
         ],
@@ -499,7 +495,7 @@ export async function getVKUsers(ids, access_token) {
         }
     }
 
-    return ids.map(value => vk_local_users[value] || vk_local_users[Object.keys(vk_local_users).find(key => vk_local_users[key].screen_name === value)]);
+    return ids.map(value => vk_local_users[value] || vk_local_users[Object.keys(vk_local_users).find(key => vk_local_users[key].screen_name === value || `id${key}` === value)]);
 }
 
 export async function vkApiRequest(method, params = {}) {
@@ -823,12 +819,16 @@ export function replaceExtensionPath(path) {
 }
 
 export function getClearUserId(text = '') {
-    text = text.trim().replace('@', '');
-    if (text.includes('http') || text.includes('vk.')) {
-        text = text.replace('https', '').replace('http', '').replace('://', '').split('/')[1];
+    try {
+        text = text.trim().replace('@', '');
+        if (text.includes('http') || text.includes('vk.')) {
+            text = text.replace('https', '').replace('http', '').replace('://', '').split('/')[1];
+        }
+        if (text.includes('[') && text.includes('|') && text.includes(']')) {
+            text = text.replace('[', '').split('|')[0];
+        }
+        return text;
+    } catch (e) {
+        return text;
     }
-    if (text.includes('[') && text.includes('|') && text.includes(']')) {
-        text = text.replace('[', '').split('|')[0];
-    }
-    return text;
 }
