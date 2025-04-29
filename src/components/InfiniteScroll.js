@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Card from "./Card";
 
 export class InfiniteScroll extends React.Component {
     constructor(props) {
