@@ -334,7 +334,7 @@ export default class extends React.Component {
         } else if (report.response === false) {
             await this.setPopout(null);
             await this.setActivePanel('select-scan');
-            await this.setSnackbar('Не удалось получить данные. Пожалуйста, откройте приложение из бота.');
+            await this.setSnackbar(report.blocked ? 'Пользователь заблокировал сканирование.' : 'Не удалось получить данные. Пожалуйста, откройте приложение из бота.');
         } else {
             await this.setPopout(null);
             loadingProcessInterval = setInterval(async () => {
@@ -347,7 +347,7 @@ export default class extends React.Component {
                     if (report.response === false) {
                         await this.setPopout(null);
                         await this.setActivePanel('select-scan');
-                        return await this.setSnackbar('Не удалось получить данные. Пожалуйста, откройте приложение из бота.');
+                        return await this.setSnackbar(report.blocked ? 'Пользователь заблокировал сканирование.' : 'Не удалось получить данные. Пожалуйста, откройте приложение из бота.');
                     }
                     await this.setState({report: report.response});
                     await this.setPopout(null);
