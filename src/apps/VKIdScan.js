@@ -1,6 +1,5 @@
 import React from 'react';
 import bridge from '@vkontakte/vk-bridge';
-import '../css/VKIdScan.css';
 import '../css/Fonts.css';
 
 import {CustomSelect, Panel, ScreenSpinner, View, Text} from '@vkontakte/vkui';
@@ -10,11 +9,146 @@ import {get, getClearUserId, getUrlParams, getVKUsers, openUrl, post, sleep, vk_
 import {defaultViewProps, initializeNavigation} from "../js/defaults/navigation";
 import {getToken, subscribeBridgeEvents, vkApi} from "../js/defaults/bridge_utils";
 import {ReactComponent as Logo} from "../assets/vk_id_scan/logo.svg"
+import {ReactComponent as Logo2} from "../assets/vk_id_scan/logo2.svg"
 import {ReactComponent as IconMessage} from "../assets/vk_id_scan/icon_32_message.svg"
-import {ReactComponent as IconLikes} from "../assets/vk_id_scan/icon_24_likes.svg";
+import {ReactComponent as IconMessage2} from "../assets/vk_id_scan/icon_40_message.svg"
+import {ReactComponent as AnimationPulse} from "../assets/vk_id_scan/animation.svg"
+import {ReactComponent as IconLikes} from "../assets/vk_id_scan/icon_24_likes.svg"
+import {ReactComponent as IconLikes2} from "../assets/vk_id_scan/icon_20_likes.svg";
 import {ReactComponent as IconComments} from "../assets/vk_id_scan/icon_24_comments.svg";
-import {ReactComponent as Animation} from "../assets/vk_id_scan/Animation2.svg";
+import {ReactComponent as IconComments2} from "../assets/vk_id_scan/icon_20_comments.svg";
 import Lottie from "lottie-react";
+
+const apps = {
+    chatboom: {
+        id: 53414465,
+        group_id: 135209264,
+        domain: 'idscan.special-backend.ru',
+        documentation: {
+            rules: 'https://vk.com/topic-135209264_52897843',
+            agreement: 'https://vk.com/topic-135209264_52897844',
+            policy: 'https://vk.com/topic-135209264_52897846',
+            tariffs: 'https://vk.com/topic-135209264_52897848'
+        },
+
+        css: 'VKIdScan.css',
+        scheme: 'space_gray',
+        action_bar_settings: {
+            status_bar_style: 'light',
+            action_bar_color: '#07092C'
+        },
+
+        background: false,
+        logo: <Logo id='logo'/>,
+        hello_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_hand.webp')}/>,
+        hello_hint_icon: false,
+        select_scan_hint_icon: false,
+        scan_button_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_search.webp')}/>,
+        scan_button_text: 'Сканировать',
+        loading_hint_icon: false,
+        loading_message_icon: <IconMessage/>,
+        loading_animation: <Lottie
+            id='animation'
+            autoplay={true}
+            loop={true}
+            animationData={require(`../assets/vk_id_scan/animation.json`)}
+            width={window.innerWidth}
+        />,
+        result_icon_likes: <IconLikes/>,
+        result_icon_comments: <IconComments/>,
+        get_graph_sex: (report) => <div className='graph-sex'>
+            <div>
+                <span>{report.friends.graph[0] || 0}%</span>
+                <span>{report.friends.graph[1] || 0}%</span>
+            </div>
+            <div>
+                <div style={{width: `${report.friends.graph[0] || 0}%`}}/>
+            </div>
+            <div>
+                <span>Мужской</span>
+                <span>Женский</span>
+            </div>
+        </div>
+    },
+    gochatix: {
+        id: 53589211, // Поменять
+        group_id: 135209265, // Поменять
+        domain: 'idscan.special-backend.ru', // поменять на scan.gochatix.ru
+        documentation: { // Поменять
+            rules: 'https://vk.com/topic-135209264_52897843',
+            agreement: 'https://vk.com/topic-135209264_52897844',
+            policy: 'https://vk.com/topic-135209264_52897846',
+            tariffs: 'https://vk.com/topic-135209264_52897848'
+        },
+
+        css: 'VKIdScan2.css',
+        scheme: 'bright_light',
+        action_bar_settings: {
+            status_bar_style: 'dark',
+            action_bar_color: '#FFFFFF'
+        },
+
+        background: require('../assets/vk_id_scan/bg.webp'),
+        logo: <Logo2 id='logo'/>,
+        hello_icon: false,
+        hello_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_info.webp')}/>,
+        select_scan_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_plus.webp')}/>,
+        scan_button_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_search_2.webp')}/>,
+        scan_button_text: 'Анализировать',
+        loading_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_time.webp')}/>,
+        loading_message_icon: <IconMessage2/>,
+        loading_animation: <AnimationPulse id='animation'/>,
+        result_icon_likes: <IconLikes2/>,
+        result_icon_comments: <IconComments2/>,
+        get_graph_sex: (report) => {
+            const
+                size = 210,
+                strokeWidth = 38,
+                percentage = [report.friends.graph[0] || 0, report.friends.graph[1] || 0],
+                colors = ['#1C66EF', '#000000'],
+
+                half = size / 2,
+                radius = half - strokeWidth / 2,
+                circumference = 2 * Math.PI * radius,
+                offset = -circumference * (percentage[0] / 100)
+            ;
+
+            return <div className='graph-sex'>
+                <svg width={size} height={size}>
+                    <g transform={`rotate(-90 ${half} ${half})`}>
+                        <circle
+                            cx={half}
+                            cy={half}
+                            r={radius}
+                            fill='transparent'
+                            stroke={colors[1]}
+                            strokeWidth={strokeWidth}
+                            strokeDasharray={`${(circumference * percentage[1]) / 100} ${circumference}`}
+                            strokeDashoffset={offset}
+                        />
+                        <circle
+                            cx={half}
+                            cy={half}
+                            r={radius}
+                            fill='transparent'
+                            stroke={colors[0]}
+                            strokeWidth={strokeWidth}
+                            strokeDasharray={`${(circumference * percentage[0]) / 100} ${circumference}`}
+                            strokeDashoffset={0}
+                        />
+                    </g>
+                </svg>
+                <div>
+                    <span><span>{percentage[0]}%</span> Мужской</span>
+                    <span><span>{percentage[1]}%</span> Женский</span>
+                </div>
+            </div>
+        }
+    }
+};
+const currentApp = apps.gochatix;
+import ('../css/' + currentApp.css);
+
 
 let timeoutSearchUser, loadingProcessInterval;
 
@@ -241,14 +375,14 @@ export default class extends React.Component {
 
     async api(method, params = {}) {
         if (method === 'getReport') {
-            return (await post(`https://idscan.special-backend.ru/method/${method}`, {...getUrlParams(), ...params})).data;
+            return (await post(`https://${currentApp.domain}/method/${method}`, {...getUrlParams(), ...params})).data;
         } else {
-            return await get(`https://idscan.special-backend.ru/method/${method}`, {...getUrlParams(), ...params});
+            return await get(`https://${currentApp.domain}/method/${method}`, {...getUrlParams(), ...params});
         }
     }
 
     async componentDidMount() {
-        subscribeBridgeEvents({}, 'space_gray');
+        subscribeBridgeEvents({}, currentApp.scheme);
         this.changeStatusBarColor();
 
         await bridge.send('VKWebAppInit');
@@ -269,10 +403,7 @@ export default class extends React.Component {
 
     changeStatusBarColor() {
         if (bridge.supports('VKWebAppSetViewSettings')) {
-            bridge.send('VKWebAppSetViewSettings', {
-                status_bar_style: 'light',
-                action_bar_color: '#07092C'
-            });
+            bridge.send('VKWebAppSetViewSettings', currentApp.action_bar_settings);
         }
     }
 
@@ -296,11 +427,6 @@ export default class extends React.Component {
         let {access_token, vk_user, userInfo} = this.state;
         if (!this.state.userInfo) {
             userInfo = (await this.api('getUser')).response;
-            /*userInfo = {
-                user_id: 245481845,
-                history: [1],
-                agreement: true
-            };*/ // fetch from api
             await this.setState({userInfo});
         }
         if (userInfo.agreement && !access_token) {
@@ -526,19 +652,23 @@ export default class extends React.Component {
         return (
             <View
                 {...defaultViewProps.bind(this)()}
+                style={currentApp.background ? {
+                    backgroundImage: `url(${currentApp.background})`,
+                    backgroundSize: '100% 100%'
+                } : {}}
             >
 
                 <Panel id='main'>
-                    <Logo id='logo'/>
-                    <h1>Привет! <img alt='icon' src={require('../assets/vk_id_scan/icon_hand.webp')}/></h1>
-                    <h2>Прежде чем мы продолжим, ознакомься:</h2>
+                    {currentApp.logo}
+                    <h1>Привет! {currentApp.hello_icon}</h1>
+                    <h2>{currentApp.hello_hint_icon} Прежде чем мы продолжим, ознакомься:</h2>
                     <div className='agreements'>
                         {
                             [
-                                ['Правила сервиса', 'https://vk.com/topic-135209264_52897843'],
-                                ['Пользовательское соглашение', 'https://vk.com/topic-135209264_52897844'],
-                                ['Политика конфиденциальности', 'https://vk.com/topic-135209264_52897846'],
-                                ['Условия предоставления услуг', 'https://vk.com/topic-135209264_52897848']
+                                ['Правила сервиса', currentApp.documentation.rules],
+                                ['Пользовательское соглашение', currentApp.documentation.agreement],
+                                ['Политика конфиденциальности', currentApp.documentation.policy],
+                                ['Условия предоставления услуг', currentApp.documentation.tariffs]
                             ].map((value, index) =>
                                 <button
                                     key={index}
@@ -566,9 +696,9 @@ export default class extends React.Component {
                 </Panel>
 
                 <Panel id='select-scan'>
-                    <Logo id='logo'/>
-                    <h1>Какую страницу будем сканировать? </h1>
-                    <h2>Введите ссылку на страницу:</h2>
+                    {currentApp.logo}
+                    <h1>Какую страницу будем {currentApp.scan_button_text.toLowerCase()}? </h1>
+                    <h2>{currentApp.select_scan_hint_icon} Введите ссылку на страницу:</h2>
                     <CustomSelect
                         options={
                             (searchUsers.length > 0 ? searchUsers : (userInfo ? userInfo.history : [])).map(value => ({
@@ -604,7 +734,7 @@ export default class extends React.Component {
                                 return searchUsers.length > 0 ? true : option.label.toLowerCase().includes(value.toLowerCase()) ||
                                     option.value.toLowerCase().includes(value.toLowerCase()) ||
                                     option.screen_name.includes(getClearUserId(value))
-                            } catch(e) {
+                            } catch (e) {
                                 return true;
                             }
                         }}
@@ -617,20 +747,20 @@ export default class extends React.Component {
                             await this.fetchReport(scanId);
                         }}
                     >
-                        <img alt='icon' src={require('../assets/vk_id_scan/icon_search.webp')}/>
-                        Сканировать
+                        {currentApp.scan_button_icon}
+                        {currentApp.scan_button_text}
                     </button>
                     {snackbar}
                 </Panel>
 
                 <Panel id='loading'>
-                    <Logo id='logo'/>
+                    {currentApp.logo}
                     <h1>Идет обработка {loading_process > 0 &&
                         <React.Fragment><br/>({loading_process}%)</React.Fragment>}</h1>
-                    <h2>Это может занять от 1 минут до 24 часов</h2>
+                    <h2>{currentApp.loading_hint_icon} Это может занять от 1 минут до 24 часов</h2>
                     <div className='box'>
                         <div>
-                            <IconMessage/>
+                            {currentApp.loading_message_icon}
                             <p>Результат будет отправлен вам в личные сообщения!</p>
                         </div>
                         <button
@@ -638,7 +768,7 @@ export default class extends React.Component {
                                 display: allow_messages ? 'none' : ''
                             }}
                             onClick={() => {
-                                bridge.send('VKWebAppAllowMessagesFromGroup', {group_id: 135209264})
+                                bridge.send('VKWebAppAllowMessagesFromGroup', {group_id: currentApp.group_id})
                                     .then(() => {
                                         this.setSnackbar('Отлично! Скоро пришлём результат.');
                                         this.setState({allow_messages: true});
@@ -649,23 +779,12 @@ export default class extends React.Component {
                             Разрешить сообщения
                         </button>
                     </div>
-                    {
-                        false ?
-                            <Animation/>
-                            :
-                            <Lottie
-                                id='animation'
-                                autoplay={true}
-                                loop={true}
-                                animationData={require(`../assets/vk_id_scan/animation.json`)}
-                                width={window.innerWidth}
-                            />
-                    }
+                    {currentApp.loading_animation}
                     {snackbar}
                 </Panel>
 
                 <Panel id='result'>
-                    <Logo id='logo'/>
+                    {currentApp.logo}
                     {
                         report && <React.Fragment>
                             <p>Результат:</p>
@@ -743,11 +862,11 @@ export default class extends React.Component {
                                                         <span>{vk_local_users[id].first_name} {vk_local_users[id].last_name}</span>
                                                         <div>
                                                             <span>
-                                                                <IconLikes/>
+                                                                {currentApp.result_icon_likes}
                                                                 {(top_activity_selected === 0 ? outgoing_activity_data : incoming_activity_data)[id].likes}
                                                             </span>
                                                             <span>
-                                                                <IconComments/>
+                                                                {currentApp.result_icon_comments}
                                                                 {(top_activity_selected === 0 ? outgoing_activity_data : incoming_activity_data)[id].comments}
                                                             </span>
                                                         </div>
@@ -860,19 +979,7 @@ export default class extends React.Component {
                                     Мы анализируем страницы друзей и презентуем вам сводную статистику об их показателях.
                                     Делайте выводы!)
                                 </p>
-                                <div className='graph-sex'>
-                                    <div>
-                                        <span>{report.friends.graph[0] || 0}%</span>
-                                        <span>{report.friends.graph[1] || 0}%</span>
-                                    </div>
-                                    <div>
-                                        <div style={{width: `${report.friends.graph[0] || 0}%`}}/>
-                                    </div>
-                                    <div>
-                                        <span>Мужской</span>
-                                        <span>Женский</span>
-                                    </div>
-                                </div>
+                                {currentApp.get_graph_sex(report)}
                                 <div className='graph-years'>
                                     {
                                         [
@@ -961,7 +1068,7 @@ export default class extends React.Component {
                                         }
                                     }}
                                 >
-                                    <img alt='icon' src={require('../assets/vk_id_scan/icon_search.webp')}/>
+                                    {currentApp.scan_button_icon}
                                     Искать
                                 </button>
                             </div>
