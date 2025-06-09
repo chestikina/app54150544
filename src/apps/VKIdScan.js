@@ -19,6 +19,7 @@ import {ReactComponent as IconComments} from "../assets/vk_id_scan/icon_24_comme
 import {ReactComponent as IconComments2} from "../assets/vk_id_scan/icon_20_comments.svg";
 import Lottie from "lottie-react";
 
+// Удалить прилы которые не относятся (во время билда)
 const apps = {
     chatboom: {
         id: 53414465,
@@ -71,14 +72,14 @@ const apps = {
         </div>
     },
     gochatix: {
-        id: 53589211, // Поменять
-        group_id: 135209265, // Поменять
-        domain: 'idscan.special-backend.ru', // поменять на scan.gochatix.ru
-        documentation: { // Поменять
-            rules: 'https://vk.com/topic-135209264_52897843',
-            agreement: 'https://vk.com/topic-135209264_52897844',
-            policy: 'https://vk.com/topic-135209264_52897846',
-            tariffs: 'https://vk.com/topic-135209264_52897848'
+        id: 53589211,
+        group_id: 158743989,
+        domain: 'scan.gochatix.ru',
+        documentation: {
+            rules: 'https://vk.com/topic-158743989_53724965',
+            agreement: 'https://vk.com/topic-158743989_53728355',
+            policy: 'https://vk.com/topic-158743989_53728350',
+            tariffs: 'https://vk.com/topic-158743989_53728352'
         },
 
         css: 'VKIdScan2.css',
