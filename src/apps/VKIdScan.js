@@ -24,7 +24,7 @@ const apps = {
     chatboom: {
         id: 53414465,
         group_id: 135209264,
-        domain: 'idscan.special-backend.ru',
+        domain: 'scan.chatboom.ru',
         documentation: {
             rules: 'https://vk.com/topic-135209264_52897843',
             agreement: 'https://vk.com/topic-135209264_52897844',
@@ -147,7 +147,7 @@ const apps = {
         }
     }
 };
-const currentApp = apps.gochatix;
+const currentApp = apps.chatboom;
 import ('../css/' + currentApp.css);
 
 
