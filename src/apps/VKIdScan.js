@@ -2,21 +2,21 @@ import React from 'react';
 import bridge from '@vkontakte/vk-bridge';
 import '../css/Fonts.css';
 
-import {CustomSelect, Panel, ScreenSpinner, View, Text} from '@vkontakte/vkui';
-import {InfiniteScroll} from '../components/InfiniteScroll'
+import { CustomSelect, Panel, ScreenSpinner, View, Text } from '@vkontakte/vkui';
+import { InfiniteScroll } from '../components/InfiniteScroll'
 
-import {get, getClearUserId, getUrlParams, getVKUsers, openUrl, post, sleep, vk_local_users} from "../js/utils";
-import {defaultViewProps, initializeNavigation} from "../js/defaults/navigation";
-import {getToken, subscribeBridgeEvents, vkApi} from "../js/defaults/bridge_utils";
-import {ReactComponent as Logo} from "../assets/vk_id_scan/logo.svg"
-import {ReactComponent as Logo2} from "../assets/vk_id_scan/logo2.svg"
-import {ReactComponent as IconMessage} from "../assets/vk_id_scan/icon_32_message.svg"
-import {ReactComponent as IconMessage2} from "../assets/vk_id_scan/icon_40_message.svg"
-import {ReactComponent as AnimationPulse} from "../assets/vk_id_scan/animation.svg"
-import {ReactComponent as IconLikes} from "../assets/vk_id_scan/icon_24_likes.svg"
-import {ReactComponent as IconLikes2} from "../assets/vk_id_scan/icon_20_likes.svg";
-import {ReactComponent as IconComments} from "../assets/vk_id_scan/icon_24_comments.svg";
-import {ReactComponent as IconComments2} from "../assets/vk_id_scan/icon_20_comments.svg";
+import { get, getClearUserId, getUrlParams, getVKUsers, openUrl, post, sleep, vk_local_users } from "../js/utils";
+import { defaultViewProps, initializeNavigation } from "../js/defaults/navigation";
+import { getToken, subscribeBridgeEvents, vkApi } from "../js/defaults/bridge_utils";
+import { ReactComponent as Logo } from "../assets/vk_id_scan/logo.svg"
+import { ReactComponent as Logo2 } from "../assets/vk_id_scan/logo2.svg"
+import { ReactComponent as IconMessage } from "../assets/vk_id_scan/icon_32_message.svg"
+import { ReactComponent as IconMessage2 } from "../assets/vk_id_scan/icon_40_message.svg"
+import { ReactComponent as AnimationPulse } from "../assets/vk_id_scan/animation.svg"
+import { ReactComponent as IconLikes } from "../assets/vk_id_scan/icon_24_likes.svg"
+import { ReactComponent as IconLikes2 } from "../assets/vk_id_scan/icon_20_likes.svg";
+import { ReactComponent as IconComments } from "../assets/vk_id_scan/icon_24_comments.svg";
+import { ReactComponent as IconComments2 } from "../assets/vk_id_scan/icon_20_comments.svg";
 import Lottie from "lottie-react";
 
 // Удалить прилы которые не относятся (во время билда)
@@ -40,14 +40,14 @@ const apps = {
         },
 
         background: false,
-        logo: <Logo id='logo'/>,
-        hello_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_hand.webp')}/>,
+        logo: <Logo id='logo' />,
+        hello_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_hand.webp')} />,
         hello_hint_icon: false,
         select_scan_hint_icon: false,
-        scan_button_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_search.webp')}/>,
+        scan_button_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_search.webp')} />,
         scan_button_text: 'Сканировать',
         loading_hint_icon: false,
-        loading_message_icon: <IconMessage/>,
+        loading_message_icon: <IconMessage />,
         loading_animation: <Lottie
             id='animation'
             autoplay={true}
@@ -55,15 +55,15 @@ const apps = {
             animationData={require(`../assets/vk_id_scan/animation.json`)}
             width={window.innerWidth}
         />,
-        result_icon_likes: <IconLikes/>,
-        result_icon_comments: <IconComments/>,
+        result_icon_likes: <IconLikes />,
+        result_icon_comments: <IconComments />,
         get_graph_sex: (report) => <div className='graph-sex'>
             <div>
                 <span>{report.friends.graph[0] || 0}%</span>
                 <span>{report.friends.graph[1] || 0}%</span>
             </div>
             <div>
-                <div style={{width: `${report.friends.graph[0] || 0}%`}}/>
+                <div style={{ width: `${report.friends.graph[0] || 0}%` }} />
             </div>
             <div>
                 <span>Мужской</span>
@@ -90,17 +90,17 @@ const apps = {
         },
 
         background: require('../assets/vk_id_scan/bg.webp'),
-        logo: <Logo2 id='logo'/>,
+        logo: <Logo2 id='logo' />,
         hello_icon: false,
-        hello_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_info.webp')}/>,
-        select_scan_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_plus.webp')}/>,
-        scan_button_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_search_2.webp')}/>,
+        hello_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_info.webp')} />,
+        select_scan_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_plus.webp')} />,
+        scan_button_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_search_2.webp')} />,
         scan_button_text: 'Анализировать',
-        loading_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_time.webp')}/>,
-        loading_message_icon: <IconMessage2/>,
-        loading_animation: <AnimationPulse id='animation'/>,
-        result_icon_likes: <IconLikes2/>,
-        result_icon_comments: <IconComments2/>,
+        loading_hint_icon: <img alt='icon' src={require('../assets/vk_id_scan/icon_48_time.webp')} />,
+        loading_message_icon: <IconMessage2 />,
+        loading_animation: <AnimationPulse id='animation' />,
+        result_icon_likes: <IconLikes2 />,
+        result_icon_comments: <IconComments2 />,
         get_graph_sex: (report) => {
             const
                 size = 210,
@@ -112,7 +112,7 @@ const apps = {
                 radius = half - strokeWidth / 2,
                 circumference = 2 * Math.PI * radius,
                 offset = -circumference * (percentage[0] / 100)
-            ;
+                ;
 
             return <div className='graph-sex'>
                 <svg width={size} height={size}>
@@ -148,7 +148,7 @@ const apps = {
     }
 };
 const currentApp = apps.chatboom;
-import ('../css/' + currentApp.css);
+import('../css/' + currentApp.css);
 
 
 let timeoutSearchUser, loadingProcessInterval;
@@ -186,7 +186,7 @@ async function batchGetFriends(ids, token) {
         // Формируем массив вызовов для каждого user_id из батча
         const calls = batch.map(userId => ({
             method: 'friends.get',
-            params: {user_id: userId, count: 5000, v: '5.131', access_token: token},
+            params: { user_id: userId, count: 5000, v: '5.131', access_token: token },
             // Оборачиваем, чтобы вернуть объект с uid и items:
             first: `{"uid":${userId},"items":`,
             last: '.items}'
@@ -195,7 +195,7 @@ async function batchGetFriends(ids, token) {
         try {
             const response = await bridge.send('VKWebAppCallAPIMethod', {
                 method: 'execute',
-                params: {code, access_token: token, v: '5.131'}
+                params: { code, access_token: token, v: '5.131' }
             });
             if (response && response.response && Array.isArray(response.response)) {
                 // Каждый элемент response.response должен быть объектом: { uid: <userId>, items: [...] }
@@ -227,7 +227,7 @@ export async function findHandshakePath(user, userA, userB, token) {
         try {
             const areFriendsRes = await bridge.send('VKWebAppCallAPIMethod', {
                 method: 'friends.areFriends',
-                params: {user_ids: userB, access_token: token, v: '5.131'}
+                params: { user_ids: userB, access_token: token, v: '5.131' }
             });
             if (areFriendsRes.response && areFriendsRes.response[0] && areFriendsRes.response[0].friend_status === 3) {
                 return [userA, userB];
@@ -241,7 +241,7 @@ export async function findHandshakePath(user, userA, userB, token) {
     try {
         const mutualRes = await bridge.send('VKWebAppCallAPIMethod', {
             method: 'friends.getMutual',
-            params: {source_uid: userA, target_uid: userB, access_token: token, v: '5.131'}
+            params: { source_uid: userA, target_uid: userB, access_token: token, v: '5.131' }
         });
         if (mutualRes.response && mutualRes.response.length > 0) {
             return [userA, mutualRes.response[0], userB];
@@ -345,6 +345,165 @@ export async function findHandshakePath(user, userA, userB, token) {
     // Если ничего не нашли до maxDepth – возвращаем пустой массив
     return [];
 }
+/*
+export async function getFriendsData(user_id, token) {
+    console.log('getFriendsData');
+    const startTime = Date.now();
+
+    const report_result = {
+        possible_friends: [],
+        friends: {
+            graph: [],
+            years: []
+        },
+    };
+
+    let friends_data = {}, friends_count;
+    for (let i = 0; i < Math.ceil((friends_count || 1000) / 1000); i++) {
+        const data = await vkApi('friends.get', {
+            user_id,
+            count: 1000,
+            offset: i * 1000,
+            access_token: token, v: '5.131',
+            _catch: true
+        });
+        console.log('debug data', data);
+
+        if (data.response) {
+            if (!friends_count) friends_count = data.response.count;
+
+            data.response.items.forEach(user_id => friends_data[user_id] = {});
+        } else if (data.error) {
+            if (data.error.error_msg.includes('Flood control')) {
+                console.errror('Flood error');
+                break;
+            }
+
+            console.error(`[Scanner] Error in report ${user_id}, friends, ${data.error.error_msg}`);
+        }
+
+        await sleep(100);
+    }
+
+    console.log('friends_data', friends_data, Date.now() - startTime);
+
+    const friend_ids = Object.keys(friends_data);
+    for (let i = 0; i < Math.ceil(friend_ids.length / 500); i++) {
+        const data = await vkApi('users.get', {
+            user_ids: friend_ids.slice(i * 500, i * 500 + 500).join(','),
+            fields: ['bdate', 'sex', 'is_closed', 'deactivated'],
+            access_token: token, v: '5.131',
+            _catch: true
+        });
+
+        if (data.response) {
+            data.response.forEach(user_data => friends_data[user_data.id] = user_data);
+        } else if (data.error) {
+            if (data.error.error_msg.includes('Flood control')) {
+                i--;
+                await sleep(1000);
+                continue;
+            }
+
+            console.error(`[Scanner] Error in report ${user_id}, friends_data, ${data.error.error_msg}`);
+        }
+
+        await sleep(100);
+    }
+    const friend_ids_not_closed = friend_ids.filter(id => friends_data[id].is_closed === false && friends_data[id].deactivated !== 'banned' && friends_data[id].deactivated !== 'deleted');
+    console.log('friend_ids_not_closed', friend_ids_not_closed, Date.now() - startTime);
+
+    // Установка количества друзей к каждому другу
+    const get_friends_count_execute = friend_ids_not_closed.map(id =>
+    ({
+        method: 'friends.get',
+        params: { user_id: id, count: 1 },
+        first: `{user_id:${id},count:`,
+        last: '.count}'
+    })
+    );
+
+    for (let i = 0; i < Math.ceil(get_friends_count_execute.length / 25); i++) {
+        const data = await vkApi('execute', {
+            code: generateExecute(get_friends_count_execute.slice(i * 25, i * 25 + 25)),
+            access_token: token, v: '5.131',
+            _catch: true
+        });
+        for (const response of (data.response || [])) {
+            friends_data[response.user_id].friends_count = response.count || 0;
+        }
+        if (data.execute_errors && data.execute_errors.length >= 20) {
+            console.errror('Flood error execute');
+            break;
+        }
+
+        await sleep(100);
+    }
+    console.log('friends_data (2)', friends_data, Date.now() - startTime);
+
+    // Составление графика друзей (по полу и возрасту)
+    const all_friends_with_sex = friend_ids.filter(id => friends_data[id].sex !== 0);
+    report_result.friends.graph[0] = Math.round(100 / all_friends_with_sex.length * all_friends_with_sex.filter(id => friends_data[id].sex === 2).length);
+    report_result.friends.graph[1] = 100 - report_result.friends.graph[0];
+
+    const all_friends_with_bdate = friend_ids.filter(id => friends_data[id].bdate !== undefined && friends_data[id].bdate !== '' && friends_data[id].bdate.split('.').length === 3);
+    const years_array = [[0, 17], [18, 25], [26, 35], [36, 100]];
+
+    for (let i = 0; i < years_array.length; i++) {
+        report_result.friends.years[i] = Math.round(100 / all_friends_with_bdate.length * all_friends_with_bdate.filter(id => {
+            const condition = years_array[i];
+            const bdate = friends_data[id].bdate.split('.');
+            const years = new Date().getFullYear() - parseInt(bdate[2]);
+            return years >= condition[0] && years <= condition[1];
+        }).length);
+    }
+
+    console.log('friends_data (3)', report_result.friends, Date.now() - startTime);
+
+
+    // Получение возможных друзей (пересечение пользователей у друзей текущего пользователя)
+    const mutual_friends_data = {};
+    const get_mutual_friends_execute = [];
+
+    for (const owner_id of friend_ids_not_closed.filter(id => friends_data[id].friends_count > 0)) {
+        for (let i = 0; i < Math.ceil((friends_data[owner_id].friends_count || 1000) / 1000); i++) {
+            get_mutual_friends_execute.push({
+                method: 'friends.get',
+                params: { user_id: owner_id, count: 1000, offset: i * 1000 },
+                first: `{user_id:${owner_id},friend_ids:`,
+                last: '.items}'
+            });
+        }
+    }
+
+    let get_mutual_friends_execute_max_length = 20;
+    for (let i = 0; i < Math.ceil(get_mutual_friends_execute.length / get_mutual_friends_execute_max_length); i++) {
+        const data = await vkApi('execute', {
+            code: generateExecute(get_mutual_friends_execute.slice(i * get_mutual_friends_execute_max_length, i * get_mutual_friends_execute_max_length + get_mutual_friends_execute_max_length)),
+            access_token: token, v: '5.131',
+            _catch: true
+        });
+        if (data.error && (data.error.error_msg.includes('Failed to fetch') || data.error.error_msg.includes('response size is too big') || data.error.error_msg.includes('aborted a request') || data.error.error_msg.includes('Internal server error'))) {
+            if (get_mutual_friends_execute_max_length > 1) {
+                get_mutual_friends_execute_max_length -= 1;
+                i--;
+                continue;
+            }
+        }
+        for (const response of (data.response || [])) {
+            (response.friend_ids || []).forEach(id => mutual_friends_data[id] = (mutual_friends_data[id] || 0) + 1);
+        }
+        if (data.execute_errors && data.execute_errors.length >= 20) {
+            console.errror('Flood error execute');
+            break;
+        }
+        await sleep(100);
+    }
+
+    report_result.possible_friends = Object.keys(mutual_friends_data).filter(id => id != user_id && friend_ids.indexOf(id) === -1 && mutual_friends_data[id] > 1).sort((a, b) => mutual_friends_data[b] - mutual_friends_data[a]).slice(0, 20);
+
+    console.log('possible_friends', report_result.possible_friends, Date.now() - startTime);
+}*/
 
 export default class extends React.Component {
 
@@ -376,9 +535,9 @@ export default class extends React.Component {
 
     async api(method, params = {}) {
         if (method === 'getReport') {
-            return (await post(`https://${currentApp.domain}/method/${method}`, {...getUrlParams(), ...params})).data;
+            return (await post(`https://${currentApp.domain}/method/${method}`, { ...getUrlParams(), ...params })).data;
         } else {
-            return await get(`https://${currentApp.domain}/method/${method}`, {...getUrlParams(), ...params});
+            return await get(`https://${currentApp.domain}/method/${method}`, { ...getUrlParams(), ...params });
         }
     }
 
@@ -389,9 +548,9 @@ export default class extends React.Component {
         await bridge.send('VKWebAppInit');
 
         const vk_user = await bridge.send('VKWebAppGetUserInfo');
-        await this.setState({vk_user});
+        await this.setState({ vk_user });
         await this.fetchUserData();
-        const {userInfo} = this.state;
+        const { userInfo } = this.state;
         await this.setActivePanel(!userInfo.agreement ? 'main' : 'select-scan');
         if (userInfo.agreement) {
             if (window.location.hash && window.location.hash.length > 1) {
@@ -400,6 +559,9 @@ export default class extends React.Component {
             }
         }
 
+        /*setTimeout(async () => {
+            await getFriendsData(23459131, await getToken('friends'));
+        }, 10000);*/
     }
 
     changeStatusBarColor() {
@@ -409,7 +571,7 @@ export default class extends React.Component {
     }
 
     async saveToken() {
-        await this.setPopout(<ScreenSpinner/>);
+        await this.setPopout(<ScreenSpinner />);
         let access_token;
         for (let i = 0; i < 1; i++) {
             access_token = await getToken('friends');
@@ -419,21 +581,21 @@ export default class extends React.Component {
                 i--;
             }
         }
-        await this.setState({access_token});
+        await this.setState({ access_token });
         await this.setPopout(null);
     }
 
     async fetchUserData() {
-        await this.setPopout(<ScreenSpinner/>);
-        let {access_token, vk_user, userInfo} = this.state;
+        await this.setPopout(<ScreenSpinner />);
+        let { access_token, vk_user, userInfo } = this.state;
         if (!this.state.userInfo) {
             userInfo = (await this.api('getUser')).response;
-            await this.setState({userInfo});
+            await this.setState({ userInfo });
         }
         if (userInfo.agreement && !access_token) {
             await this.saveToken();
             access_token = this.state.access_token;
-            await this.setPopout(<ScreenSpinner/>);
+            await this.setPopout(<ScreenSpinner />);
         }
         if (access_token) {
             userInfo.history = userInfo.history.slice(Math.max(0, userInfo.history.length - 10), Math.max(0, userInfo.history.length - 10) + 10);
@@ -441,7 +603,7 @@ export default class extends React.Component {
                 userInfo.history.unshift(vk_user.id);
             }
             userInfo.history = await getVKUsers(userInfo.history, access_token);
-            await this.setState({userInfo, searchUsers: userInfo.history});
+            await this.setState({ userInfo, searchUsers: userInfo.history });
         }
         await this.setPopout(null);
     }
@@ -449,12 +611,12 @@ export default class extends React.Component {
     async fetchReport(report_id) {
         await getVKUsers([report_id], this.state.access_token);
         await this.setActivePanel('loading');
-        await this.setPopout(<ScreenSpinner/>);
-        const report = await this.api('getReport', {source_id: report_id}); // fetch from api
-        console.log({step: 0, report});
+        await this.setPopout(<ScreenSpinner />);
+        const report = await this.api('getReport', { source_id: report_id }); // fetch from api
+        console.log({ step: 0, report });
         await sleep(1000);
         if (report.response) {
-            await this.setState({report: report.response});
+            await this.setState({ report: report.response });
             await this.setPopout(null);
             await this.setActivePanel('result');
             this.fetchReportActions();
@@ -465,18 +627,18 @@ export default class extends React.Component {
         } else {
             await this.setPopout(null);
             loadingProcessInterval = setInterval(async () => {
-                const status = (await this.api('getReportStatus', {source_id: report_id})).response; // fetch from api get report status
-                this.setState({loading_process: status});
+                const status = (await this.api('getReportStatus', { source_id: report_id })).response; // fetch from api get report status
+                this.setState({ loading_process: status });
                 if (status >= 100) {
                     clearInterval(loadingProcessInterval);
-                    const report = await this.api('getReport', {source_id: report_id}); // fetch from api
-                    console.log({step: 1, report});
+                    const report = await this.api('getReport', { source_id: report_id }); // fetch from api
+                    console.log({ step: 1, report });
                     if (report.response === false) {
                         await this.setPopout(null);
                         await this.setActivePanel('select-scan');
                         return await this.setSnackbar(report.blocked ? 'Пользователь заблокировал сканирование.' : 'Не удалось получить данные. Пожалуйста, откройте приложение из бота.');
                     }
-                    await this.setState({report: report.response});
+                    await this.setState({ report: report.response });
                     await this.setPopout(null);
                     await this.setActivePanel('result');
                     this.fetchReportActions();
@@ -488,7 +650,7 @@ export default class extends React.Component {
     async fetchReportActions() {
         await this.saveToken();
 
-        const {access_token, report} = this.state;
+        const { access_token, report } = this.state;
 
         // Блок 1: Топ активности
         const outgoing_activity_data = {}, incoming_activity_data = {};
@@ -536,27 +698,27 @@ export default class extends React.Component {
         // Блок 2: Вероятные друзья
         if (report.possible_friends.length > 0)
             await getVKUsers(report.possible_friends, access_token);
-        await this.setState({possible_friends: true});
+        await this.setState({ possible_friends: true });
 
         await this.fetchActivity(true);
         await this.fetchReviews(true);
     }
 
     async fetchReviews(first) {
-        await this.setState({fetch_reviews: true});
-        const {reviews, report} = this.state;
-        const data = (await this.api('getReviews', {source_id: report.user_id, offset: reviews.length})).response;// fetch from api
+        await this.setState({ fetch_reviews: true });
+        const { reviews, report } = this.state;
+        const data = (await this.api('getReviews', { source_id: report.user_id, offset: reviews.length })).response;// fetch from api
         if (data.length === 0 && first !== true) {
             this.setSnackbar('Отзывов пока что нет.');
         }
         reviews.push(...data);
-        await this.setState({reviews, fetch_reviews: false});
+        await this.setState({ reviews, fetch_reviews: false });
     }
 
     async fetchActivity(first) {
-        await this.setState({fetch_activity: true});
+        await this.setState({ fetch_activity: true });
 
-        let {incoming_activity, outgoing_activity, report, access_token, activity_selected} = this.state;
+        let { incoming_activity, outgoing_activity, report, access_token, activity_selected } = this.state;
         for (let i = 0; i < 2; i++) {
             const is_incoming_activity = first === true ? i : activity_selected === 1;
             if (is_incoming_activity ?
@@ -571,7 +733,7 @@ export default class extends React.Component {
                         (is_incoming_activity ? incoming_activity : outgoing_activity).length,
                         (is_incoming_activity ? incoming_activity : outgoing_activity).length + 10
                     )
-                ;
+                    ;
                 if (is_incoming_activity) {
                     incoming_activity.push(...next_activity);
                 } else {
@@ -593,14 +755,14 @@ export default class extends React.Component {
                 break;
             }
         }
-        this.setState({incoming_activity, outgoing_activity});
+        this.setState({ incoming_activity, outgoing_activity });
 
-        await this.setState({fetch_activity: false});
+        await this.setState({ fetch_activity: false });
     }
 
     async fetchHandshake(user_id) {
-        await this.setState({handshake_fetch: true, handshake: []});
-        const {access_token, report, vk_user} = this.state;
+        await this.setState({ handshake_fetch: true, handshake: [] });
+        const { access_token, report, vk_user } = this.state;
         const source_id = report.user_id;
         if (user_id == source_id) {
             return this.setSnackbar('Пользователь не найден.');
@@ -614,12 +776,12 @@ export default class extends React.Component {
                 await this.setSnackbar('Не удалось получить данные :(');
             } else {
                 await getVKUsers(data);
-                await this.setState({handshake: data});
+                await this.setState({ handshake: data });
             }
         } else {
             await this.setSnackbar('Пользователь не найден.');
         }
-        await this.setState({handshake_fetch: false});
+        await this.setState({ handshake_fetch: false });
     }
 
     render() {
@@ -686,7 +848,7 @@ export default class extends React.Component {
                             // fetch from api acceptAgreement
                             await this.api('acceptAgreement');
                             userInfo.agreement = true;
-                            await this.setState({userInfo});
+                            await this.setState({ userInfo });
                             await this.fetchUserData();
                             await this.setActivePanel('select-scan');
                         }}
@@ -716,19 +878,19 @@ export default class extends React.Component {
                             timeoutSearchUser = setTimeout(async () => {
                                 const value = getClearUserId(e.target.value);
                                 if (!value) {
-                                    this.setState({searchUsers: []});
+                                    this.setState({ searchUsers: [] });
                                     return;
                                 }
 
-                                this.setState({searchUser: true});
+                                this.setState({ searchUser: true });
                                 const users = (await getVKUsers([value], access_token)).filter(v => !!v);
-                                await this.setState({searchUsers: users, searchUser: false});
+                                await this.setState({ searchUsers: users, searchUser: false });
                                 this.forceUpdate();
                             }, 1000);
                         }}
                         onChange={(e) => {
                             const value = e.target.value;
-                            this.setState({scanId: value});
+                            this.setState({ scanId: value });
                         }}
                         filterFn={(value, option) => {
                             try {
@@ -739,7 +901,7 @@ export default class extends React.Component {
                                 return true;
                             }
                         }}
-                        onOpen={() => this.setState({searchUsers: []})}
+                        onOpen={() => this.setState({ searchUsers: [] })}
                         fetching={searchUser}
                     />
                     <button
@@ -757,7 +919,7 @@ export default class extends React.Component {
                 <Panel id='loading'>
                     {currentApp.logo}
                     <h1>Идет обработка {loading_process > 0 &&
-                        <React.Fragment><br/>({loading_process}%)</React.Fragment>}</h1>
+                        <React.Fragment><br />({loading_process}%)</React.Fragment>}</h1>
                     <h2>{currentApp.loading_hint_icon} Это может занять от 1 минут до 24 часов</h2>
                     <div className='box'>
                         <div>
@@ -769,10 +931,10 @@ export default class extends React.Component {
                                 display: allow_messages ? 'none' : ''
                             }}
                             onClick={() => {
-                                bridge.send('VKWebAppAllowMessagesFromGroup', {group_id: currentApp.group_id})
+                                bridge.send('VKWebAppAllowMessagesFromGroup', { group_id: currentApp.group_id })
                                     .then(() => {
                                         this.setSnackbar('Отлично! Скоро пришлём результат.');
-                                        this.setState({allow_messages: true});
+                                        this.setState({ allow_messages: true });
                                     })
                                     .catch(() => this.setSnackbar('Доступ к сообщениям не был получен.'))
                             }}
@@ -791,7 +953,7 @@ export default class extends React.Component {
                             <p>Результат:</p>
 
                             <div className='user-header'>
-                                <img alt='avatar' src={report.photo_100}/>
+                                <img alt='avatar' src={report.photo_100} />
                                 <p>{report.first_name} {report.last_name}</p>
                             </div>
 
@@ -830,7 +992,7 @@ export default class extends React.Component {
                                         ['Исходящая', 'Входящая'].map((value, index) =>
                                             <button
                                                 key={index}
-                                                onClick={() => this.setState({top_activity_selected: index})}
+                                                onClick={() => this.setState({ top_activity_selected: index })}
                                                 className={top_activity_selected === index ? 'active' : ''}
                                             >
                                                 {value}
@@ -839,7 +1001,7 @@ export default class extends React.Component {
                                     <span className='background' style={{
                                         left: `${top_activity_selected * (100 / 2)}%`,
                                         width: `${100 / 2}%`
-                                    }}/>
+                                    }} />
                                 </div>
                                 <p>
                                     {
@@ -859,7 +1021,7 @@ export default class extends React.Component {
                                                         onClick={() => openUrl(`https://vk.com/id${id}`)}
                                                     >
                                                         <span>{index + 1}</span>
-                                                        <img alt='avatar' src={vk_local_users[id].photo_100}/>
+                                                        <img alt='avatar' src={vk_local_users[id].photo_100} />
                                                         <span>{vk_local_users[id].first_name} {vk_local_users[id].last_name}</span>
                                                         <div>
                                                             <span>
@@ -876,7 +1038,7 @@ export default class extends React.Component {
                                             }
                                         </div>
                                         :
-                                        <ScreenSpinner/>
+                                        <ScreenSpinner />
                                 }
                             </div>
 
@@ -885,31 +1047,40 @@ export default class extends React.Component {
                                     <span>2</span>
                                     Вероятные друзья
                                 </h1>
-                                <p>
-                                    Страницы, которых нет в друзьях у пользователя, но которые часто пересекаются среди его
-                                    друзей:
-                                </p>
                                 {
-                                    possible_friends ?
-                                        <div className='list'>
-                                            <InfiniteScroll
-                                                items={report.possible_friends}
-                                                initialCount={50}
-                                                step={10}
-                                                renderItem={(id, index) =>
-                                                    <div
-                                                        key={index}
-                                                        onClick={() => openUrl(`https://vk.com/id${id}`)}
-                                                    >
-                                                        <span>{index + 1}</span>
-                                                        <img alt='avatar' src={vk_local_users[id].photo_100}/>
-                                                        <span>{vk_local_users[id].first_name} {vk_local_users[id].last_name}</span>
+                                    report.possible_friends.length > 0 ?
+                                        <React.Fragment>
+                                            <p>
+                                                Страницы, которых нет в друзьях у пользователя, но которые часто пересекаются среди его
+                                                друзей:
+                                            </p>
+                                            {
+                                                possible_friends ?
+                                                    <div className='list'>
+                                                        <InfiniteScroll
+                                                            items={report.possible_friends}
+                                                            initialCount={50}
+                                                            step={10}
+                                                            renderItem={(id, index) =>
+                                                                <div
+                                                                    key={index}
+                                                                    onClick={() => openUrl(`https://vk.com/id${id}`)}
+                                                                >
+                                                                    <span>{index + 1}</span>
+                                                                    <img alt='avatar' src={vk_local_users[id].photo_100} />
+                                                                    <span>{vk_local_users[id].first_name} {vk_local_users[id].last_name}</span>
+                                                                </div>
+                                                            }
+                                                        />
                                                     </div>
-                                                }
-                                            />
-                                        </div>
+                                                    :
+                                                    <ScreenSpinner />
+                                            }
+                                        </React.Fragment>
                                         :
-                                        <ScreenSpinner/>
+                                        <p>
+                                            Временно недоступно
+                                        </p>
                                 }
                             </div>
 
@@ -923,7 +1094,7 @@ export default class extends React.Component {
                                         ['Исходящая', 'Входящая'].map((value, index) =>
                                             <button
                                                 key={index}
-                                                onClick={() => this.setState({activity_selected: index})}
+                                                onClick={() => this.setState({ activity_selected: index })}
                                                 className={activity_selected === index ? 'active' : ''}
                                             >
                                                 {value}
@@ -932,7 +1103,7 @@ export default class extends React.Component {
                                     <span className='background' style={{
                                         left: `${activity_selected * (100 / 2)}%`,
                                         width: `${100 / 2}%`
-                                    }}/>
+                                    }} />
                                 </div>
                                 <div className='list'>
                                     {
@@ -952,7 +1123,7 @@ export default class extends React.Component {
                                                 >
                                                     <span>{index + 1}</span>
                                                     <img alt='avatar'
-                                                         src={(is_incoming_activity ? user_data : user_data2).photo_100}/>
+                                                        src={(is_incoming_activity ? user_data : user_data2).photo_100} />
                                                     <span>{user_data.first_name} {action[activity.type]} {user_data2.first_name_gen}</span>
                                                 </div>
                                             }
@@ -960,12 +1131,12 @@ export default class extends React.Component {
                                     }
                                 </div>
                                 {
-                                    fetch_activity && <ScreenSpinner/>
+                                    fetch_activity && <ScreenSpinner />
                                 }
                                 <button
                                     className='load-more'
                                     onClick={this.fetchActivity}
-                                    style={fetch_activity ? {opacity: .5, pointerEvents: 'none'} : {}}
+                                    style={fetch_activity ? { opacity: .5, pointerEvents: 'none' } : {}}
                                 >
                                     Загрузить ещё...
                                 </button>
@@ -976,27 +1147,37 @@ export default class extends React.Component {
                                     <span>4</span>
                                     Возраст и пол друзей
                                 </h1>
-                                <p>
-                                    Мы анализируем страницы друзей и презентуем вам сводную статистику об их показателях.
-                                    Делайте выводы!)
-                                </p>
-                                {currentApp.get_graph_sex(report)}
-                                <div className='graph-years'>
-                                    {
-                                        [
-                                            [report.friends.years[0] || 0, 'до 18'],
-                                            [report.friends.years[1] || 0, '19-25'],
-                                            [report.friends.years[2] || 0, '26-35'],
-                                            [report.friends.years[3] || 0, '36+']
-                                        ].map((value, index) =>
-                                            <div key={index}>
-                                                <span>{value[0]}%</span>
-                                                <div style={{height: `${value[0]}%`}}/>
-                                                <span>{value[1]}</span>
+                                {
+                                    report.friends.graph[0] ?
+                                        <React.Fragment>
+                                            <p>
+                                                Мы анализируем страницы друзей и презентуем вам сводную статистику об их показателях.
+                                                Делайте выводы!)
+                                            </p>
+                                            {currentApp.get_graph_sex(report)}
+                                            <div className='graph-years'>
+                                                {
+                                                    [
+                                                        [report.friends.years[0] || 0, 'до 18'],
+                                                        [report.friends.years[1] || 0, '19-25'],
+                                                        [report.friends.years[2] || 0, '26-35'],
+                                                        [report.friends.years[3] || 0, '36+']
+                                                    ].map((value, index) =>
+                                                        <div key={index}>
+                                                            <span>{value[0]}%</span>
+                                                            <div style={{ height: `${value[0]}%` }} />
+                                                            <span>{value[1]}</span>
+                                                        </div>
+                                                    )
+                                                }
                                             </div>
-                                        )
-                                    }
-                                </div>
+                                        </React.Fragment>
+                                        :
+                                        <p>
+                                            Временно недоступно
+                                        </p>
+                                }
+
                             </div>
 
                             <div className='block block-5'>
@@ -1018,7 +1199,7 @@ export default class extends React.Component {
                                                 onClick={() => openUrl(`https://vk.com/club${value.id}`)}
                                             >
                                                 <span>{index + 1}</span>
-                                                <img alt='avatar' src={value.photo_100}/>
+                                                <img alt='avatar' src={value.photo_100} />
                                                 <span>{value.name}</span>
                                             </div>
                                         }
@@ -1042,24 +1223,24 @@ export default class extends React.Component {
                                                 onClick={() => openUrl(`https://vk.com/id${id}`)}
                                             >
                                                 <span>{index + 1}</span>
-                                                <img alt='avatar' src={vk_local_users[id].photo_100}/>
+                                                <img alt='avatar' src={vk_local_users[id].photo_100} />
                                                 <span>{vk_local_users[id].first_name} {vk_local_users[id].last_name}</span>
                                             </div>
                                         )
                                     }
                                 </div>}
                                 {
-                                    handshake_fetch && <ScreenSpinner/>
+                                    handshake_fetch && <ScreenSpinner />
                                 }
                                 <input
-                                    style={handshake_fetch ? {opacity: .5, pointerEvents: 'none'} : {}}
+                                    style={handshake_fetch ? { opacity: .5, pointerEvents: 'none' } : {}}
                                     placeholder='vk.com/id12345'
                                     onChange={(e) => {
-                                        this.setState({handshake_url: e.target.value})
+                                        this.setState({ handshake_url: e.target.value })
                                     }}
                                 />
                                 <button
-                                    style={handshake_fetch ? {opacity: .5, pointerEvents: 'none'} : {}}
+                                    style={handshake_fetch ? { opacity: .5, pointerEvents: 'none' } : {}}
                                     onClick={async () => {
                                         const user_id = getClearUserId(handshake_url);
                                         if (user_id) {
@@ -1080,7 +1261,7 @@ export default class extends React.Component {
                                     Отзывы
                                 </h1>
                                 <div className='user-header'>
-                                    <img alt='avatar' src={report.photo_100}/>
+                                    <img alt='avatar' src={report.photo_100} />
                                     <p>{report.first_name} {report.last_name}</p>
                                 </div>
                                 <p className='score'>
@@ -1108,12 +1289,12 @@ export default class extends React.Component {
                                     }
                                 </div>
                                 {
-                                    fetch_reviews && <ScreenSpinner/>
+                                    fetch_reviews && <ScreenSpinner />
                                 }
                                 <button
                                     className='load-more'
                                     onClick={this.fetchReviews}
-                                    style={fetch_reviews ? {opacity: .5, pointerEvents: 'none'} : {}}
+                                    style={fetch_reviews ? { opacity: .5, pointerEvents: 'none' } : {}}
                                 >
                                     Загрузить ещё...
                                 </button>
@@ -1127,7 +1308,7 @@ export default class extends React.Component {
                                                 key={index}
                                                 className={selected_score === index ? 'active' : ''}
                                                 onClick={() => {
-                                                    this.setState({selected_score: selected_score === index ? -1 : index})
+                                                    this.setState({ selected_score: selected_score === index ? -1 : index })
                                                 }}
                                             >
                                                 {index + 1}
@@ -1139,7 +1320,7 @@ export default class extends React.Component {
                                     placeholder='Напишите свой отзыв здесь'
                                     id='input_score_text'
                                     onChange={(e) => {
-                                        this.setState({score_text: e.target.value})
+                                        this.setState({ score_text: e.target.value })
                                     }}
                                 />
                                 <button
@@ -1160,7 +1341,7 @@ export default class extends React.Component {
                                             return this.setSnackbar('Вы не можете оставить отзыв самому себе');
                                         }
 
-                                        await this.setPopout(<ScreenSpinner/>);
+                                        await this.setPopout(<ScreenSpinner />);
                                         const review = await this.api('sendReview', {
                                             source_id: report.user_id,
                                             text: score_text,
@@ -1168,9 +1349,9 @@ export default class extends React.Component {
                                         }); // fetch from api
                                         if (review.response) {
                                             reviews.push(review.response);
-                                            this.setState({reviews});
+                                            this.setState({ reviews });
                                             document.querySelector('#input_score_text').value = '';
-                                            this.setState(({selected_score: -1}));
+                                            this.setState(({ selected_score: -1 }));
                                         }
                                         await this.setPopout(null);
                                     }}

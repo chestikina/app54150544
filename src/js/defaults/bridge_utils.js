@@ -1,15 +1,15 @@
 import bridge from "@vkontakte/vk-bridge";
-import {getUrlParams, sleep} from "../utils";
+import { getUrlParams, sleep } from "../utils";
 import fetch from "node-fetch";
-import {proxyUrl} from "./catalin_tg_bot";
+import { proxyUrl } from "./catalin_tg_bot";
 
 export async function getStorageKeys() {
-    return (await bridge.send('VKWebAppStorageGetKeys', {count: 1000})).keys;
+    return (await bridge.send('VKWebAppStorageGetKeys', { count: 1000 })).keys;
 }
 
 export async function getStorageValue(key) {
     try {
-        return (await bridge.send('VKWebAppStorageGet', {keys: [key]})).keys[0].value;
+        return (await bridge.send('VKWebAppStorageGet', { keys: [key] })).keys[0].value;
     } catch (e) {
         console.error(e);
         return false;
@@ -17,7 +17,7 @@ export async function getStorageValue(key) {
 }
 
 export function setStorageValue(key, value) {
-    return bridge.send('VKWebAppStorageSet', {key, value});
+    return bridge.send('VKWebAppStorageSet', { key, value });
 }
 
 export async function isEmptyKey(key) {
@@ -35,7 +35,7 @@ export async function isEmptyKeyWithSet(key) {
 
 export async function getToken(scope, require = false) {
     try {
-        const response = await bridge.send('VKWebAppGetAuthToken', {app_id: parseInt(getUrlParams().vk_app_id), scope});
+        const response = await bridge.send('VKWebAppGetAuthToken', { app_id: parseInt(getUrlParams().vk_app_id), scope });
         if (scope.includes(',') ? response.scope.split(',').length === scope.split(',').length : response.scope === scope) {
             return response.access_token;
         } else {
@@ -56,11 +56,22 @@ export async function getToken(scope, require = false) {
 
 export async function vkApi(method = '', params = {}) {
     if (!params.v) params.v = '5.126';
-    return await bridge.send('VKWebAppCallAPIMethod', {method, params});
+    let autoCatch = !!params._catch;
+    delete params._catch;
+
+    try {
+        return await bridge.send('VKWebAppCallAPIMethod', { method, params });
+    } catch (e) {
+        if (autoCatch) {
+            return e.error_data ? { error: e.error_data } : e;
+        } else {
+            throw new Error(e);
+        }
+    }
 }
 
 export function subscribeBridgeEvents(events = {}, defaultScheme) {
-    bridge.subscribe(async ({detail: {type, data}}) => {
+    bridge.subscribe(async ({ detail: { type, data } }) => {
         if (type !== undefined) console.debug(type, data);
         if (type === 'VKWebAppUpdateConfig') {
             const schemeAttribute = document.createAttribute('scheme');
@@ -85,7 +96,7 @@ export async function shareWallPhoto(image_blob, caption, copyright, access_toke
             }
         })).response.upload_url,
         bodyFormData = new FormData()
-    ;
+        ;
 
     bodyFormData.append('photo', image_blob, 'image.png');
 
@@ -98,7 +109,7 @@ export async function shareWallPhoto(image_blob, caption, copyright, access_toke
                 return res_.json();
             })
             .then(async response => {
-                const {server, photo, hash} = response;
+                const { server, photo, hash } = response;
                 const wallPhoto = (await bridge.send('VKWebAppCallAPIMethod', {
                     method: 'photos.saveWallPhoto',
                     params: {
@@ -196,7 +207,7 @@ export async function shareAlbumPhoto(image_blob, album_name, album_caption, acc
                     }).then(res_ => {
                         return res_.json()
                     });
-                    const {server, photos_list, hash} = response;
+                    const { server, photos_list, hash } = response;
                     const save = await bridge.send('VKWebAppCallAPIMethod', {
                         method: 'photos.save',
                         params: {
