@@ -650,7 +650,7 @@ export async function adAppApi(method, params) {
     }*/
 }
 
-export async function uploadFile(evt) {
+export async function uploadFile(evt, format = 'png') {
     const
         tgt = evt.target || window.event.srcElement,
         {files} = tgt
@@ -674,7 +674,7 @@ export async function uploadFile(evt) {
                         ;
                         ctx.drawImage(image, 0, 0, image.width, image.height);
 
-                        resolve({image, data: canvas.toDataURL('image/png')});
+                        resolve({image, data: canvas.toDataURL(`image/${format}`)});
                     };
                 } else {
                     console.error('File type not image');
