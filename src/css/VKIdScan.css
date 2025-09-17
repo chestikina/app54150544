@@ -1,0 +1,756 @@
+body[scheme="space_gray"] {
+    --background_content: linear-gradient(167.45deg, #05072B 0%, #1F283C 100%);
+}
+
+span,
+h1,
+h2,
+h3,
+p,
+label,
+img,
+svg {
+    user-select: none;
+    margin: 0 0 0 0;
+}
+
+.vkuiPanel .vkuiPanel__in,
+.vkuiPanel:after,
+.vkuiPanel,
+#root,
+body,
+html {
+    background: var(--background_content);
+}
+
+.vkuiPanel .vkuiPanel__in > svg#logo {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 18px) auto 0;
+}
+
+#main.vkuiPanel .vkuiPanel__in > h1,
+#select-scan.vkuiPanel .vkuiPanel__in > h1,
+#loading.vkuiPanel .vkuiPanel__in > h1 {
+    font-family: 'Gotham Pro Medium';
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+
+    margin: 7vh 20px 0;
+}
+
+#main.vkuiPanel .vkuiPanel__in > h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#main.vkuiPanel .vkuiPanel__in > h1 > img {
+    width: 37px;
+    height: 42px;
+}
+
+#main.vkuiPanel .vkuiPanel__in > h2,
+#select-scan.vkuiPanel .vkuiPanel__in > h2,
+#loading.vkuiPanel .vkuiPanel__in > h2 {
+    font-family: 'Gotham Pro';
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+
+    color: #75EEF7;
+
+    margin: 20px 20px 0;
+}
+
+#main.vkuiPanel .vkuiPanel__in > .agreements {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px;
+    gap: 15px;
+}
+
+#main.vkuiPanel .vkuiPanel__in > .agreements > button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+
+    width: 100%;
+    height: 70px;
+
+    background: #06082C;
+
+    outline: none;
+    border: none;
+
+    font-family: 'Gotham Pro';
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#main.vkuiPanel .vkuiPanel__in > button,
+#select-scan.vkuiPanel .vkuiPanel__in > button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 10px;
+
+    margin: auto 20px 20px;
+    height: 90px;
+
+    background: linear-gradient(139.22deg, #05B6DE -46.08%, #97FFFF 110.93%);
+
+    outline: none;
+    border: none;
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #06082C;
+    cursor: pointer;
+}
+
+.vkuiPanel .vkuiPanel__in button {
+    cursor: pointer;
+}
+
+.vkuiPanel .vkuiPanel__in button > img {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+}
+
+#select-scan.vkuiPanel .vkuiPanel__in > .vkuiCustomSelect {
+    margin: 20px;
+    width: calc(100% - 20px * 2);
+}
+
+#select-scan.vkuiPanel .vkuiPanel__in > .vkuiCustomSelect .vkuiSelect,
+#select-scan.vkuiPanel .vkuiPanel__in > .vkuiCustomSelect .vkuiSelect--open {
+    height: 70px;
+}
+
+.vkuiCustomSelectDropdown {
+    box-shadow: unset;
+    border-radius: 0;
+    border: unset;
+}
+
+.vkuiCustomSelectDropdown .vkuiCustomSelectOption {
+    height: 70px;
+    background: #06082C;
+    color: #FFFFFF;
+}
+
+.vkuiCustomSelectDropdown .vkuiCustomSelectOption__main {
+    /*color: #FFFFFF;*/
+}
+
+.vkuiCustomSelectDropdown .vkuiCustomSelectOption:nth-child(2n) {
+    height: 70px;
+    background: #141934;
+}
+
+#select-scan.vkuiPanel .vkuiPanel__in > .vkuiCustomSelect .vkuiFormField__border {
+    border-radius: 0;
+    outline: none;
+    border: none;
+    background: #06082C;
+    /*color: #FFFFFF;*/
+}
+
+#select-scan.vkuiPanel .vkuiPanel__in > .vkuiCustomSelect .vkuiSelect--open .vkuiFormField__border {
+    border-radius: 0;
+}
+
+#select-scan.vkuiPanel .vkuiPanel__in > .vkuiCustomSelect .vkuiSelect__container,
+#select-scan.vkuiPanel .vkuiPanel__in > .vkuiCustomSelect input {
+    font-family: 'Gotham Pro';
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    /*color: #FFFFFF;*/
+}
+
+#select-scan.vkuiPanel .vkuiPanel__in > .vkuiCustomSelect .vkuiSelect__title {
+    /*color: #FFFFFF;*/
+}
+
+body :has(#loading) {
+    overflow-y: hidden;
+}
+
+#loading.vkuiPanel .vkuiPanel__in > .box {
+    margin: 20px;
+    background: #4CD9EE;
+    padding: 25px 27px;
+    z-index: 2;
+}
+
+#loading.vkuiPanel .vkuiPanel__in > .box > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#loading.vkuiPanel .vkuiPanel__in > .box > div > svg {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+}
+
+#loading.vkuiPanel .vkuiPanel__in > .box > div > p {
+    font-family: 'Gotham Pro Medium';
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+
+    color: #06082C;
+}
+
+#loading.vkuiPanel .vkuiPanel__in > .box > button {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+
+    width: 100%;
+    height: 51px;
+
+    background: #06082C;
+
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+
+    outline: none;
+    border: none;
+}
+
+#loading.vkuiPanel .vkuiPanel__in #animation {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > p {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 24px) 20px 0;
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+}
+
+#result.vkuiPanel .vkuiPanel__in .user-header {
+    margin: 25px 20px 0;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#result.vkuiPanel .vkuiPanel__in .user-header > img {
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    border-radius: 64px;
+}
+
+#result.vkuiPanel .vkuiPanel__in .user-header > p {
+    font-family: 'Gotham Pro Medium';
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .grid {
+    margin: 25px 20px 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 10px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .grid > * {
+    width: calc((100% - 10px) / 2);
+}
+
+#result.vkuiPanel .vkuiPanel__in > .grid > * > :first-child {
+    font-family: 'Gotham Pro Medium';
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #4CD9EE;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .grid > * > :last-child {
+    margin-top: 10px;
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block {
+    margin: 50px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > h1 > span {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+
+    background: linear-gradient(139.22deg, #05B6DE -46.08%, #97FFFF 110.93%);
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: -0.05em;
+
+    color: #06082C;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > p {
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #4CD9EE;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.list > * {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.list > * > :nth-child(1) {
+    font-family: 'Gotham Pro Medium';
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+
+    width: 20px;
+    white-space: nowrap;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-3 > div.list > * > :nth-child(1),
+#result.vkuiPanel .vkuiPanel__in > .block-6 > div.list > * > :nth-child(1) {
+    display: none;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.list > * > img:nth-child(2) {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #D9D9D9;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.list > * > :nth-child(3) {
+    font-family: 'Gotham Pro Medium';
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.list > * > :nth-child(4) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 0 auto;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.list > * > :nth-child(4) > * {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+
+    white-space: nowrap;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.switch {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    overflow: hidden;
+    position: relative;
+    background: #06082C;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.switch > .background {
+    background: linear-gradient(139.22deg, #05B6DE -46.08%, #97FFFF 110.93%), #FFFFFF;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 400ms ease-in-out;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.switch > *:not(.background) {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.05em;
+
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: all 400ms ease-in-out;
+
+    background: transparent;
+    outline: none;
+    border: none;
+    z-index: 1;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > div.switch > .active {
+    color: #101532;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex {
+    padding: 20px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(1),
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(1) > *,
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(3) > * {
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(1) > * {
+    color: #05B6DE;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(2) {
+    margin-top: 15px;
+    background: #2F446F;
+    width: 100%;
+    height: 36px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(2) > div {
+    background: #4CD9EE;
+    height: inherit;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(3) {
+    margin-top: 15px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-sex > :nth-child(3) > * {
+    color: #FFFFFF;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 149px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years > * {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: end;
+
+    height: 100%;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years > * > :nth-child(1) {
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+
+    color: #4CD9EE;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years > * > :nth-child(2) {
+    width: 44px;
+    background: #D9D9D9;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years > :nth-child(1) > :nth-child(2) {
+    background: #4CD9EE;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years > :nth-child(2) > :nth-child(2) {
+    background: #41A3C0;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years > :nth-child(3) > :nth-child(2) {
+    background: #3B81A3;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years > :nth-child(4) > :nth-child(2) {
+    background: #2F446F;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > .graph-years > * > :nth-child(3) {
+    font-family: 'Gotham Pro Medium';
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > input {
+    padding: 24px 20px;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    background: #06082C;
+
+    font-family: 'Gotham Pro';
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > button:not(.load-more) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+
+    padding: 34px 20px;
+    outline: none;
+    border: none;
+    background: linear-gradient(139.22deg, #05B6DE -46.08%, #97FFFF 110.93%), #151515;
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #06082C;
+    cursor: pointer;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > .user-header {
+    margin: 0;
+    gap: 15px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > .user-header > img {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > .user-header > p {
+    font-size: 24px;
+    line-height: 130%;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > p.score {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    color: #4CD9EE;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > p.score > span {
+    font-size: 20px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > div.list {
+    background: #06082C;
+    padding: 20px 15px;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > div.list > * > :nth-child(1) {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+
+    background: linear-gradient(139.22deg, #05B6DE -46.08%, #97FFFF 110.93%);
+    border-radius: 40px;
+    line-height: 195%;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > div.list > * > :nth-child(2) > :nth-child(1) {
+    font-family: 'Gotham Pro Bold';
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > div.list > * > :nth-child(2) > :nth-child(2) {
+    font-family: 'Gotham Pro';
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block > button.load-more {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 21px;
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: -0.05em;
+
+    color: #4CD9EE;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > .score-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+
+    align-self: stretch;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > .score-grid > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: calc((100% - 10px * 4) / 5);
+    height: 40px;
+
+    background: #06082C;
+    border-radius: 10px;
+
+    font-family: 'Gotham Pro Medium';
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.05em;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > .score-grid > .active {
+    background: linear-gradient(139.22deg, #05B6DE -46.08%, #97FFFF 110.93%);
+    color: #06082C;
+}
+
+#result.vkuiPanel .vkuiPanel__in > .block-7 > button {
+    margin-bottom: calc(var(--safe-area-inset-bottom) + 24px);
+}
+
+#result.vkuiPanel .vkuiPanel__in .vkuiScreenSpinner {
+    position: relative;
+    left: unset;
+    top: unset;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+}
+
+#result.vkuiPanel .vkuiPanel__in .vkuiScreenSpinner .vkuiScreenSpinner__container {
+    background: none;
+    box-shadow: none;
+
+    width: 48px;
+    height: 48px;
+}
+
+#result.vkuiPanel .vkuiPanel__in .vkuiScreenSpinner .vkuiIcon {
+}

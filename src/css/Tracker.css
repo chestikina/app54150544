@@ -1,0 +1,126 @@
+#error .Panel__in, #add .Panel__in, .simple_placeholder {
+    height: calc(100vh - 52px);
+}
+
+body {
+    --accent_green: #6BDAA7;
+}
+
+body[scheme='space_gray'] {
+    --placeholder_icon_background: #48494B;
+    --elements_border: #3F3F3F;
+    --background_content: #343537;
+    --header_background: var(--background_content);
+    --field_background: #3A3A3A;
+    --header_alternate_background: #343537;
+    --accent_green: var(--color);
+    --panel_tab_active_text: #343537;
+    --panel_tab_inactive_text: #FFFFFF;
+}
+
+body[scheme='bright_light'] {
+    --header_tint: #000000;
+    --placeholder_icon_background: #F9F9F9;
+    --elements_border: #F1F1F1;
+    --background_content: #FDFDFD;
+    --header_background: var(--background_content);
+    --field_background: #F7F7F7;
+    --header_alternate_background: #FFFFFF;
+    --panel_tab_active_text: #FFFFFF;
+    --panel_tab_inactive_text: #000000;
+}
+
+.PanelHeader__content, .PanelHeaderContent__children-in {
+    font-family: Daikon;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: var(--panelheader_height_android);
+}
+
+.PanelHeaderContent__children-in {
+    max-width: 40vw;
+}
+
+.PanelHeader__in {
+    background: var(--background_content);
+}
+
+.Tabbar {
+    border: 1px solid var(--elements_border);
+    height: 52px;
+}
+
+.Tabbar--android.Tabbar--shadow {
+    box-shadow: none;
+}
+
+.Tabbar--shadow::before {
+    display: none;
+}
+
+.Tabs--buttons {
+    margin: 17.5px 24px 0;
+}
+
+.Tabs--buttons .TabsItem {
+    padding: 14px 21px;
+    border-radius: 50px;
+    min-width: 68px;
+    height: 44px;
+}
+
+.Tabs--buttons .TabsItem {
+    color: var(--panel_tab_inactive_text);
+    background-color: #FFFFFF00;
+}
+
+.Tabs--buttons .TabsItem--selected {
+    color: var(--panel_tab_active_text);
+    background-color: #6BDAA7;
+}
+
+.Tabs--buttons .TabsItem__in {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    text-align: center;
+
+    align-self: center;
+    margin: 10px 0px;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Daikon;
+    src: url(../fonts/Daikon-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: SF Pro Text;
+    src: url(../fonts/SF-Pro-Text-Regular.ttf);
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated-loading {
+    animation: loading .5s ease-in-out;
+}
+
+.SimpleCell > .Icon:first-child, .SimpleCell > .Tappable__waves + .Icon, .SimpleCell .SimpleCell__after .Icon {
+    color: var(--color);
+}
+
+.SimpleCell__destructive > .Icon:first-child, .SimpleCell__destructive > .Tappable__waves + .Icon, .SimpleCell__destructive .SimpleCell__children {
+    color: var(--destructive);
+}

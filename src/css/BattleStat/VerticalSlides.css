@@ -1,0 +1,28 @@
+.VerticalSlides {
+    width: 100vw;
+    position: fixed;
+}
+
+.SlideArrowUp {
+    z-index: 1;
+    position: fixed;
+    left: 50%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+    height: 5vh;
+    width: 5vh;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}

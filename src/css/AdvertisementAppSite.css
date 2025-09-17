@@ -1,0 +1,410 @@
+body {
+    background: #EFF2F5;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+a {
+    text-decoration: none;
+    color: #3687FF;
+}
+
+.Container__phone {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+}
+
+#root {
+    margin: 10.93vh auto 0;
+    padding-bottom: 96px;
+    min-width: 55.4166667vw;
+    max-width: 55.4166667vw;
+}
+
+.Main__Container.Container__tabled {
+    margin: 0;
+}
+
+.Title {
+    font-family: Inter Medium;
+    font-size: 2.55863539446vh;
+    line-height: 3.94456289979vh;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.Title, .Title > div {
+    display: flex;
+    align-items: center;
+}
+
+.Title > div {
+    justify-content: end;
+    width: 100%;
+}
+
+.Button {
+    padding: 1.70575692964vh 2.13219616205vh;
+    font-family: Inter Medium;
+    font-size: 1.70575692964vh;
+    line-height: 2.02558635394vh;
+    color: #3E3E3E;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 122px rgba(0, 0, 0, 0.02);
+    border-radius: 32px;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.Title > div > :last-child {
+    margin-left: 12px;
+}
+
+.Grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250.67px, 1fr));
+    grid-gap: 24px;
+    margin-top: 24px;
+}
+
+.Card {
+    position: relative;
+    overflow: hidden;
+    min-width: 210.67px;
+    height: 192px;
+    padding: 24px 20px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+
+    z-index: 0;
+}
+
+.Card .Card__Background {
+    position: absolute;
+    left: -107px;
+    top: -107px;
+    opacity: 0.1;
+    filter: blur(64px);
+    width: 324px;
+    height: 324px;
+}
+
+.Card .Card__Icon {
+    min-width: 110px;
+    min-height: 110px;
+    max-width: 110px;
+    max-height: 110px;
+    border-radius: 24px;
+}
+
+.Card .Card__Title {
+    font-family: Inter Semibold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #5A5A5A;
+    margin-top: 16px;
+}
+
+.Card .Card__Date {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(70, 70, 70, 0.75);
+    margin-top: 6px;
+}
+
+.Card .Card__TextLayout {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    left: 24px;
+}
+
+.Button__ShowMore {
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 122px rgba(0, 0, 0, 0.02);
+    border-radius: 32px;
+    margin: 24px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Article__Info {
+    margin-top: 48px;
+}
+
+.Article__Container.Container__tabled {
+    margin: 0 96px;
+}
+
+.Container__tabled .Article__Info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.Article__Info .Article__Icon {
+    background: #FFFFFF;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 149px;
+    width: 149px;
+    height: 149px;
+}
+
+.Article__Info .Article__Icon > img {
+    min-width: 125px;
+    min-height: 125px;
+    max-width: 125px;
+    max-height: 125px;
+    border-radius: 28px;
+}
+
+.Container__tabled .Article__Info .Article__Titles {
+    margin-left: 28px;
+    width: 100%;
+}
+
+.Container__phone .Article__Info .Article__Titles {
+    margin-top: 12px;
+}
+
+.Article__Info .Article__Titles > :first-child {
+    font-family: Inter Semibold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5A5A5A;
+}
+
+.Article__Info .Article__Titles > :last-child {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7C7C7C;
+    margin-top: 8px;
+}
+
+.Container__tabled .Article__Info .Article__Actions {
+    margin-left: 20px;
+}
+
+.Container__phone .Article__Info .Article__Actions {
+    margin-top: 12px;
+}
+
+.Article__Info .Article__Actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container__phone .Article__Info .Article__Actions > * {
+    width: 100%;
+}
+
+.Container__phone .Article__Info .Article__Actions > :first-child {
+    margin-left: 0;
+}
+
+.Article__Info .Article__Actions > *, .Button__Main {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    margin-left: 8px;
+    cursor: pointer;
+    color: #3E3E3E;
+    padding: 0 20px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 122px rgba(0, 0, 0, 0.02);
+    border-radius: 32px;
+
+    font-family: Inter Medium;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3E3E3E;
+}
+
+.Button__Main {
+    margin-left: 0;
+    width: fit-content;
+}
+
+.Article__Description {
+    margin-top: 47px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #464646;
+    width: 100%;
+}
+
+.Article__Description body {
+    margin: 0;
+}
+
+.Article__Stickers {
+    margin-top: 48px;
+}
+
+.Article__Stickers > :first-child, .Article__Rec > :first-child {
+    font-family: Inter Medium;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5A5A5A;
+}
+
+.Article__Stickers > :last-child {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    grid-gap: 26px;
+}
+
+.Article__Stickers > :last-child > * {
+    width: 128px;
+    height: 128px;
+}
+
+.Article__Rec {
+    margin-top: 48px;
+    padding-bottom: 64px;
+}
+
+.Article__Rec > :last-child {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.Article__Rec > :last-child > * {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin-top: 12px;
+}
+
+.Article__Rec > :last-child > * > :first-child {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+}
+
+.Article__Rec > :last-child > * > :last-child {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #5A5A5A;
+
+    margin-left: 12px;
+}
+
+.Popout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(15px);
+
+    z-index: 99;
+    width: 100vw;
+}
+
+.Popout .Text {
+    width: 80%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.55863539vh;
+    line-height: 3.09168443vh;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.Footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5.63634vh;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2vh;
+    line-height: 1.4vh;
+    color: #5A5A5A;
+
+    border-top: 2px solid #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #EFF2F5;
+}
+
+.ArticleAdvert {
+    margin-top: 12px;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.Button__ShowMore > .Icon {
+    display: block;
+}
+
+.Button__ShowMore > :first-child {
+    display: none;
+}

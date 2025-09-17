@@ -1,0 +1,105 @@
+body[scheme="bright_light"] {}
+
+span,
+h1,
+h2,
+h3,
+p,
+label,
+img,
+svg {
+    user-select: none;
+    margin: 0 0 0 0;
+}
+
+.vkuiPanel .vkuiPanel__in,
+.vkuiPanel:after,
+.vkuiPanel,
+#root,
+body,
+html {
+    background: var(--background_content);
+}
+
+.vkuiPanel .vkuiPanel__in>.vkuiIconButton {
+    width: fit-content;
+}
+
+#main.vkuiPanel .vkuiPanel__in>img {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 18px) 18px 0;
+    height: 30vh;
+    width: -webkit-fill-available;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: var(--vkui--size_border_radius--regular, 8px);
+}
+
+#main.vkuiPanel .vkuiPanel__in>.vkuiTitle {
+    margin: 28px 18px 0;
+}
+
+#main.vkuiPanel .vkuiPanel__in>.vkuiText {
+    margin: 16px 18px 0;
+}
+
+#main.vkuiPanel .vkuiPanel__in>.vkuiButton {
+    margin: 28px 18px 0;
+}
+
+
+
+#admin.vkuiPanel .vkuiPanel__in>.vkuiButton--lvl-primary {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 18px) 18px 0;
+}
+
+#admin.vkuiPanel .vkuiPanel__in>.vkuiTitle {
+    margin: 28px 18px 0;
+}
+
+#admin.vkuiPanel .vkuiPanel__in>.vkuiButton--lvl-outline {
+    margin: 16px 18px 0;
+}
+
+
+
+#edit.vkuiPanel .vkuiPanel__in>.vkuiFile {
+    margin: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 18px) 18px 0;
+    width: fit-content;
+}
+
+#edit.vkuiPanel .vkuiPanel__in>.vkuiFile:has(img) {
+    width: -webkit-fill-available;
+    overflow: hidden;
+}
+
+#edit.vkuiPanel .vkuiPanel__in>.vkuiFile:has(img) .vkuiButton__content {
+    width: inherit;
+    padding: unset;
+    height: 30vh;
+}
+
+#edit.vkuiPanel .vkuiPanel__in>.vkuiFile img {
+    width: inherit;
+    height: -webkit-fill-available;
+    object-fit: cover;
+}
+
+#edit.vkuiPanel .vkuiPanel__in>.vkuiFile .UploadContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 6px 0;
+}
+
+#edit.vkuiPanel .vkuiPanel__in>.vkuiInput {
+    margin: 8px 18px 0;
+}
+
+#edit.vkuiPanel .vkuiPanel__in>.vkuiTitle {
+    margin: 16px 18px 0;
+}
+
+#edit.vkuiPanel .vkuiPanel__in>.vkuiButton {
+    margin: 28px 18px 0;
+}

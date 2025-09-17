@@ -1,0 +1,303 @@
+body {
+    --color_blue: #0177FF;
+}
+
+body #main {
+    --background_content: #F0F2F5;
+}
+
+body #stickers {
+    --background_content: #0177FF;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.HeaderTitle {
+    position: fixed;
+    top: calc(var(--safe-area-inset-top) + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 9px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    background: var(--color_blue);
+    color: #FFFFFF;
+
+    width: 74px;
+    height: 23px;
+
+    transition: all 800ms cubic-bezier(.22, .91, .52, 1.11);
+}
+
+.HeaderFull {
+    margin-top: calc(var(--safe-area-inset-top) + 15px * -1);
+    padding: calc(var(--safe-area-inset-top) + 15px) 50vw 100vh;
+
+    z-index: -1;
+}
+
+.HeaderTitle span {
+    font-family: "VK Sans Display DemiBold";
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.3px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.StickersList {
+    position: absolute;
+    top: calc(var(--safe-area-inset-top) + var(--panelheader_height) + 16px);
+    left: 12px;
+    right: 12px;
+    bottom: 0;
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+    gap: 10px 20px;*/
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-bottom: 24px;
+
+    transition: all 800ms cubic-bezier(.22, .91, .52, 1.11);
+}
+
+.StickersListHidden {
+    top: 100vh;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.StickersList > * {
+    cursor: pointer;
+
+    border-radius: 9px;
+    outline: 0.5px solid rgba(0, 0, 0, .12);
+    background: rgba(255, 255, 255, .12);
+    /*height: 144px;*/
+    height: 232px;
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.StickersList > * > :first-child {
+    position: absolute;
+    width: 100%;
+}
+
+.StickersList > * > :last-child {
+    padding: 6px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+}
+
+.StickersList > * > :last-child > h1 {
+    font-family: "SF Pro Display Medium";
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.3px;
+    color: #000000;
+    font-weight: 400;
+
+    margin: 0 0 0 0;
+}
+
+.StickersList > * > :last-child > h3 {
+    font-family: "SF Pro Text";
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: -0.3px;
+    color: #818C99;
+    font-weight: 400;
+
+    margin: 0 0 0 0;
+}
+
+.StickersPoster {
+    position: absolute;
+
+    top: calc(var(--safe-area-inset-top) + var(--panelheader_height));
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+    height: 191px;
+    width: 255px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+
+    transition: all 800ms cubic-bezier(.22, .91, .52, 1.02);
+    opacity: 1;
+}
+
+.StickersPosterHidden {
+    top: -300px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.StickersPoster > img {
+    width: inherit;
+    border-radius: 21px;
+}
+
+.StickersPoster > h1 {
+    font-family: "SF Pro Display Bold";
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+    font-weight: 400;
+    text-align: center;
+
+    margin: 0 0 0 0;
+}
+
+.StickersModal {
+    position: absolute;
+
+    bottom: -128px;
+
+    min-height: calc(100vh - var(--safe-area-inset-top) - var(--panelheader_height) - 191px - 11px + 128px);
+    width: 100vw;
+
+    background: #FFFFFF;
+    border-radius: 21px 21px 0 0;
+
+    transition: all 800ms cubic-bezier(.22, .91, .52, 1.05);
+}
+
+.StickersModalHidden {
+    position: fixed;
+    bottom: -100vh;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.StickersModal > .StickersGrid {
+    margin: 12px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(74px, 1fr));
+    gap: 6px 10px;
+}
+
+.StickersModal > .StickersGrid > * {
+    width: 74px;
+    height: 74px;
+}
+
+.StickersActions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    backdrop-filter: blur(4px);
+
+    padding: 0 16px calc(var(--safe-area-inset-bottom) + 6px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    transition: all 800ms 200ms cubic-bezier(.22, .91, .52, 1.05);
+}
+
+.StickersActionsHidden {
+    bottom: -136px;
+    pointer-events: none;
+}
+
+.BackButton {
+    position: fixed;
+    top: calc(var(--safe-area-inset-top) + 15px);
+    left: 20px;
+    color: #FFFFFF;
+}
+
+.BackButtonHidden {
+    opacity: 0;
+    transition: all 800ms 200ms cubic-bezier(.22, .91, .52, 1.05);
+    pointer-events: none;
+}
+
+.YearsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.StepsContainer {
+    width: calc(100vw - 18px * 2);
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    margin: auto auto;
+}
+
+.StepsContainer .StepsTitle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.StepsContainer .StepsTitle h1 {
+    color: #000;
+    font-size: 24px;
+    font-family: VK Sans Display DemiBold;
+    margin: 0 0 0 0;
+}
+
+.StepsContainer .StepsDescription {
+    margin: 24px 0 0 0;
+
+    color: #000;
+    font-size: 15px;
+    font-family: VK Sans Display DemiBold;
+}
+
+.StepsContainer .StepsSubDescription {
+    margin: 6px 0 0 0;
+
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 15px;
+    font-family: VK Sans Display DemiBold;
+}
+
+.StepsContainer .StepActions {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+#root .vkuiButton--lvl-primary {
+    background-color: #0177FF;
+    color: #FFFFFF;
+}
+
+#root .vkuiButton--lvl-secondary2 {
+    background-color: transparent;
+    color: #000000;
+    opacity: .75;
+}

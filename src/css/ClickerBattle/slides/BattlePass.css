@@ -1,0 +1,138 @@
+.BattlePass {
+    height: 100%;
+}
+
+.BattlePassTextContainer {
+    margin: 0 22px;
+    position: relative;
+}
+
+.BPInfoIcon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.BPBackIcon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.BPProgress {
+    margin: 18px 22px 0;
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(135, 120, 103, 0.5);
+}
+
+.BPProgress > * {
+    height: inherit;
+    border-radius: 4px;
+    background: rgba(135, 120, 103, 1);
+}
+
+.BPAwards {
+    margin: 0 32px;
+    position: relative;
+}
+
+.BPAwardContainer {
+    display: flex;
+    margin-top: 18px;
+    align-items: flex-end;
+}
+
+.BPAwardVectorRight {
+    margin-left: 30px;
+    margin-bottom: 13px;
+}
+
+.BPAwardVectorLeft {
+    margin-right: 30px;
+    margin-bottom: -6px;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.AwardLVLText {
+    position: relative;
+}
+
+.AwardLVLText > :last-child {
+    margin-top: 30px;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #574039;
+}
+
+.AwardLocked {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BPFuture {
+    margin: 28px 22px 0;
+}
+
+.BPFutures > :last-child {
+    padding-bottom: 112px;
+}
+
+.BPFutureTitle {
+    margin-top: 8px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: #574039;
+}
+
+.BPFutureDescription {
+    margin-top: 4px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.078px;
+    color: #877867;
+}
+
+.BPButtonBuy {
+    width: 100vw;
+    position: fixed;
+    bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.BattlePass > * {
+    -webkit-animation: showOpacity 400ms ease-in-out;
+    -o-animation: showOpacity 400ms ease-in-out;
+    animation: showOpacity 400ms ease-in-out;
+}

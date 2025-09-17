@@ -1,0 +1,16 @@
+.SimpleButton {
+    min-height: 5.05vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.SimpleButton .SimpleButton_Text {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.72vh;
+    line-height: 2.09vh;
+
+    text-align: center;
+}

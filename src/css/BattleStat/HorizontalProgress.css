@@ -1,0 +1,5 @@
+.HorizontalProgress > * {
+    height: 100%;
+    border-radius: inherit;
+    transition: all 250ms;
+}
